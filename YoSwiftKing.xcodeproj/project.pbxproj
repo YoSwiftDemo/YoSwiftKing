@@ -17,6 +17,8 @@
 		846A368C27B3A4C7004AEC34 /* YoSwiftKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A368B27B3A4C7004AEC34 /* YoSwiftKingTests.swift */; };
 		846A369627B3A4C7004AEC34 /* YoSwiftKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369527B3A4C7004AEC34 /* YoSwiftKingUITests.swift */; };
 		846A369827B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */; };
+		84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */; };
+		84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */; };
 		9065A99C9A156142478C824B /* Pods_YoSwiftKingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37477BC52B22035ACFA24758 /* Pods_YoSwiftKingTests.framework */; };
 		F8AF43D9C1B211EDC3500AE7 /* Pods_YoSwiftKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		846A369127B3A4C7004AEC34 /* YoSwiftKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoSwiftKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A369527B3A4C7004AEC34 /* YoSwiftKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITests.swift; sourceTree = "<group>"; };
 		846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoDarkModeColor.swift; sourceTree = "<group>"; };
+		84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoLaunchScreen.swift; sourceTree = "<group>"; };
 		A336371BDB189EDAB29E75FE /* Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFD891EB5005802FF0B6CE3F /* Pods-YoSwiftKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKingTests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKingTests/Pods-YoSwiftKingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoSwiftKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,7 @@
 		846A367327B3A4C3004AEC34 /* YoSwiftKing */ = {
 			isa = PBXGroup;
 			children = (
+				84E16DE727B3B46C00FD63A7 /* YoLib */,
 				846A367427B3A4C3004AEC34 /* AppDelegate.swift */,
 				846A367627B3A4C3004AEC34 /* SceneDelegate.swift */,
 				846A367827B3A4C3004AEC34 /* ViewController.swift */,
@@ -165,6 +170,15 @@
 				846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */,
 			);
 			path = YoSwiftKingUITests;
+			sourceTree = "<group>";
+		};
+		84E16DE727B3B46C00FD63A7 /* YoLib */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */,
+				84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */,
+			);
+			path = YoLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +422,8 @@
 			files = (
 				846A367927B3A4C3004AEC34 /* ViewController.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
+				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
+				84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
