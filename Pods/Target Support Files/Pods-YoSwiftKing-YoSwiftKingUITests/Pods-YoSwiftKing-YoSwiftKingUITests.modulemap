@@ -1,0 +1,6 @@
+framework module Pods_YoSwiftKing_YoSwiftKingUITests {
+  umbrella header "Pods-YoSwiftKing-YoSwiftKingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
