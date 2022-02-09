@@ -1,3 +1,128 @@
-PODFILE CHECKSUM: cddff747ae6ba191fe5f06c30c4ddf760ed47f5d
+PODS:
+  - Alamofire (5.5.0)
+  - CleanJSON (1.0.9)
+  - Differentiator (5.0.0)
+  - HandyJSON (5.0.2)
+  - Kingfisher (6.3.1)
+  - MJRefresh (3.7.5)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - ObjectMapper (4.2.0)
+  - ReactorKit (3.2.0):
+    - RxSwift (~> 6.0)
+    - WeakMapTable (~> 1.1)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.3):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxNetwork/Cacheable (1.0.2):
+    - RxNetwork/Core
+    - Storable
+  - RxNetwork/Core (1.0.2):
+    - Moya/RxSwift
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SnapKit (5.0.1)
+  - Storable (0.1.1)
+  - SVProgressHUD (2.2.5)
+  - WeakMapTable (1.2.0)
+  - YoCommon (0.1.1):
+    - YoCommon/Configure (= 0.1.1)
+    - YoCommon/Define (= 0.1.1)
+  - YoCommon/Configure (0.1.1)
+  - YoCommon/Define (0.1.1)
+  - YoNavBarView (0.1.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - CleanJSON
+  - HandyJSON
+  - Kingfisher
+  - MJRefresh
+  - Moya/RxSwift
+  - "NSObject+Rx"
+  - ObjectMapper
+  - ReactorKit
+  - Reusable
+  - RxCocoa
+  - RxDataSources
+  - RxGesture
+  - RxNetwork/Cacheable
+  - RxNetwork/Core
+  - RxSwift
+  - SnapKit
+  - SVProgressHUD
+  - YoCommon
+  - YoNavBarView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CleanJSON
+    - Differentiator
+    - HandyJSON
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - "NSObject+Rx"
+    - ObjectMapper
+    - ReactorKit
+    - Reusable
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxNetwork
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - Storable
+    - SVProgressHUD
+    - WeakMapTable
+    - YoCommon
+    - YoNavBarView
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  CleanJSON: 910a36465ce4829e264a902ccf6d1455fdd9f980
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ReactorKit: e8b11d6b9c415405f381669b095c154a05b59eca
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: abadd243fc36db74df43dfc893829ddde94f1a3d
+  RxNetwork: b14e08b1ed874a0379496065be43ef0ee1ac0adb
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Storable: 31d19a4f897d68d1f1843604b60e12e5c2e1db5f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
+  YoCommon: 7027e6dff473ac9b7a56501a651b081a6b62c4d2
+  YoNavBarView: 2325498a7752ff5e44af244f1ae087d0a2def578
+
+PODFILE CHECKSUM: cf11558e74600bec50bff17f0fd41851ad4ac6ec
 
 COCOAPODS: 1.11.2
