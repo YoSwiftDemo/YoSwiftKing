@@ -10,7 +10,6 @@
 		49DAD2B590600C4B266C220E /* Pods_YoSwiftKing_YoSwiftKingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4FEB4ADBB363004C4CAE97 /* Pods_YoSwiftKing_YoSwiftKingUITests.framework */; };
 		846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367427B3A4C3004AEC34 /* AppDelegate.swift */; };
 		846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367627B3A4C3004AEC34 /* SceneDelegate.swift */; };
-		846A367927B3A4C3004AEC34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367827B3A4C3004AEC34 /* ViewController.swift */; };
 		846A367C27B3A4C3004AEC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367A27B3A4C3004AEC34 /* Main.storyboard */; };
 		846A367E27B3A4C7004AEC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A367D27B3A4C7004AEC34 /* Assets.xcassets */; };
 		846A368127B3A4C7004AEC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,18 @@
 		846A369827B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */; };
 		84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */; };
 		84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */; };
+		84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */; };
+		84E16DFD27B3B98300FD63A7 /* YoUIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DF327B3B98300FD63A7 /* YoUIColor+Gradient.swift */; };
+		84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DF527B3B98300FD63A7 /* YoUIColor+HexColor.swift */; };
+		84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DF727B3B98300FD63A7 /* YoUIColor+Rgb.swift */; };
+		84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DF927B3B98300FD63A7 /* YoUIColor+Normal.swift */; };
+		84E16E0127B3B98300FD63A7 /* YoUIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DFC27B3B98300FD63A7 /* YoUIImage+Color.swift */; };
+		84E16E0827B3C0D100FD63A7 /* YoSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E0727B3C0D100FD63A7 /* YoSwiftViewController.swift */; };
+		84E16E0A27B3C17300FD63A7 /* YoFoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E0927B3C17300FD63A7 /* YoFoundationViewController.swift */; };
+		84E16E0F27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E0E27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift */; };
+		84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E1027B3CF9A00FD63A7 /* YoBaseNavView.swift */; };
+		84E16E1327B4BA0B00FD63A7 /* YoTabBarCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E1227B4BA0B00FD63A7 /* YoTabBarCtl.swift */; };
+		84E16E1527B4BB4700FD63A7 /* YoBaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E1427B4BB4700FD63A7 /* YoBaseUIViewController.swift */; };
 		9065A99C9A156142478C824B /* Pods_YoSwiftKingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37477BC52B22035ACFA24758 /* Pods_YoSwiftKingTests.framework */; };
 		F8AF43D9C1B211EDC3500AE7 /* Pods_YoSwiftKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +61,6 @@
 		846A367127B3A4C3004AEC34 /* YoSwiftKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoSwiftKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A367427B3A4C3004AEC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A367627B3A4C3004AEC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		846A367827B3A4C3004AEC34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		846A367B27B3A4C3004AEC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846A367D27B3A4C7004AEC34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846A368027B3A4C7004AEC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +72,18 @@
 		846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoDarkModeColor.swift; sourceTree = "<group>"; };
 		84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoLaunchScreen.swift; sourceTree = "<group>"; };
+		84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseUITabBarController.swift; sourceTree = "<group>"; };
+		84E16DF327B3B98300FD63A7 /* YoUIColor+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YoUIColor+Gradient.swift"; sourceTree = "<group>"; };
+		84E16DF527B3B98300FD63A7 /* YoUIColor+HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YoUIColor+HexColor.swift"; sourceTree = "<group>"; };
+		84E16DF727B3B98300FD63A7 /* YoUIColor+Rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YoUIColor+Rgb.swift"; sourceTree = "<group>"; };
+		84E16DF927B3B98300FD63A7 /* YoUIColor+Normal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YoUIColor+Normal.swift"; sourceTree = "<group>"; };
+		84E16DFC27B3B98300FD63A7 /* YoUIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YoUIImage+Color.swift"; sourceTree = "<group>"; };
+		84E16E0727B3C0D100FD63A7 /* YoSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftViewController.swift; sourceTree = "<group>"; };
+		84E16E0927B3C17300FD63A7 /* YoFoundationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoFoundationViewController.swift; sourceTree = "<group>"; };
+		84E16E0E27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseUINavigationController.swift; sourceTree = "<group>"; };
+		84E16E1027B3CF9A00FD63A7 /* YoBaseNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseNavView.swift; sourceTree = "<group>"; };
+		84E16E1227B4BA0B00FD63A7 /* YoTabBarCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTabBarCtl.swift; sourceTree = "<group>"; };
+		84E16E1427B4BB4700FD63A7 /* YoBaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseUIViewController.swift; sourceTree = "<group>"; };
 		A336371BDB189EDAB29E75FE /* Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFD891EB5005802FF0B6CE3F /* Pods-YoSwiftKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKingTests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKingTests/Pods-YoSwiftKingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoSwiftKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,10 +165,10 @@
 		846A367327B3A4C3004AEC34 /* YoSwiftKing */ = {
 			isa = PBXGroup;
 			children = (
-				84E16DE727B3B46C00FD63A7 /* YoLib */,
+				84E16E0227B3BC7F00FD63A7 /* Module */,
+				84E16DE727B3B46C00FD63A7 /* KingLib */,
 				846A367427B3A4C3004AEC34 /* AppDelegate.swift */,
 				846A367627B3A4C3004AEC34 /* SceneDelegate.swift */,
-				846A367827B3A4C3004AEC34 /* ViewController.swift */,
 				846A367A27B3A4C3004AEC34 /* Main.storyboard */,
 				846A367D27B3A4C7004AEC34 /* Assets.xcassets */,
 				846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */,
@@ -172,13 +194,152 @@
 			path = YoSwiftKingUITests;
 			sourceTree = "<group>";
 		};
-		84E16DE727B3B46C00FD63A7 /* YoLib */ = {
+		84E16DE727B3B46C00FD63A7 /* KingLib */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DEC27B3B72A00FD63A7 /* YoBase */,
+				84E16DF127B3B98300FD63A7 /* KingUIColor */,
+				84E16DFA27B3B98300FD63A7 /* YoUIImage */,
+				84E16DEE27B3B74700FD63A7 /* YoLaunchScreen */,
+				84E16DED27B3B73300FD63A7 /* YoDark */,
+			);
+			path = KingLib;
+			sourceTree = "<group>";
+		};
+		84E16DEC27B3B72A00FD63A7 /* YoBase */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */,
+				84E16E0E27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift */,
+				84E16E1027B3CF9A00FD63A7 /* YoBaseNavView.swift */,
+				84E16E1427B4BB4700FD63A7 /* YoBaseUIViewController.swift */,
+			);
+			path = YoBase;
+			sourceTree = "<group>";
+		};
+		84E16DED27B3B73300FD63A7 /* YoDark */ = {
 			isa = PBXGroup;
 			children = (
 				84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */,
+			);
+			path = YoDark;
+			sourceTree = "<group>";
+		};
+		84E16DEE27B3B74700FD63A7 /* YoLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
 				84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */,
 			);
-			path = YoLib;
+			path = YoLaunchScreen;
+			sourceTree = "<group>";
+		};
+		84E16DF127B3B98300FD63A7 /* KingUIColor */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DF227B3B98300FD63A7 /* YoUIColor+Gradient */,
+				84E16DF427B3B98300FD63A7 /* YoUIColor+HexColor */,
+				84E16DF627B3B98300FD63A7 /* YoUIColor+Rgb */,
+				84E16DF827B3B98300FD63A7 /* YoUIColor+Normal */,
+			);
+			path = KingUIColor;
+			sourceTree = "<group>";
+		};
+		84E16DF227B3B98300FD63A7 /* YoUIColor+Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DF327B3B98300FD63A7 /* YoUIColor+Gradient.swift */,
+			);
+			path = "YoUIColor+Gradient";
+			sourceTree = "<group>";
+		};
+		84E16DF427B3B98300FD63A7 /* YoUIColor+HexColor */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DF527B3B98300FD63A7 /* YoUIColor+HexColor.swift */,
+			);
+			path = "YoUIColor+HexColor";
+			sourceTree = "<group>";
+		};
+		84E16DF627B3B98300FD63A7 /* YoUIColor+Rgb */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DF727B3B98300FD63A7 /* YoUIColor+Rgb.swift */,
+			);
+			path = "YoUIColor+Rgb";
+			sourceTree = "<group>";
+		};
+		84E16DF827B3B98300FD63A7 /* YoUIColor+Normal */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DF927B3B98300FD63A7 /* YoUIColor+Normal.swift */,
+			);
+			path = "YoUIColor+Normal";
+			sourceTree = "<group>";
+		};
+		84E16DFA27B3B98300FD63A7 /* YoUIImage */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DFB27B3B98300FD63A7 /* YoUIImage+Color */,
+			);
+			path = YoUIImage;
+			sourceTree = "<group>";
+		};
+		84E16DFB27B3B98300FD63A7 /* YoUIImage+Color */ = {
+			isa = PBXGroup;
+			children = (
+				84E16DFC27B3B98300FD63A7 /* YoUIImage+Color.swift */,
+			);
+			path = "YoUIImage+Color";
+			sourceTree = "<group>";
+		};
+		84E16E0227B3BC7F00FD63A7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				84E16E0C27B3C42600FD63A7 /* TabBar */,
+				84E16E0627B3BFE900FD63A7 /* YoSwift */,
+				84E16E0527B3BFD700FD63A7 /* YoFoundation */,
+				84E16E0427B3BFC500FD63A7 /* YoUIKit */,
+				84E16E0327B3BC8600FD63A7 /* YoDemo */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		84E16E0327B3BC8600FD63A7 /* YoDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YoDemo;
+			sourceTree = "<group>";
+		};
+		84E16E0427B3BFC500FD63A7 /* YoUIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YoUIKit;
+			sourceTree = "<group>";
+		};
+		84E16E0527B3BFD700FD63A7 /* YoFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				84E16E0927B3C17300FD63A7 /* YoFoundationViewController.swift */,
+			);
+			path = YoFoundation;
+			sourceTree = "<group>";
+		};
+		84E16E0627B3BFE900FD63A7 /* YoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				84E16E0727B3C0D100FD63A7 /* YoSwiftViewController.swift */,
+			);
+			path = YoSwift;
+			sourceTree = "<group>";
+		};
+		84E16E0C27B3C42600FD63A7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				84E16E1227B4BA0B00FD63A7 /* YoTabBarCtl.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,11 +581,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846A367927B3A4C3004AEC34 /* ViewController.swift in Sources */,
+				84E16E0127B3B98300FD63A7 /* YoUIImage+Color.swift in Sources */,
+				84E16E0F27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift in Sources */,
+				84E16E1327B4BA0B00FD63A7 /* YoTabBarCtl.swift in Sources */,
+				84E16E0827B3C0D100FD63A7 /* YoSwiftViewController.swift in Sources */,
+				84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */,
+				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
+				84E16E0A27B3C17300FD63A7 /* YoFoundationViewController.swift in Sources */,
+				84E16E1527B4BB4700FD63A7 /* YoBaseUIViewController.swift in Sources */,
 				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
 				84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */,
+				84E16DFD27B3B98300FD63A7 /* YoUIColor+Gradient.swift in Sources */,
+				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
+				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
+				84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
