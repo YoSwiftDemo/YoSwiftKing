@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		49DAD2B590600C4B266C220E /* Pods_YoSwiftKing_YoSwiftKingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4FEB4ADBB363004C4CAE97 /* Pods_YoSwiftKing_YoSwiftKingUITests.framework */; };
+		842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */; };
+		842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */; };
+		842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */; };
+		842CD1AC27BB444F003F8240 /* UIScrollView+YoRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1AB27BB444F003F8240 /* UIScrollView+YoRefresh.swift */; };
+		842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1BB27BB83AC003F8240 /* YoRefreshListViewCtl.swift */; };
+		842CD1BE27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1BD27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift */; };
 		846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367427B3A4C3004AEC34 /* AppDelegate.swift */; };
 		846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367627B3A4C3004AEC34 /* SceneDelegate.swift */; };
 		846A367C27B3A4C3004AEC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367A27B3A4C3004AEC34 /* Main.storyboard */; };
@@ -35,6 +41,11 @@
 		84E16E2027B4FD5100FD63A7 /* YoBaseTableViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E1F27B4FD5000FD63A7 /* YoBaseTableViewListCell.swift */; };
 		84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2127B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift */; };
 		84E16E2627B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2527B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift */; };
+		84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2827B60D9200FD63A7 /* YoRefreshView.swift */; };
+		84E16E2B27B6111900FD63A7 /* YoRefreshConfiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2A27B6111900FD63A7 /* YoRefreshConfiger.swift */; };
+		84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2C27B665C000FD63A7 /* YoIndicatorRefreshView.swift */; };
+		84E16E2F27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2E27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift */; };
+		84E16E3127B6793800FD63A7 /* YoGifHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E3027B6793800FD63A7 /* YoGifHeaderRefreshView.swift */; };
 		9065A99C9A156142478C824B /* Pods_YoSwiftKingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37477BC52B22035ACFA24758 /* Pods_YoSwiftKingTests.framework */; };
 		F8AF43D9C1B211EDC3500AE7 /* Pods_YoSwiftKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +74,12 @@
 		46BF988287BCEF26308706AC /* Pods-YoSwiftKingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKingTests.debug.xcconfig"; path = "Target Support Files/Pods-YoSwiftKingTests/Pods-YoSwiftKingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72EDAF944996907CB359CF13 /* Pods-YoSwiftKing-YoSwiftKingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKing-YoSwiftKingUITests.debug.xcconfig"; path = "Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwiftKing-YoSwiftKingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E4FEB4ADBB363004C4CAE97 /* Pods_YoSwiftKing_YoSwiftKingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoSwiftKing_YoSwiftKingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifTextHeaderRefreshView.swift; sourceTree = "<group>"; };
+		842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorAutoFooterRefreshView.swift; sourceTree = "<group>"; };
+		842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTextAutoFooterRefreshView.swift; sourceTree = "<group>"; };
+		842CD1AB27BB444F003F8240 /* UIScrollView+YoRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+YoRefresh.swift"; sourceTree = "<group>"; };
+		842CD1BB27BB83AC003F8240 /* YoRefreshListViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoRefreshListViewCtl.swift; sourceTree = "<group>"; };
+		842CD1BD27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoRefreshDetailViewCtl.swift; sourceTree = "<group>"; };
 		846A367127B3A4C3004AEC34 /* YoSwiftKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoSwiftKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A367427B3A4C3004AEC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A367627B3A4C3004AEC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +111,11 @@
 		84E16E1F27B4FD5000FD63A7 /* YoBaseTableViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseTableViewListCell.swift; sourceTree = "<group>"; };
 		84E16E2127B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseTableViewListHeaderView.swift; sourceTree = "<group>"; };
 		84E16E2527B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseTableViewListModel.swift; sourceTree = "<group>"; };
+		84E16E2827B60D9200FD63A7 /* YoRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoRefreshView.swift; sourceTree = "<group>"; };
+		84E16E2A27B6111900FD63A7 /* YoRefreshConfiger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoRefreshConfiger.swift; sourceTree = "<group>"; };
+		84E16E2C27B665C000FD63A7 /* YoIndicatorRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorRefreshView.swift; sourceTree = "<group>"; };
+		84E16E2E27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorTextRefreshView.swift; sourceTree = "<group>"; };
+		84E16E3027B6793800FD63A7 /* YoGifHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifHeaderRefreshView.swift; sourceTree = "<group>"; };
 		A336371BDB189EDAB29E75FE /* Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFD891EB5005802FF0B6CE3F /* Pods-YoSwiftKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKingTests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKingTests/Pods-YoSwiftKingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoSwiftKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +170,23 @@
 				CFD891EB5005802FF0B6CE3F /* Pods-YoSwiftKingTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		842CD1AD27BB79FE003F8240 /* YoRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				842CD1BB27BB83AC003F8240 /* YoRefreshListViewCtl.swift */,
+				842CD1BD27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift */,
+			);
+			path = YoRefresh;
+			sourceTree = "<group>";
+		};
+		842CD1B027BB7A54003F8240 /* YoLib */ = {
+			isa = PBXGroup;
+			children = (
+				842CD1AD27BB79FE003F8240 /* YoRefresh */,
+			);
+			path = YoLib;
 			sourceTree = "<group>";
 		};
 		846A366827B3A4C3004AEC34 = {
@@ -207,6 +246,7 @@
 		84E16DE727B3B46C00FD63A7 /* KingLib */ = {
 			isa = PBXGroup;
 			children = (
+				84E16E2727B60D6000FD63A7 /* YoRefresh */,
 				84E16DEC27B3B72A00FD63A7 /* YoBase */,
 				84E16DF127B3B98300FD63A7 /* KingUIColor */,
 				84E16DFA27B3B98300FD63A7 /* YoUIImage */,
@@ -369,6 +409,7 @@
 		84E16E1A27B4F82200FD63A7 /* ViewCtl */ = {
 			isa = PBXGroup;
 			children = (
+				842CD1B027BB7A54003F8240 /* YoLib */,
 				84E16E1B27B4F86600FD63A7 /* Base */,
 				84E16E0627B3BFE900FD63A7 /* YoSwift */,
 				84E16E0527B3BFD700FD63A7 /* YoFoundation */,
@@ -395,6 +436,22 @@
 				84E16E2527B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift */,
 			);
 			path = TableList;
+			sourceTree = "<group>";
+		};
+		84E16E2727B60D6000FD63A7 /* YoRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				84E16E2827B60D9200FD63A7 /* YoRefreshView.swift */,
+				84E16E2A27B6111900FD63A7 /* YoRefreshConfiger.swift */,
+				84E16E2C27B665C000FD63A7 /* YoIndicatorRefreshView.swift */,
+				84E16E2E27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift */,
+				84E16E3027B6793800FD63A7 /* YoGifHeaderRefreshView.swift */,
+				842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */,
+				842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */,
+				842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */,
+				842CD1AB27BB444F003F8240 /* UIScrollView+YoRefresh.swift */,
+			);
+			path = YoRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -636,27 +693,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */,
+				84E16E2F27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift in Sources */,
 				84E16E0127B3B98300FD63A7 /* YoUIImage+Color.swift in Sources */,
 				84E16E0F27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift in Sources */,
 				84E16E2627B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift in Sources */,
+				842CD1AC27BB444F003F8240 /* UIScrollView+YoRefresh.swift in Sources */,
 				84E16E1327B4BA0B00FD63A7 /* YoTabBarCtl.swift in Sources */,
+				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
 				84E16E1827B4F77500FD63A7 /* YoLibViewController.swift in Sources */,
 				84E16E0827B3C0D100FD63A7 /* YoSwiftViewController.swift in Sources */,
 				84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */,
 				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
+				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
 				84E16E0A27B3C17300FD63A7 /* YoFoundationViewController.swift in Sources */,
 				84E16E1527B4BB4700FD63A7 /* YoBaseUIViewController.swift in Sources */,
 				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
+				84E16E3127B6793800FD63A7 /* YoGifHeaderRefreshView.swift in Sources */,
 				84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */,
 				84E16E1E27B4F99200FD63A7 /* YoBaseTableListViewController.swift in Sources */,
 				84E16DFD27B3B98300FD63A7 /* YoUIColor+Gradient.swift in Sources */,
+				84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */,
 				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
 				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
+				84E16E2B27B6111900FD63A7 /* YoRefreshConfiger.swift in Sources */,
 				84E16E2027B4FD5100FD63A7 /* YoBaseTableViewListCell.swift in Sources */,
+				842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */,
 				84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */,
+				842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */,
+				842CD1BE27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

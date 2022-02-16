@@ -25,6 +25,9 @@ class YoTabBarCtl: YoBaseUITabBarController {
                         title: "基础",
                         image: UIImage(named: "tabbar_mine"),
                         selectedImage: UIImage(named: "tabbar_mine_selected"))
-       
+        addChildViewCtl(childViewCtl: YoRefreshListViewCtl(),
+                        title: "基础",
+                        image: UIImage(named: "tabbar_mine"),
+                        selectedImage: UIImage(named: "tabbar_mine_selected"))
     }
 }

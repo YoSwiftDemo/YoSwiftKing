@@ -48,4 +48,6 @@ Swift 基础语法+基础理论
  
  Swift内存泄漏详解([weak self]使用场景)
  https://www.jianshu.com/p/cb45b5e016ff
+ //@escaping @noescape
+ //https://www.jianshu.com/p/905ba2a85455
  */

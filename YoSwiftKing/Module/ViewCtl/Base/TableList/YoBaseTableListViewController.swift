@@ -20,7 +20,8 @@ open class YoBaseTableListViewController: YoBaseUIViewController, UITableViewDat
         return tableView
     }()
     open override func viewDidLoad() {
-        view.backgroundColor = .red
+        super.viewDidLoad()
+        view.backgroundColor = .white
    //测试 数据
         var model = YoBaseTableViewListSectionModel()
         model.title = "播放器xxx"
@@ -30,29 +31,21 @@ open class YoBaseTableListViewController: YoBaseUIViewController, UITableViewDat
         row2.title = "播放器1"
         model.list = [row1, row2]
         listData = [model]
-//        listData = [["title":"播放器xxx"],["list":["播放器1","播放器1"]]]
         layoutViewCtlSubviews()
     }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if listData.count > 0 {
             let sectionModel = listData[section] as! YoBaseTableViewListSectionModel
-    //        var sectionDic = [String: Any]()
-    //        sectionDic = listData[section] as! [String : Any]
-    //        let rows =  sectionDic["list"] as! [Any]
             return sectionModel.list.count
         }else{
             return 0
         }
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //取区数据数据
-//        var sectionDic = [String: Any]()
-//        sectionDic = listData[indexPath.section] as! [String : Any]
-//        let rows: [String] =  sectionDic["list"] as! [String]
         let sectionModel = listData[indexPath.section] as! YoBaseTableViewListSectionModel
         let rowModel: YoBaseTableViewListModel = sectionModel.list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(YoBaseTableViewListCell.self))! as! YoBaseTableViewListCell
-        cell.textLab.text = rowModel.title as String? 
+        cell.textLab.text = rowModel.title as String?
         cell.indexPath = indexPath as NSIndexPath
         cell.backgroundColor = .orange
         return cell
