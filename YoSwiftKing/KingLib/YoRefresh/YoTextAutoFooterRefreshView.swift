@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//MARK:
 class YoTextAutoFooterRefreshView: YoIndicatorAutoFooterRefreshView {
     private let loadingText: String
     private lazy var label: UILabel = {
@@ -25,7 +26,7 @@ class YoTextAutoFooterRefreshView: YoIndicatorAutoFooterRefreshView {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        let center = CGPoint(x: bounds.minX, y: bounds.midX)
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
         indictor.center = center.move(x: -label.bounds.midX - 4)
         label.center  = center.move(x: indictor.bounds.midX - 4)
     }

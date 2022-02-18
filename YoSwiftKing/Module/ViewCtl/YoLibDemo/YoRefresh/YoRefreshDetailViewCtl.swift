@@ -18,12 +18,12 @@ class YoRefreshDetailViewCtl: YoBaseUIViewController {
         // 可以滚动的区域
         scrollView.contentSize = CGSize(width: self.view.frame.size.width,
                                         height: self.view.frame.size.height*2)
-        scrollView.snp.makeConstraints { make in
-            make.left.top.width.equalTo(self.view)
-            make.height.equalTo(self.view.frame.size.height-88-20)
-        }
-//        scrollView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width,
-//                                  height: self.view.frame.size.height-88-20)
+//        scrollView.snp.makeConstraints { make in
+//            make.left.top.width.equalTo(self.view)
+//            make.height.equalTo(self.view.frame.size.height-88-20)
+//        }
+        scrollView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width,
+                                  height: self.view.frame.size.height-88-20)
         return scrollView
     }()
 }

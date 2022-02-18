@@ -112,7 +112,7 @@ extension UIScrollView {
     public func createFootertIndicatorAuto(height: CGFloat = 60, action: @escaping () -> Void) {
         footer = YoIndicatorAutoFooterRefreshView(height: height, action: action)
     }
-    //尾部刷新+文字 +Auto Footer + Text +Auto
+    //尾部立即刷新+文字 +Auto Footer + Text +Auto
     public func createFooterTextAuto(loadingText: String = YoRefreshConfig.instance.loadingText, height: CGFloat = 60, action: @escaping () -> Void) {
         footer = YoTextAutoFooterRefreshView(loadingText: loadingText, height: height, action: action)
     }

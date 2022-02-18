@@ -129,7 +129,6 @@ extension YoRefreshView {
             completion?()
             return
         }
-
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.3, animations: {
                 switch self.refreshStyle {
@@ -162,7 +161,7 @@ extension YoRefreshView {
     //MARK:  private添加监听
     private func setupObserver(_ scrollView: UIScrollView) {
         //监听滚动-偏移
-        offsetToken = scrollView.observe(\.contentOffset, c) { [weak self] scrollView, _ in
+        offsetToken = scrollView.observe(\.contentOffset, options: [.new]) { [weak self] scrollView, _ in
             self?.scrollViewDidScroll(scrollView)
         }
         //监听滚动-手势状态
@@ -192,15 +191,10 @@ extension YoRefreshView {
         case .header:
             progress = min(1, max(0, -(scrollView.contentOffset.y + scrollView.contentInsetTop) / height))
         case .footer:
-            print(scrollView.contentSize.height)
-            print(scrollView.bounds.height)
-            print( "---------")
             if scrollView.contentSize.height <= scrollView.bounds.height {
                 break
             }
             progress = min(1, max(0, (scrollView.contentOffset.y + scrollView.bounds.height - scrollView.contentSize.height - scrollView.contentInsetBottom) / height))
-            print( "----progress-----" )
-            print(progress)
         case .autoFooter:
             if scrollView.contentSize.height <= scrollView.bounds.height {
                 break
