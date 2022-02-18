@@ -11,8 +11,8 @@ class YoIndicatorTextRefreshView: YoIndicatorRefreshView {
     //文本
     private lazy var textLab: UILabel = {
         let lab = UILabel()
-        lab.font = UIFont.systemFont(ofSize: 14)
-        lab.textColor = UIColor.black.withAlphaComponent(0.8)
+        lab.font = YoRefreshConfig.instance.titleTextFont
+        lab.textColor = YoRefreshConfig.instance.titleTextTextColor
         addSubview(lab)
         return lab
     }()

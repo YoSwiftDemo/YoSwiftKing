@@ -28,7 +28,12 @@ open class YoBaseUINavigationController: UINavigationController {
 //    }()
     open override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        navigationBar.tintColor = .red;
+        //设置导航栏背景颜色
+        navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = .red
+        //设置标题及其颜色
+        navigationBar.titleTextAttributes = [.foregroundColor : UIColor.purple, .font : UIFont.systemFont(ofSize: 18)]
     }
     deinit {}
 }

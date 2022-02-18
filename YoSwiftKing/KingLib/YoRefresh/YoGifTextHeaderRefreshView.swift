@@ -14,8 +14,8 @@ class YoGifTextHeaderRefreshView: YoGifHeaderRefreshView {
     //
     private lazy var  label: UILabel = {
        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = UIColor.black.withAlphaComponent(0.8)
+        label.font = YoRefreshConfig.instance.refreshTextFont
+        label.textColor =  YoRefreshConfig.instance.refreshTextTextColor
         return label
     }()
     //

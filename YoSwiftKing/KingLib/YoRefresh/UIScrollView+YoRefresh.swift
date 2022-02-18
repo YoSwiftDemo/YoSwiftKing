@@ -56,7 +56,8 @@ extension UIScrollView {
         header = YoIndicatorRefreshView(isHeader: true,height: height,action: action)
     }
     //MARK:头部刷新+指示器+文字 Indicator + Text header
-    public func  createHeaderIndicatorText(refreshText: YoRefreshText = headerText, height: CGFloat = 60,action: @escaping () -> Void) {
+
+    public func  createHeaderIndicatorText(refreshText: YoRefreshText =  YoRefreshConfig.instance.headerText, height: CGFloat = 60,action: @escaping () -> Void) {
         header = YoIndicatorTextRefreshView(isHeader: true, refreshText: refreshText, height: height, action: action)
     }
     //MARK:头部刷新—— gif  GIF header
@@ -64,7 +65,7 @@ extension UIScrollView {
         header = YoGifHeaderRefreshView(data: data, isLarger: isLarger, height: height, action: action)
     }
     //MARK:头部刷新 +小图+文字 Gif+text
-    public func createHeaderGifText(data: Data,isLarger: Bool = false, refreshText: YoRefreshText = headerText, height: CGFloat = 60,action: @escaping() -> Void) {
+    public func createHeaderGifText(data: Data,isLarger: Bool = false, refreshText: YoRefreshText = YoRefreshConfig.instance.headerText, height: CGFloat = 60,action: @escaping() -> Void) {
         header = YoGifHeaderRefreshView(data: data, isLarger: isLarger, height: height, action: action)
     }
     //MARK:Header
@@ -76,7 +77,7 @@ extension UIScrollView {
        footer = refreshView
     }
     //MARK: 开始刷新方法
-    public func bginRefreshing() {
+    public func beginRefreshing() {
         header?.beginRefreshing()
     }
     //结束刷新
@@ -102,7 +103,7 @@ extension UIScrollView {
         footer = YoIndicatorRefreshView(isHeader: false, height: height, action: action)
     }
     //尾部刷新+指示器+文字 Footer +Indicator+text
-    public func createFooterIndicatorText(refreshText: YoRefreshText = footerText,
+    public func createFooterIndicatorText(refreshText: YoRefreshText = YoRefreshConfig.instance.footerText,
                                           height: CGFloat = 60,
                                           action: @escaping () -> Void){
         footer = YoIndicatorTextRefreshView(isHeader: false, refreshText:refreshText , height: height, action: action)
@@ -112,7 +113,7 @@ extension UIScrollView {
         footer = YoIndicatorAutoFooterRefreshView(height: height, action: action)
     }
     //尾部刷新+文字 +Auto Footer + Text +Auto
-    public func createFooterTextAuto(loadingText: String = loadingText, height: CGFloat = 60, action: @escaping () -> Void) {
+    public func createFooterTextAuto(loadingText: String = YoRefreshConfig.instance.loadingText, height: CGFloat = 60, action: @escaping () -> Void) {
         footer = YoTextAutoFooterRefreshView(loadingText: loadingText, height: height, action: action)
     }
     // 清除 头部刷新
@@ -124,19 +125,3 @@ extension UIScrollView {
         footer = nil
     }
 }
-
-private let isChinese = Locale.preferredLanguages[0].contains("zh-Han")
-
-public let loadingText = isChinese ? "正在加载..." : "Loading..."
-
-public let headerText = YoRefreshText(
-    loadingText: loadingText,
-    pullingText: isChinese ? "下拉刷新" : "Pull down to refresh",
-    releaseText: isChinese ? "释放刷新" : "Release to refresh"
-)
-
-public let footerText = YoRefreshText(
-    loadingText: loadingText,
-    pullingText: isChinese ? "上拉加载" : "Pull up to load more",
-    releaseText: isChinese ? "释放加载" : "Release to load more"
-)

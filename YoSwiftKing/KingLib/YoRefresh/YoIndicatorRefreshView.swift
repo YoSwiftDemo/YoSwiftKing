@@ -19,17 +19,17 @@ class YoIndicatorRefreshView: YoRefreshView {
 
         let layer = CAShapeLayer()
         layer.path = path.cgPath
-        layer.strokeColor = UIColor.black.withAlphaComponent(0.8).cgColor
-        layer.lineWidth = 2
+        layer.strokeColor = YoRefreshConfig.instance.arrowStrokeColor.cgColor
+        //UIColor.black.withAlphaComponent(0.5).cgColor
+        layer.lineWidth =  YoRefreshConfig.instance.arrowLineWidth
         layer.lineCap = .round
-        
-        //测试
-        layer.strokeColor =  UIColor.green.cgColor
         return layer
     }()
-    //
-    let indicatorView = UIActivityIndicatorView(style: .gray)
+    //MARK: 菊花
+    let indicatorView = UIActivityIndicatorView(style: YoRefreshConfig.instance.activityIndicatorStyle)
+    //MARK: private 纪录是否刷新状态
     private let isHeader: Bool
+    //MARK: init
     init(isHeader: Bool, height: CGFloat, action: @escaping ()-> Void) {
         self.isHeader = isHeader
         super.init(refreshStyle: isHeader ? .header : .footer, height: height, action: action)
@@ -39,7 +39,7 @@ class YoIndicatorRefreshView: YoRefreshView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //重写布局
+    //MARK:重写布局
     override func layoutSubviews() {
         super.layoutSubviews()
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
