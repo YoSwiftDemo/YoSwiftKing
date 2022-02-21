@@ -14,7 +14,7 @@ class YoTabBarCtl: YoBaseUITabBarController {
         UITabBar.appearance().unselectedItemTintColor =  .hex("#999999")
         UITabBar.appearance().tintColor = .hex("#24C065")
         
-        addChildViewCtl(childViewCtl: TradeListTableViewCtl(),
+        addChildViewCtl(childViewCtl: TradeMainViewCtl(),
                         title: "交易",
                         image: UIImage(named: "tabar_discover_normal"),
                         selectedImage: UIImage(named: "tabar_discover_selected"))

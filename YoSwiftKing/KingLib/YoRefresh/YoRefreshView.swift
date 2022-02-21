@@ -14,13 +14,13 @@ import UIKit
  */
 open class YoRefreshView: UIView {
     private let refreshStyle: YoRefreshStyle
-    public let height: CGFloat
+    public let heightValue: CGFloat
     private let action: () -> Void
     // 默认 是默认的@noescape，这意味着该闭包不能超出方法的作用域，方法return后闭包就销毁了，所以它是安全的
     //方法加了@escaping，以为着“逃脱”，闭包的生命周期可以逃脱方法的作用域，在方法return后不会销毁，这意味着它的调用时机是不确定的，是异步的。一般用于异步网络请求
     public init(refreshStyle: YoRefreshStyle, height: CGFloat, action:  @escaping () -> Void) {
         self.refreshStyle = refreshStyle
-        self.height = height
+        self.heightValue = height
         self.action = action
         super.init(frame: .zero)
         self.autoresizingMask = [.flexibleWidth] //取消自适应layout

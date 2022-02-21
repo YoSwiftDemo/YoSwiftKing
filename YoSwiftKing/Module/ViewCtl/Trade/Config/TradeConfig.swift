@@ -1,5 +1,5 @@
 //
-//  YoTradeConfig.swift
+//  TradeConfig.swift
 //  YoSwiftKing
 //
 //  Created by admin on 2022/2/21.
@@ -8,10 +8,10 @@
 import UIKit
 import SwiftUI
 //MARK:
-open class YoTradeConfig: NSObject{
+open class TradeConfig: NSObject{
     /// 单例，设置一次全局使用
-    public static let instance: YoTradeConfig = {
-        let instance = YoTradeConfig()
+    public static let instance: TradeConfig = {
+        let instance = TradeConfig()
         return instance
     }()
     //字号相关
@@ -49,6 +49,10 @@ open class YoTradeConfig: NSObject{
     
     //分割线颜色 cell里
     public var lineColor: UIColor = .lightBackgroundColor
+    
+    //高度相关
+    //交易顶部
+    public var tradeTopBackgroundHeight: CGFloat = 44+44  //注意告诉+ 顶部状态栏高度44或20
     
 
     

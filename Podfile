@@ -28,6 +28,7 @@ target 'YoSwiftKing' do
   pod 'ReactorKit' # RxSwift 一种框架
   pod 'Kingfisher'
   pod 'RxGesture' # 基于view的Rx化手势封装
+  pod 'DNSPageView' # 分页器
   target 'YoSwiftKingTests' do
     inherit! :search_paths
     # Pods for testing

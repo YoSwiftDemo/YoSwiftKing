@@ -27,7 +27,15 @@
 		846A369827B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */; };
 		84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5127C377510020F842 /* TradeMainViewCtl.swift */; };
 		84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */; };
-		84974F5827C37B320020F842 /* YoTradeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5727C37B320020F842 /* YoTradeConfig.swift */; };
+		84974F5827C37B320020F842 /* TradeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5727C37B320020F842 /* TradeConfig.swift */; };
+		84974F5A27C387770020F842 /* TradeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5927C387770020F842 /* TradeListModel.swift */; };
+		84974F5C27C387910020F842 /* TradeListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5B27C387910020F842 /* TradeListTableCell.swift */; };
+		84974F6027C3906D0020F842 /* YoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5E27C3906D0020F842 /* YoPageView.swift */; };
+		84974F6127C3906D0020F842 /* YoTabPagerBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5F27C3906D0020F842 /* YoTabPagerBarView.swift */; };
+		84974F6427C390D80020F842 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6327C390D80020F842 /* UIView+Layout.swift */; };
+		84974F6727C391430020F842 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6627C391430020F842 /* NSObject+ClassName.swift */; };
+		84974F6A27C3927C0020F842 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6927C3927C0020F842 /* String+Size.swift */; };
+		84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6C27C39C090020F842 /* CGFloat+Config.swift */; };
 		84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */; };
 		84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */; };
 		84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */; };
@@ -103,7 +111,15 @@
 		846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84974F5127C377510020F842 /* TradeMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainViewCtl.swift; sourceTree = "<group>"; };
 		84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListTableViewCtl.swift; sourceTree = "<group>"; };
-		84974F5727C37B320020F842 /* YoTradeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTradeConfig.swift; sourceTree = "<group>"; };
+		84974F5727C37B320020F842 /* TradeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeConfig.swift; sourceTree = "<group>"; };
+		84974F5927C387770020F842 /* TradeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListModel.swift; sourceTree = "<group>"; };
+		84974F5B27C387910020F842 /* TradeListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListTableCell.swift; sourceTree = "<group>"; };
+		84974F5E27C3906D0020F842 /* YoPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoPageView.swift; sourceTree = "<group>"; };
+		84974F5F27C3906D0020F842 /* YoTabPagerBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoTabPagerBarView.swift; sourceTree = "<group>"; };
+		84974F6327C390D80020F842 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		84974F6627C391430020F842 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		84974F6927C3927C0020F842 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
+		84974F6C27C39C090020F842 /* CGFloat+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Config.swift"; sourceTree = "<group>"; };
 		84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoDarkModeColor.swift; sourceTree = "<group>"; };
 		84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoLaunchScreen.swift; sourceTree = "<group>"; };
 		84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseUITabBarController.swift; sourceTree = "<group>"; };
@@ -288,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */,
+				84974F5927C387770020F842 /* TradeListModel.swift */,
+				84974F5B27C387910020F842 /* TradeListTableCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -295,14 +313,60 @@
 		84974F5627C37B200020F842 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				84974F5727C37B320020F842 /* YoTradeConfig.swift */,
+				84974F5727C37B320020F842 /* TradeConfig.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		84974F5D27C3906D0020F842 /* YoPage */ = {
+			isa = PBXGroup;
+			children = (
+				84974F5E27C3906D0020F842 /* YoPageView.swift */,
+				84974F5F27C3906D0020F842 /* YoTabPagerBarView.swift */,
+			);
+			path = YoPage;
+			sourceTree = "<group>";
+		};
+		84974F6227C390BF0020F842 /* UIView+Layout */ = {
+			isa = PBXGroup;
+			children = (
+				84974F6327C390D80020F842 /* UIView+Layout.swift */,
+			);
+			path = "UIView+Layout";
+			sourceTree = "<group>";
+		};
+		84974F6527C391210020F842 /* NSObject+ClassName */ = {
+			isa = PBXGroup;
+			children = (
+				84974F6627C391430020F842 /* NSObject+ClassName.swift */,
+			);
+			path = "NSObject+ClassName";
+			sourceTree = "<group>";
+		};
+		84974F6827C392700020F842 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				84974F6927C3927C0020F842 /* String+Size.swift */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		84974F6B27C39BEF0020F842 /* CGFloat */ = {
+			isa = PBXGroup;
+			children = (
+				84974F6C27C39C090020F842 /* CGFloat+Config.swift */,
+			);
+			path = CGFloat;
 			sourceTree = "<group>";
 		};
 		84E16DE727B3B46C00FD63A7 /* KingLib */ = {
 			isa = PBXGroup;
 			children = (
+				84974F6B27C39BEF0020F842 /* CGFloat */,
+				84974F6827C392700020F842 /* NSString */,
+				84974F6527C391210020F842 /* NSObject+ClassName */,
+				84974F6227C390BF0020F842 /* UIView+Layout */,
+				84974F5D27C3906D0020F842 /* YoPage */,
 				84E16E2727B60D6000FD63A7 /* YoRefresh */,
 				84E16DEC27B3B72A00FD63A7 /* YoBase */,
 				84E16DF127B3B98300FD63A7 /* KingUIColor */,
@@ -761,34 +825,42 @@
 				842CD1AC27BB444F003F8240 /* UIScrollView+YoRefresh.swift in Sources */,
 				84E16E1327B4BA0B00FD63A7 /* YoTabBarCtl.swift in Sources */,
 				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
+				84974F5A27C387770020F842 /* TradeListModel.swift in Sources */,
 				84E16E1827B4F77500FD63A7 /* YoLibViewController.swift in Sources */,
+				84974F6427C390D80020F842 /* UIView+Layout.swift in Sources */,
 				844A1ABF27BE204B00A1FC75 /* YoSuperCatHeaderRefreshView .swift in Sources */,
 				84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */,
+				84974F6727C391430020F842 /* NSObject+ClassName.swift in Sources */,
 				84E16E0827B3C0D100FD63A7 /* YoSwiftViewController.swift in Sources */,
 				84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */,
 				84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */,
 				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
 				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
+				84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
 				84E16E0A27B3C17300FD63A7 /* YoFoundationViewController.swift in Sources */,
 				84E16E1527B4BB4700FD63A7 /* YoBaseUIViewController.swift in Sources */,
 				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
 				84E16E3127B6793800FD63A7 /* YoGifHeaderRefreshView.swift in Sources */,
 				84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */,
+				84974F6127C3906D0020F842 /* YoTabPagerBarView.swift in Sources */,
 				84E16E1E27B4F99200FD63A7 /* YoBaseTableListViewController.swift in Sources */,
 				84E16DFD27B3B98300FD63A7 /* YoUIColor+Gradient.swift in Sources */,
 				84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */,
 				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
-				84974F5827C37B320020F842 /* YoTradeConfig.swift in Sources */,
+				84974F5827C37B320020F842 /* TradeConfig.swift in Sources */,
 				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
 				84E16E2B27B6111900FD63A7 /* YoRefreshConfig.swift in Sources */,
 				84E16E2027B4FD5100FD63A7 /* YoBaseTableViewListCell.swift in Sources */,
 				842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */,
+				84974F6A27C3927C0020F842 /* String+Size.swift in Sources */,
 				84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */,
 				842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */,
 				842CD1BE27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift in Sources */,
+				84974F5C27C387910020F842 /* TradeListTableCell.swift in Sources */,
+				84974F6027C3906D0020F842 /* YoPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
