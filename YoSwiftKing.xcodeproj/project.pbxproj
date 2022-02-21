@@ -25,6 +25,9 @@
 		846A368C27B3A4C7004AEC34 /* YoSwiftKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A368B27B3A4C7004AEC34 /* YoSwiftKingTests.swift */; };
 		846A369627B3A4C7004AEC34 /* YoSwiftKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369527B3A4C7004AEC34 /* YoSwiftKingUITests.swift */; };
 		846A369827B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */; };
+		84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5127C377510020F842 /* TradeMainViewCtl.swift */; };
+		84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */; };
+		84974F5827C37B320020F842 /* YoTradeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5727C37B320020F842 /* YoTradeConfig.swift */; };
 		84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */; };
 		84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */; };
 		84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */; };
@@ -98,6 +101,9 @@
 		846A369127B3A4C7004AEC34 /* YoSwiftKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoSwiftKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A369527B3A4C7004AEC34 /* YoSwiftKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITests.swift; sourceTree = "<group>"; };
 		846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84974F5127C377510020F842 /* TradeMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainViewCtl.swift; sourceTree = "<group>"; };
+		84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListTableViewCtl.swift; sourceTree = "<group>"; };
+		84974F5727C37B320020F842 /* YoTradeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTradeConfig.swift; sourceTree = "<group>"; };
 		84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoDarkModeColor.swift; sourceTree = "<group>"; };
 		84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoLaunchScreen.swift; sourceTree = "<group>"; };
 		84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseUITabBarController.swift; sourceTree = "<group>"; };
@@ -258,6 +264,40 @@
 				846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */,
 			);
 			path = YoSwiftKingUITests;
+			sourceTree = "<group>";
+		};
+		84974F4E27C374C40020F842 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				84974F5627C37B200020F842 /* Config */,
+				84974F5327C377D10020F842 /* List */,
+				84974F4F27C374EC0020F842 /* Main */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
+		84974F4F27C374EC0020F842 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				84974F5127C377510020F842 /* TradeMainViewCtl.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84974F5327C377D10020F842 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		84974F5627C37B200020F842 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84974F5727C37B320020F842 /* YoTradeConfig.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		84E16DE727B3B46C00FD63A7 /* KingLib */ = {
@@ -426,6 +466,7 @@
 		84E16E1A27B4F82200FD63A7 /* ViewCtl */ = {
 			isa = PBXGroup;
 			children = (
+				84974F4E27C374C40020F842 /* Trade */,
 				842CD1B027BB7A54003F8240 /* YoLibDemo */,
 				84E16E1B27B4F86600FD63A7 /* Base */,
 				84E16E0627B3BFE900FD63A7 /* YoSwift */,
@@ -722,8 +763,10 @@
 				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
 				84E16E1827B4F77500FD63A7 /* YoLibViewController.swift in Sources */,
 				844A1ABF27BE204B00A1FC75 /* YoSuperCatHeaderRefreshView .swift in Sources */,
+				84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */,
 				84E16E0827B3C0D100FD63A7 /* YoSwiftViewController.swift in Sources */,
 				84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */,
+				84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */,
 				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
 				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
@@ -738,6 +781,7 @@
 				84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */,
 				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
+				84974F5827C37B320020F842 /* YoTradeConfig.swift in Sources */,
 				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
 				84E16E2B27B6111900FD63A7 /* YoRefreshConfig.swift in Sources */,
 				84E16E2027B4FD5100FD63A7 /* YoBaseTableViewListCell.swift in Sources */,
