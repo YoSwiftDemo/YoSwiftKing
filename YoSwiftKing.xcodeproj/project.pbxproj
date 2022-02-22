@@ -37,6 +37,10 @@
 		84974F6A27C3927C0020F842 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6927C3927C0020F842 /* String+Size.swift */; };
 		84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6C27C39C090020F842 /* CGFloat+Config.swift */; };
 		84974F7027C4D03E0020F842 /* YoTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6F27C4D03E0020F842 /* YoTagsView.swift */; };
+		84974F8327C508A20020F842 /* YoCalendarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F8227C508A20020F842 /* YoCalendarConfig.swift */; };
+		84974F8A27C529620020F842 /* WHOpthionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F8727C529610020F842 /* WHOpthionButton.swift */; };
+		84974F8B27C529620020F842 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F8827C529610020F842 /* CalendarModel.swift */; };
+		84974F8C27C529620020F842 /* WHCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F8927C529610020F842 /* WHCalendar.swift */; };
 		84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */; };
 		84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */; };
 		84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */; };
@@ -122,6 +126,10 @@
 		84974F6927C3927C0020F842 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		84974F6C27C39C090020F842 /* CGFloat+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Config.swift"; sourceTree = "<group>"; };
 		84974F6F27C4D03E0020F842 /* YoTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTagsView.swift; sourceTree = "<group>"; };
+		84974F8227C508A20020F842 /* YoCalendarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoCalendarConfig.swift; sourceTree = "<group>"; };
+		84974F8727C529610020F842 /* WHOpthionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHOpthionButton.swift; path = "../../../../../../Downloads/WHCalendar-master 2/WHCalendar/WHOpthionButton.swift"; sourceTree = "<group>"; };
+		84974F8827C529610020F842 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarModel.swift; path = "../../../../../../Downloads/WHCalendar-master 2/WHCalendar/CalendarModel.swift"; sourceTree = "<group>"; };
+		84974F8927C529610020F842 /* WHCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHCalendar.swift; path = "../../../../../../Downloads/WHCalendar-master 2/WHCalendar/WHCalendar.swift"; sourceTree = "<group>"; };
 		84E16DE827B3B46C00FD63A7 /* YoDarkModeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoDarkModeColor.swift; sourceTree = "<group>"; };
 		84E16DE927B3B46C00FD63A7 /* YoLaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoLaunchScreen.swift; sourceTree = "<group>"; };
 		84E16DEF27B3B80E00FD63A7 /* YoBaseUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoBaseUITabBarController.swift; sourceTree = "<group>"; };
@@ -287,6 +295,7 @@
 		84974F4E27C374C40020F842 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
+				84974F7B27C507500020F842 /* YoCalendar */,
 				84974F6E27C4D00E0020F842 /* YoTagView */,
 				84974F5627C37B200020F842 /* Config */,
 				84974F5327C377D10020F842 /* List */,
@@ -368,6 +377,17 @@
 				84974F6F27C4D03E0020F842 /* YoTagsView.swift */,
 			);
 			path = YoTagView;
+			sourceTree = "<group>";
+		};
+		84974F7B27C507500020F842 /* YoCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				84974F8227C508A20020F842 /* YoCalendarConfig.swift */,
+				84974F8827C529610020F842 /* CalendarModel.swift */,
+				84974F8927C529610020F842 /* WHCalendar.swift */,
+				84974F8727C529610020F842 /* WHOpthionButton.swift */,
+			);
+			path = YoCalendar;
 			sourceTree = "<group>";
 		};
 		84E16DE727B3B46C00FD63A7 /* KingLib */ = {
@@ -828,8 +848,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84974F8A27C529620020F842 /* WHOpthionButton.swift in Sources */,
 				842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */,
 				84E16E2F27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift in Sources */,
+				84974F8327C508A20020F842 /* YoCalendarConfig.swift in Sources */,
 				84E16E0127B3B98300FD63A7 /* YoUIImage+Color.swift in Sources */,
 				84E16E0F27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift in Sources */,
 				84E16E2627B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift in Sources */,
@@ -851,6 +873,7 @@
 				84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
 				84974F7027C4D03E0020F842 /* YoTagsView.swift in Sources */,
+				84974F8B27C529620020F842 /* CalendarModel.swift in Sources */,
 				84E16E0A27B3C17300FD63A7 /* YoFoundationViewController.swift in Sources */,
 				84E16E1527B4BB4700FD63A7 /* YoBaseUIViewController.swift in Sources */,
 				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
@@ -862,6 +885,7 @@
 				84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */,
 				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
+				84974F8C27C529620020F842 /* WHCalendar.swift in Sources */,
 				84974F5827C37B320020F842 /* TradeConfig.swift in Sources */,
 				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
 				84E16E2B27B6111900FD63A7 /* YoRefreshConfig.swift in Sources */,
