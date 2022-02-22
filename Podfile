@@ -29,6 +29,7 @@ target 'YoSwiftKing' do
   pod 'Kingfisher'
   pod 'RxGesture' # 基于view的Rx化手势封装
   pod 'DNSPageView' # 分页器
+  pod 'LJTagsView'
   target 'YoSwiftKingTests' do
     inherit! :search_paths
     # Pods for testing

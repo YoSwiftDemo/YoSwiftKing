@@ -30,15 +30,10 @@ class TradeMainViewCtl: UIViewController {
         style.isShowBottomLine = true
         style.isTitleViewScrollEnabled = true
         style.titleViewBackgroundColor = UIColor.clear
-        // 适配 dark mode
-        if #available(iOS 13.0, *) {
-            style.titleSelectedColor = UIColor.dns.dynamic(UIColor.red, dark: UIColor.blue)
-            style.titleColor = UIColor.dns.dynamic(UIColor.green, dark: UIColor.orange)
-        } else {
-            style.titleSelectedColor = UIColor.black
-            style.titleColor = UIColor.gray
-        }
-        style.bottomLineColor = UIColor(red: 0 / 255, green: 143 / 255, blue: 223 / 255, alpha: 1.0)
+        style.titleMargin = 80
+        style.titleSelectedColor = UIColor.black
+        style.titleColor = UIColor.white
+        style.bottomLineColor = .green
         style.bottomLineWidth = 20
         let titles = ["代缴费", "委托", "过户"]
         for i in 0..<titles.count {
@@ -80,7 +75,9 @@ class TradeMainViewCtl: UIViewController {
             } else {
                 maker.top.equalTo(topLayoutGuide.snp.bottom)
             }
-            maker.leading.trailing.equalToSuperview()
+//            maker.leading.trailing.equalToSuperview()
+            maker.left.equalTo(view)
+            maker.width.equalTo(view)
             maker.height.equalTo(44)
         }
 
