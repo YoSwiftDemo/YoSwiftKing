@@ -19,7 +19,7 @@ open class TradeConfig: NSObject{
     public var mainTitleFont: UIFont =  .boldSystemFont(ofSize: 16)
     
     //选择按钮字号
-    public var buttonFont: UIFont =  .systemFont(ofSize: 12)
+    public var selectButtonFont: UIFont =  .systemFont(ofSize: 12)
     
     //2级标题    cell里 标题 物业费/地产税/水费
     public var titleFont: UIFont =  .systemFont(ofSize: 14)
@@ -35,8 +35,10 @@ open class TradeConfig: NSObject{
     
     //1级标题  顶部分页栏标题
     public var mainTitleColor: UIColor  = .white
-     //选择按钮字号 按钮颜色
-    public var  buttonColor: UIColor = .black
+    //选择按钮 -  按钮颜色
+    public var  selectBtnSelectedColor: UIColor = .black
+    //选择按钮 - 未选择验证
+    public var  selectBtnNormalColor: UIColor = .lightTextColor
     //选择区背景色
     public var changTypeColor: UIColor = .lightBackgroundColor
     
@@ -46,6 +48,7 @@ open class TradeConfig: NSObject{
     public var textColor: UIColor = .black
     //2级文本    2021.10.12
     public var textSubColor: UIColor = .lightTextColor
+    
     
     //分割线颜色 cell里
     public var lineColor: UIColor = .lightBackgroundColor
