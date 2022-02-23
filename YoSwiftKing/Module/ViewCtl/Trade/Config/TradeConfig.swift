@@ -30,15 +30,15 @@ open class TradeConfig: NSObject{
    
    
     //渐变色
-    public var navStartColor: UIColor = .red
-    public var navEndColor: UIColor = .yellow
+    public var navStartColor: UIColor =  .hex("#FB7830")
+    public var navEndColor: UIColor = .hex("#FF983A")
     
     //1级标题  顶部分页栏标题
-    public var mainTitleColor: UIColor  = .white
+    public var mainTitleColor: UIColor  = .lightTextColor
     //选择按钮 -  按钮颜色
     public var  selectBtnSelectedColor: UIColor = .black
     //选择按钮 - 未选择验证
-    public var  selectBtnNormalColor: UIColor = .lightTextColor
+    public var  selectBtnNormalColor: UIColor = .black
     //选择区背景色
     public var changTypeColor: UIColor = .lightBackgroundColor
     
@@ -55,7 +55,7 @@ open class TradeConfig: NSObject{
     
     //高度相关
     //交易顶部
-    public var tradeTopBackgroundHeight: CGFloat = 44+44  //注意告诉+ 顶部状态栏高度44或20
+    public var tradeTopBackgroundHeight: CGFloat = 44+44+5  //注意告诉+ 顶部状态栏高度44或20
     
 
     

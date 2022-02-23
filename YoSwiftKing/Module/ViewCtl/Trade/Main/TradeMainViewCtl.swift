@@ -36,15 +36,15 @@ class TradeMainViewCtl: UIViewController {
         style.isShowBottomLine = true
         style.isTitleViewScrollEnabled = true
         style.titleViewBackgroundColor = UIColor.clear
-        style.titleMargin = 80
-        style.titleSelectedColor = UIColor.black
-        style.titleColor = UIColor.white
-        style.bottomLineColor = .green
-        style.bottomLineWidth = 20
+        style.titleMargin = self.view.frame.size.width/4
+        style.titleSelectedColor = UIColor.white
+        style.titleColor = UIColor.lightTextColor
+        style.bottomLineColor = .white
+        style.bottomLineWidth = 40
         let titles = ["代缴费", "委托", "过户"]
         for i in 0..<titles.count {
             let controller = TradeListTableViewCtl()
-            controller.view.backgroundColor = UIColor.randomColor
+            controller.view.backgroundColor = UIColor.white
             addChild(controller)
         }
 
@@ -76,8 +76,6 @@ extension TradeMainViewCtl {
         
         let titleView = pageViewManager.titleView
         view.addSubview(titleView)
-        titleView.backgroundColor = .clear
-        
 
         // 单独设置 titleView 的大小和位置，可以使用 autolayout 或者 frame
         titleView.snp.makeConstraints { (maker) in

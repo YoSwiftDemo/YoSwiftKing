@@ -19,7 +19,6 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         btn.setTitleColor(TradeConfig.instance.selectBtnSelectedColor, for: .selected)
         btn.setTitleColor(TradeConfig.instance.selectBtnNormalColor, for: .normal)
         btn.addTarget(self, action: #selector(selectBtnAction(_:)), for: .touchUpInside)
-        btn.backgroundColor = .red
         return btn
     }()
     //UI 选择 时间
@@ -31,33 +30,39 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         btn.setTitleColor(TradeConfig.instance.selectBtnSelectedColor, for: .selected)
         btn.setTitleColor(TradeConfig.instance.selectBtnNormalColor, for: .normal)
         btn.addTarget(self, action: #selector(selectBtnAction(_:)), for: .touchUpInside)
-        btn.backgroundColor = .green
         return btn
     }()
     //默认日期
     var defaultDate = Date()
     //弹窗日历
-    private lazy var  calendarView: WHCalendar = {
-        let calendar = WHCalendar()
-        calendar.isHidden = true
+    private lazy var  calendarView: YoCalendar = {
+        let calendar = YoCalendar()
+         //        calendar.isHidden = false
         calendar.animationType = .center
         return calendar
     }()
+    
+    private lazy var  testCalendarView: YoCalendarView = {
+        let calendar = YoCalendarView()
+        return calendar
+    }()
+    
+    
     //UI 标签view
     var dataSource = ["全部","物业费","地产税","水费","电费","网费","罚款","月供"]
     var modelDataSource: [TagsPropertyModel] = [TagsPropertyModel]()
-    lazy var tagsView0 : LJTagsView = {
-        let tagsView0 = LJTagsView()
-        view.addSubview(tagsView0)
-        tagsView0.backgroundColor = .brown
-        tagsView0.tagsViewDelegate = self
-        tagsView0.tagsViewContentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        tagsView0.tagsViewMinHeight = 0
-        tagsView0.scrollDirection = .vertical
-        tagsView0.tagsViewMaxHeight = view.frame.size.height
-        tagsView0.minimumLineSpacing = 10;
-        tagsView0.minimumInteritemSpacing = 10;
-        return tagsView0
+    lazy var tagsView : LJTagsView = {
+        let tagsView = LJTagsView()
+        view.addSubview(tagsView)
+        tagsView.backgroundColor = .white
+        tagsView.tagsViewDelegate = self
+        tagsView.tagsViewContentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        tagsView.tagsViewMinHeight = 0
+        tagsView.scrollDirection = .vertical
+        tagsView.tagsViewMaxHeight = view.frame.size.height
+        tagsView.minimumLineSpacing = 10;
+        tagsView.minimumInteritemSpacing = 10;
+        return tagsView
     }()
 
     //列表数据
@@ -110,24 +115,24 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
             make.left.equalTo(view).offset(60)
             make.height.equalTo(30)
             make.width.greaterThanOrEqualTo(60)
-            make.top.equalTo(self.view).offset(40)
+            make.top.equalTo(self.view).offset(20)
         }
         //按钮选择  时间
         selectDateBtn.snp.makeConstraints { make in
             make.right.equalTo(view).offset(-60)
             make.height.equalTo(30)
             make.width.greaterThanOrEqualTo(60)
-            make.top.equalTo(self.view).offset(40)
+            make.top.equalTo(self.view).offset(20)
         }
         //标签View
-        tagsView0.snp.makeConstraints { make in
-            make.top.equalTo(selectTypeBtn.snp.bottom).offset(30)
+        tagsView.snp.makeConstraints { make in
+            make.top.equalTo(selectTypeBtn.snp.bottom).offset(10)
             make.left.right.equalToSuperview().offset(0)
             //不设置高度
         }
         //表
            tableView.snp.makeConstraints { make in
-               make.top.equalTo(tagsView0.snp.bottom)
+               make.top.equalTo(tagsView.snp.bottom)
                make.left.bottom.right.equalTo(view)
            }
      }
@@ -137,6 +142,12 @@ extension TradeListTableViewCtl: UITableViewDelegate {
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 15+20+10+20+15+1
     }
+    //xuan ze
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      let viewCtl =  TradeDetailViewCtl()
+        viewCtl.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewCtl, animated: true)
+    }
 }
 //MARK: 标签代理回调
 extension TradeListTableViewCtl:  LJTagsViewProtocol {
@@ -145,16 +156,15 @@ extension TradeListTableViewCtl:  LJTagsViewProtocol {
 
         if (index  == 15) {item.minHeight = 40}
         item.imageAlignmentMode = .left
-
             item.normalImage = UIImage(named: "delete")
             item.imageSize = CGSize(width: 10, height: 10)
 
     }
     
     func tagsViewItemTapAction(_ tagsView: LJTagsView, item: TagsPropertyModel, index: NSInteger) {
-            dataSource.remove(at: index)
-            tagsView.dataSource.remove(at: index)
-        tagsView.reloadData()
+//        dataSource.remove(at: index)
+//        tagsView.dataSource.remove(at: index)
+//        tagsView.reloadData()
     }
     
     func tagsViewTapAction(_ tagsView: LJTagsView) {
@@ -168,12 +178,15 @@ extension TradeListTableViewCtl {
     @objc  private func selectBtnAction(_ sender: UIButton) {
         //选择类型
         if sender == selectTypeBtn {
-            dataSource = ["类型标签1","测试数据","测试数据2","你","我鸡尾酒","二狗子","他们来了"]
+            dataSource = ["全部","物业费","地产税","你","水费","电费","网费","罚款","月供"]
             for index in 0...dataSource.count-1 {
                 let item = dataSource[index]
                 let model = TagsPropertyModel()
+                model.contentView.backgroundColor = .white
+                model.contentView.layer.cornerRadius = 20
                 model.imageAlignmentMode = .right
                 model.titleLabel.text = item
+                model.titleLabel.textColor = .black
                 modelDataSource.append(model)
             }
         }
@@ -187,9 +200,9 @@ extension TradeListTableViewCtl {
             calendarView.show()
         }
     
-        tagsView0.dataSource = dataSource
-        tagsView0.tagsViewMaxHeight  = self.view.frame.size.height
-        tagsView0.reloadData()
+        tagsView.dataSource = dataSource
+        tagsView.tagsViewMaxHeight  = self.view.frame.size.height
+        tagsView.reloadData()
     }
 }
 

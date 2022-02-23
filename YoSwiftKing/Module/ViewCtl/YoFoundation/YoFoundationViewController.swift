@@ -26,8 +26,25 @@ class YoFoundationViewController: YoBaseUIViewController {
         tagsView0.minimumInteritemSpacing = 10;
         return tagsView0
     }()
+    
+    //默认日期
+    var defaultDate = Date()
+    //弹窗日历
+    private lazy var  calendarView: YoCalendar = {
+        let calendar = YoCalendar()
+        calendar.isHidden = false
+        calendar.animationType = .center
+        return calendar
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let btn: UIButton = UIButton.init(frame: CGRect(x: 100, y: 100, width: 300, height: 200))
+        view.addSubview(btn)
+        
+        
+        return
+        
         tagsView0.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)
             make.left.right.equalToSuperview().offset(0)
