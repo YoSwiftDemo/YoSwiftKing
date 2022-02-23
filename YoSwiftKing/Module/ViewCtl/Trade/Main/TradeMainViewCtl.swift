@@ -57,10 +57,13 @@ class TradeMainViewCtl: UIViewController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        navigationController?.navigationBar.isHidden = true
         //布局
         layoutTradeMainViewCtl()
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 

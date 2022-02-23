@@ -79,6 +79,7 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
      override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+         navigationController?.navigationBar.isHidden = true
         //测试 数据
         var model = TradeListModel()
         model.title = "生活费"
