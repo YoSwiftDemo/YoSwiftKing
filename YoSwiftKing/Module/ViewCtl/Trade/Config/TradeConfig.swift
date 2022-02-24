@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftUI
+//import SwiftUI
 //MARK:
 open class TradeConfig: NSObject{
     /// 单例，设置一次全局使用
@@ -32,6 +32,10 @@ open class TradeConfig: NSObject{
     //渐变色
     public var navStartColor: UIColor =  .hex("#FB7830")
     public var navEndColor: UIColor = .hex("#FF983A")
+    
+    //标签层背景色
+    
+    public var tagsViewBgColor: UIColor = .groupTableViewBackground
     
     //1级标题  顶部分页栏标题
     public var mainTitleColor: UIColor  = .lightTextColor

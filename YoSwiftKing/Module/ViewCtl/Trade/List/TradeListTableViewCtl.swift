@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import LJTagsView
 //MARK:
 class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
     //UI选择类型按钮
@@ -50,18 +49,20 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
     
     //UI 标签view
     var dataSource = ["全部","物业费","地产税","水费","电费","网费","罚款","月供"]
-    var modelDataSource: [TagsPropertyModel] = [TagsPropertyModel]()
-    lazy var tagsView : LJTagsView = {
-        let tagsView = LJTagsView()
+    var modelDataSource: [YoTagsPropertyModel] = [YoTagsPropertyModel]()
+    lazy var tagsView : YoTagsLabView = {
+        let tagsView = YoTagsLabView()
         view.addSubview(tagsView)
-        tagsView.backgroundColor = .white
+        tagsView.backgroundColor =  TradeConfig.instance.tagsViewBgColor
         tagsView.tagsViewDelegate = self
-        tagsView.tagsViewContentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        tagsView.tagsViewMinHeight = 0
-        tagsView.scrollDirection = .vertical
-        tagsView.tagsViewMaxHeight = view.frame.size.height
-        tagsView.minimumLineSpacing = 10;
-        tagsView.minimumInteritemSpacing = 10;
+        
+        let config =   YoTagsLabViewConfig.instance
+        config.tagsViewContentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        config.tagsViewMinHeight = 0
+        config.scrollDirection = .vertical
+        config.tagsViewMaxHeight = view.frame.size.height
+        config.minimumLineSpacing = 10;
+        config.minimumInteritemSpacing = 10;
         return tagsView
     }()
 
@@ -151,9 +152,9 @@ extension TradeListTableViewCtl: UITableViewDelegate {
     }
 }
 //MARK: 标签代理回调
-extension TradeListTableViewCtl:  LJTagsViewProtocol {
+extension TradeListTableViewCtl:  YoTagsLabViewProtocol {
     /** 设置每个tag的属性，包含UI ，对应的属性*/
-    func tagsViewUpdatePropertyModel(_ tagsView: LJTagsView, item: TagsPropertyModel, index: NSInteger) {
+    func tagsViewUpdatePropertyModel(_ tagsView: YoTagsLabView, item: YoTagsPropertyModel, index: NSInteger) {
 
         if (index  == 15) {item.minHeight = 40}
         item.imageAlignmentMode = .left
@@ -162,13 +163,13 @@ extension TradeListTableViewCtl:  LJTagsViewProtocol {
 
     }
     
-    func tagsViewItemTapAction(_ tagsView: LJTagsView, item: TagsPropertyModel, index: NSInteger) {
+    func tagsViewItemTapAction(_ tagsView: YoTagsLabView, item: YoTagsPropertyModel, index: NSInteger) {
 //        dataSource.remove(at: index)
 //        tagsView.dataSource.remove(at: index)
 //        tagsView.reloadData()
     }
     
-    func tagsViewTapAction(_ tagsView: LJTagsView) {
+    func tagsViewTapAction(_ tagsView: YoTagsLabView) {
         tagsView.isSelect = !tagsView.isSelect
         tagsView.reloadData()
     }
@@ -179,10 +180,10 @@ extension TradeListTableViewCtl {
     @objc  private func selectBtnAction(_ sender: UIButton) {
         //选择类型
         if sender == selectTypeBtn {
-            dataSource = ["全部","物业费","地产税","你","水费","电费","网费","罚款","月供"]
+            dataSource = ["全部","物业费","地产税","水费","电费","网费","罚款","月供"]
             for index in 0...dataSource.count-1 {
                 let item = dataSource[index]
-                let model = TagsPropertyModel()
+                let model = YoTagsPropertyModel()
                 model.contentView.backgroundColor = .white
                 model.contentView.layer.cornerRadius = 20
                 model.imageAlignmentMode = .right
@@ -202,7 +203,7 @@ extension TradeListTableViewCtl {
         }
     
         tagsView.dataSource = dataSource
-        tagsView.tagsViewMaxHeight  = self.view.frame.size.height
+//        tagsView.tagsViewMaxHeight  = self.view.frame.size.height
         tagsView.reloadData()
     }
 }
