@@ -169,7 +169,8 @@ extension TradeListTableViewCtl {
                 }
             }else{
                 dataSource = []
-                
+                tagsView.removeFromSuperview()
+                self.tagsView.layoutIfNeeded()
             }
 
             tagsView.dataSource = dataSource
