@@ -154,7 +154,7 @@ extension YoTagsLabView {
                 propertyModel.contentView.layer.cornerRadius = YoTagsLabViewConfig.instance.tagLayerCornerRadius
             }
             //处理背景色问题
-            if selectModel == nil && index == 0 {
+            if selectModel == nil {
                 selectModel = propertyModel
             }
             if self.selectModel!.index == propertyModel.index {

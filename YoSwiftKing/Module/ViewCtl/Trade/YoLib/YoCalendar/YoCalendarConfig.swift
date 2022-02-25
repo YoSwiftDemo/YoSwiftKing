@@ -17,8 +17,9 @@ open class YoCalendarConfig: NSObject{
     let containerColor: UIColor = .white
    //头部 背景 橘黄色FD6718
     let  topContainer: UIColor = UIColor.hex("#FD6718")
-    //年颜色
-    let yearTitleColor: UIColor = .lightTextColor
+    //顶部 年颜色
+    let yearTitleColor: UIColor = .hex("#AAAAAA", alpha: 0.5)
+        //.hex("#AAAAAA")
     //日期  xx月xx日周x
     let monthDayWeekTitleColor: UIColor = .white
     //日期  xx年xx月
@@ -56,21 +57,23 @@ open class YoCalendarConfig: NSObject{
     lazy var dayWidth: CGFloat = weekTitleWidth
     let  dayHeight: CGFloat = 30
     let daySpace: CGFloat = 10  //设置day 上下间距
+    
+    
     //字体
     //年标题 字体大小
-    let yearTitleFont: UIFont = .systemFont(ofSize: 24)
+    let yearTitleFont: UIFont = .systemFont(ofSize: 16, weight: .bold)
     //月日周 标题 字体大小
-    let monthDayWeekTitleFont : UIFont = .systemFont(ofSize: 36)
+    let monthDayWeekTitleFont : UIFont = .systemFont(ofSize: 24, weight: .heavy)
     //年月 标题 字体大小
-    let yearMonthTitleFont : UIFont = .systemFont(ofSize: 14)
+    let yearMonthTitleFont : UIFont = .boldSystemFont(ofSize: 16)
     //周标题 字体大小
-    let weekTitleFont : UIFont = .systemFont(ofSize: 14)
+    let weekTitleFont : UIFont = .systemFont(ofSize: 16)
     //日 字体大小
-    let dayFont : UIFont = .systemFont(ofSize: 14)
+    let dayFont : UIFont = .systemFont(ofSize: 16)
     //选择日期
     let selectedDayFont: UIFont = .systemFont(ofSize: 16)
     // 按钮大小  取消 确定
-    let selectBtnFont: UIFont = .systemFont(ofSize: 16)
+    let selectBtnFont: UIFont = .boldSystemFont(ofSize: 18)
     
     //星期数组  7天
     let weekTitleArray: [String] = ["日", "一", "二", "三", "四", "五", "六"]

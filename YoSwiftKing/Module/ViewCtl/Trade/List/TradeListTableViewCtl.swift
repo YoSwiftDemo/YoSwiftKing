@@ -9,10 +9,17 @@ import UIKit
 import SnapKit
 //MARK:
 class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
+    //2个选择按钮背景 蛋蛋暗灰色
+    private lazy var selectBtnBackgroundView: UIView = {
+        let bgview = UIView()
+        view.addSubview(bgview)
+        bgview.backgroundColor = TradeConfig.instance.selectBtnBgViewColor
+        return bgview
+    }()
     //UI选择类型按钮
     private lazy var selectTypeBtn: UIButton = {
         let btn = UIButton()
-        view.addSubview(btn)
+        selectBtnBackgroundView.addSubview(btn)
         btn.setTitle("选择类型", for: .normal)
         btn.titleLabel?.font = TradeConfig.instance.selectButtonFont
         btn.setTitleColor(TradeConfig.instance.selectBtnSelectedColor, for: .selected)
@@ -23,7 +30,7 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
     //UI 选择 时间
     private lazy var selectDateBtn: UIButton = {
         let btn = UIButton()
-        view.addSubview(btn)
+        selectBtnBackgroundView.addSubview(btn)
         btn.setTitle("选择时间", for: .normal)
         btn.titleLabel?.font = TradeConfig.instance.selectButtonFont
         btn.setTitleColor(TradeConfig.instance.selectBtnSelectedColor, for: .selected)
@@ -40,12 +47,6 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         calendar.animationType = .center
         return calendar
     }()
-    
-    private lazy var  testCalendarView: YoCalendarView = {
-        let calendar = YoCalendarView()
-        return calendar
-    }()
-    
     
     //UI 标签view
     var dataSource = ["全部","物业费","地产税","水费","电费","网费","罚款","月供"]
@@ -110,34 +111,6 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         cell.indexPath = indexPath as NSIndexPath
         return cell
     }
-    //MARK: 布局
-    func layoutViewCtlSubviews() {
-        //按钮选择  类型
-        selectTypeBtn.snp.makeConstraints { make in
-            make.left.equalTo(view).offset(60)
-            make.height.equalTo(30)
-            make.width.greaterThanOrEqualTo(60)
-            make.top.equalTo(self.view).offset(20)
-        }
-        //按钮选择  时间
-        selectDateBtn.snp.makeConstraints { make in
-            make.right.equalTo(view).offset(-60)
-            make.height.equalTo(30)
-            make.width.greaterThanOrEqualTo(60)
-            make.top.equalTo(self.view).offset(20)
-        }
-        //标签View
-        tagsView.snp.makeConstraints { make in
-            make.top.equalTo(selectTypeBtn.snp.bottom).offset(10)
-            make.left.right.equalToSuperview().offset(0)
-            //不设置高度
-        }
-        //表
-           tableView.snp.makeConstraints { make in
-               make.top.equalTo(tagsView.snp.bottom)
-               make.left.bottom.right.equalTo(view)
-           }
-     }
 }
 extension TradeListTableViewCtl: UITableViewDelegate {
     //行高
@@ -148,7 +121,7 @@ extension TradeListTableViewCtl: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let viewCtl =  TradeDetailViewCtl()
         viewCtl.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(viewCtl, animated: true)
+        navigationController?.pushViewController(viewCtl, animated: false)
     }
 }
 //MARK: 标签代理回调
@@ -178,19 +151,29 @@ extension TradeListTableViewCtl:  YoTagsLabViewProtocol {
 //MARK: 选择按钮事件
 extension TradeListTableViewCtl {
     @objc  private func selectBtnAction(_ sender: UIButton) {
+        sender.isSelected =  !sender.isSelected
         //选择类型
         if sender == selectTypeBtn {
-            dataSource = ["全部","物业费","地产税","水费","电费","网费","罚款","月供"]
-            for index in 0...dataSource.count-1 {
-                let item = dataSource[index]
-                let model = YoTagsPropertyModel()
-                model.contentView.backgroundColor = .white
-                model.contentView.layer.cornerRadius = 20
-                model.imageAlignmentMode = .right
-                model.titleLabel.text = item
-                model.titleLabel.textColor = .black
-                modelDataSource.append(model)
+            if(sender.isSelected){
+                dataSource = ["全部","物业费","地产税","水费","电费","网费","罚款","月供"]
+                for index in 0...dataSource.count-1 {
+                    let item = dataSource[index]
+                    let model = YoTagsPropertyModel()
+                    model.contentView.backgroundColor = .white
+                    model.contentView.layer.cornerRadius = 20
+                    model.imageAlignmentMode = .right
+                    model.titleLabel.text = item
+                    model.titleLabel.textColor = .black
+                    modelDataSource.append(model)
+                }
+            }else{
+                dataSource = []
+                
             }
+
+            tagsView.dataSource = dataSource
+               //        tagsView.tagsViewMaxHeight  = self.view.frame.size.height
+            tagsView.reloadData()
         }
         //选择时间
         if sender == selectDateBtn {
@@ -202,9 +185,48 @@ extension TradeListTableViewCtl {
             calendarView.show()
         }
     
-        tagsView.dataSource = dataSource
-//        tagsView.tagsViewMaxHeight  = self.view.frame.size.height
-        tagsView.reloadData()
+
     }
 }
-
+//MARK: 页面布局
+extension TradeListTableViewCtl {
+    
+}
+//MARK: 页面布局
+extension TradeListTableViewCtl {
+    //MARK: 布局
+     private  func layoutViewCtlSubviews() {
+         //20+20+20
+         selectBtnBackgroundView.snp.makeConstraints { make in
+             make.left.right.equalTo(view)
+             make.height.equalTo(60)
+             make.top.equalTo(self.view)
+         }
+        //按钮选择  类型
+        selectTypeBtn.snp.makeConstraints { make in
+            make.left.equalTo(view).offset(60)
+            make.height.equalTo(20)
+            make.width.greaterThanOrEqualTo(60)
+            make.top.equalTo(self.selectBtnBackgroundView).offset(20)
+        }
+        //按钮选择  时间
+        selectDateBtn.snp.makeConstraints { make in
+            make.right.equalTo(view).offset(-60)
+            make.height.equalTo(20)
+            make.width.greaterThanOrEqualTo(60)
+            make.top.equalTo(self.selectBtnBackgroundView).offset(20)
+        }
+        //标签View
+        tagsView.snp.makeConstraints { make in
+            make.top.equalTo(selectBtnBackgroundView.snp.bottom).offset(-10)
+            make.left.equalToSuperview().offset(0)
+            make.right.equalToSuperview().offset(0)
+            //不设置高度
+        }
+        //表
+           tableView.snp.makeConstraints { make in
+               make.top.equalTo(tagsView.snp.bottom)
+               make.left.bottom.right.equalTo(view)
+           }
+     }
+}

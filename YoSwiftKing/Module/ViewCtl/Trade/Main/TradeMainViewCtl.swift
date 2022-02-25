@@ -36,9 +36,10 @@ class TradeMainViewCtl: UIViewController {
         style.isShowBottomLine = true
         style.isTitleViewScrollEnabled = true
         style.titleViewBackgroundColor = UIColor.clear
-        style.titleMargin = self.view.frame.size.width/4
-        style.titleSelectedColor = UIColor.white
-        style.titleColor = UIColor.lightTextColor
+        style.titleMargin = TradeConfig.instance.titleMargin
+        style.titleSelectedColor = TradeConfig.instance.mainTitleSelectColor
+        style.titleColor =  TradeConfig.instance.mainTitleColor
+        style.titleFont = TradeConfig.instance.mainTitleFont
         style.bottomLineColor = .white
         style.bottomLineWidth = 40
         let titles = ["代缴费", "委托", "过户"]
@@ -47,7 +48,6 @@ class TradeMainViewCtl: UIViewController {
             controller.view.backgroundColor = UIColor.white
             addChild(controller)
         }
-
         return PageViewManager(style: style, titles: titles, childViewControllers: children, currentIndex: 0)
     }()
 

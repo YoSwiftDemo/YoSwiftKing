@@ -44,6 +44,7 @@ class TradeDetailViewCtl: UIViewController, UITableViewDataSource {
         listData = [model,model2]
          self.topView.costLab.text = "30000P"
          self.topView.detailLab.text = "wek sjd aksdkadk "
+         self.topView.backgroundColor = .groupTableViewBackground
          tableView.tableHeaderView = topView
         layoutViewCtlSubviews()
     }

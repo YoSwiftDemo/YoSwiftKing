@@ -57,7 +57,7 @@ open class YoTagsLabViewConfig: NSObject{
     let tagLayerCornerRadius: CGFloat = 0
     let tagLayerMasksToBounds: Bool =  true  // false+ 0 则是 高度一半
     //字号
-    let  tagTextFont: UIFont = .systemFont(ofSize: 14, weight: .regular)
+    let  tagTextFont: UIFont = .systemFont(ofSize: 16, weight: .regular)
     
     
 }

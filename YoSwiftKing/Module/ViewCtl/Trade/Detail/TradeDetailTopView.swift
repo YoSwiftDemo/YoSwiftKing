@@ -24,7 +24,7 @@ class TradeDetailTopView: UIView {
   public  lazy var costLab: UILabel = {
         let costLab = UILabel()
       costLab.textColor = .white
-      costLab.font = TradeConfig.instance.mainTitleFont
+      costLab.font = .systemFont(ofSize: 24, weight: .semibold)
       costLab.textAlignment = .left
         container.addSubview(costLab)
         return costLab
@@ -33,7 +33,7 @@ class TradeDetailTopView: UIView {
   public  lazy var detailLab: UILabel = {
         let detailLab = UILabel()
       detailLab.textColor = .white
-      detailLab.font = TradeConfig.instance.textFont
+      detailLab.font = .systemFont(ofSize: 18, weight: .bold)
       detailLab.textAlignment = .left
         container.addSubview(detailLab)
         return detailLab

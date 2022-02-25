@@ -100,7 +100,7 @@ public class YoCalendarView: UIView {
     private lazy var lastMonnthBtn: UIButton = {
         let btn = UIButton()
         bottomContainer.addSubview(btn)
-        btn.setTitle("上一个月", for: .normal)
+        // btn.setTitle("上一个月", for: .normal)
         btn.backgroundColor = .red
         btn.addTarget(self, action: #selector(monthChangeBtnAction(_:)), for: .touchUpInside)
         return btn
@@ -109,7 +109,7 @@ public class YoCalendarView: UIView {
     private lazy var nextMonnthBtn: UIButton = {
         let btn = UIButton()
         bottomContainer.addSubview(btn)
-        btn.setTitle("下一个月", for: .normal)
+        //btn.setTitle("下一个月", for: .normal)
         btn.backgroundColor = .red
         btn.addTarget(self, action: #selector(monthChangeBtnAction(_:)), for: .touchUpInside)
         return btn
@@ -121,7 +121,7 @@ public class YoCalendarView: UIView {
         lab.font = YoCalendarConfig.instance.yearMonthTitleFont
         lab.textColor =  YoCalendarConfig.instance.yearMonthTitleColor
         lab.textAlignment = .center
-        lab.text = "2022年2月"
+         // lab.text = "2022年2月"
         return lab
     }()
     

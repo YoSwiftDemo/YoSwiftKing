@@ -6,12 +6,12 @@ typealias ObjectCallback = (_ value: Any) -> Void
 
 let kScreenWidth: CGFloat = UIScreen.main.bounds.width
 let kScreenHeight: CGFloat = UIScreen.main.bounds.height
-let spaceMargin: CGFloat = 40
+let spaceMargin: CGFloat = 30
 let KShowYearsCount: Int = 100
 let KTipWidth: CGFloat = kScreenWidth/5
 let KTipHeigh: CGFloat = KBtnW*2
 let KCol: Int = 7
-let KBtnW: CGFloat = (kScreenWidth-2*spaceMargin)/CGFloat(KCol+2)
+let KBtnW: CGFloat = (kScreenWidth-2*spaceMargin)/CGFloat(KCol+1)
 let KMaxCount: Int = 37
 let KBtnTag: Int = 100
 //适配iPhoneX
@@ -122,7 +122,7 @@ class YoCalendar: UIView {
         yearLabel.snp.makeConstraints { (make) in
             make.top.equalTo(letfView).offset(KBtnW*0)
             make.height.equalTo(KBtnW)
-            make.left.equalTo(letfView).offset(KBtnW)
+            make.left.equalTo(letfView).offset(KBtnW*0.75)
             make.width.equalTo(100)
 //            make.top.equalTo(weekLabel.snp.bottom).offset(20)
 //            make.left.right.equalTo(letfView)
@@ -137,7 +137,7 @@ class YoCalendar: UIView {
         monthLabel.snp.makeConstraints { (make) in
             make.top.equalTo(yearLabel.snp.bottom).offset(-KBtnW*0.2)
             make.height.equalTo(KBtnW)
-            make.left.equalTo(letfView).offset(KBtnW)
+            make.left.equalTo(letfView).offset(KBtnW*0.75)
             make.width.greaterThanOrEqualTo(0)
 //            make.left.right.equalTo(letfView)
 //            make.top.equalTo(yearLabel.snp.bottom)
@@ -220,7 +220,8 @@ class YoCalendar: UIView {
         container.addSubview(preMonthBtn)
         preMonthBtn.snp.makeConstraints { (make) in
             make.left.equalTo(container).offset(KBtnW/2)
-            make.top.bottom.equalTo(container)
+            make.centerY.equalTo(container)
+            make.height.equalTo(KBtnW)
             make.width.equalTo(KBtnW/2)
         }
         
@@ -294,7 +295,7 @@ class YoCalendar: UIView {
                         make.left.equalTo(tempWeekLabel.snp.right)
                     } else {
 //                        make.left.equalTo(letfView.snp.right)
-                        make.left.equalTo(letfView).offset(KBtnW)
+                        make.left.equalTo(letfView).offset(KBtnW/2)
                     }
                     make.width.equalTo(KBtnW)
 //                    make.top.equalTo(backTodayBtn.snp.bottom)
@@ -310,10 +311,10 @@ class YoCalendar: UIView {
         self.addSubview(calendarView)
         calendarView.snp.makeConstraints { (make) in
 //            make.left.equalTo(letfView.snp.right)
-            make.left.equalTo(letfView).offset(KBtnW)
+            make.left.equalTo(letfView).offset(KBtnW/2)
             make.top.equalTo((tempWeekLabel?.snp.bottom)!)
             make.height.equalTo(KBtnW*6)
-            make.right.equalTo(self.snp.right)
+            make.right.equalTo(self.snp.right).offset(-KBtnW/2)
         }
         //每一个日期用一个按钮去创建，当一个月的第一天是星期六并且有31天时为最多个数，5行零2个，共37个
         for i in 0...KMaxCount {
@@ -346,12 +347,14 @@ class YoCalendar: UIView {
         sureBtn.addTarget(self, action: #selector(sureBtnOnClick(_:)), for: .touchUpInside)
         self.addSubview(sureBtn)
         sureBtn.snp.makeConstraints { (make) in
-            make.right.equalTo(self.snp.right)
+            make.right.equalTo(self.snp.right).offset(-KBtnW/2)
             make.height.equalTo(KBtnW)
             make.width.equalTo(2*KBtnW)
-            make.top.equalTo(calendarView.snp.bottom)
+//            make.top.equalTo(calendarView.snp.bottom)
+            make.bottom.equalTo(self.snp.bottom).offset(-KBtnW/2)
         }
-        
+     
+
         //取消按钮
         let cancelBtn = UIButton(type: .custom)
         cancelBtn.setTitle("取消", for: .normal)
@@ -360,10 +363,10 @@ class YoCalendar: UIView {
         cancelBtn.addTarget(self, action: #selector(cancelBtnOnClick(_:)), for: .touchUpInside)
         self.addSubview(cancelBtn)
         cancelBtn.snp.makeConstraints { (make) in
-            make.right.equalTo(sureBtn.snp.left)
+            make.right.equalTo(sureBtn.snp.left).offset(-KBtnW/2)
             make.height.equalTo(KBtnW)
             make.width.equalTo(2*KBtnW)
-            make.top.equalTo(calendarView.snp.bottom)
+            make.bottom.equalTo(self.snp.bottom).offset(-KBtnW/2)
         }
     }
 
@@ -423,9 +426,9 @@ class YoCalendar: UIView {
         case .bottom:
             self.frame = CGRect(x: spaceMargin, y: kScreenHeight+tabHeight, width: kScreenWidth-2*spaceMargin, height: KBtnW*9)
         case .center:
-            self.frame = CGRect(x: spaceMargin,
-                                y: (kScreenHeight - KBtnW*9-KBtnW*3)/2,
-                                width: kScreenWidth-2*spaceMargin, height: KBtnW*9+KBtnW*3)
+            self.frame = CGRect(x: spaceMargin,y: (kScreenHeight - KBtnW*9-KBtnW*3)/2,
+                                width: kScreenWidth-2*spaceMargin,
+                                height: KBtnW*(7+1)+KBtnW*3)
         case .top:
             self.frame = CGRect(x: 0, y: -kScreenHeight, width: kScreenWidth, height: KBtnW*9)
         }
@@ -464,6 +467,9 @@ class YoCalendar: UIView {
             }
             self.control?.alpha = 0
         }) { (finished) in
+            for sub in self.subviews {
+                sub.removeFromSuperview()
+            }
             self.control?.removeFromSuperview()
             self.removeFromSuperview()
         }
