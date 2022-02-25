@@ -76,13 +76,13 @@ class TradeListTableCell: UITableViewCell {
            //说明文本
            textLab.snp.makeConstraints { make in
                make.left.equalTo(titleLab)
-               make.top.equalTo(titleLab.snp.bottom).offset(10)
+               make.top.equalTo(titleLab.snp.bottom).offset(15)
                make.width.greaterThanOrEqualTo(0)
                make.height.equalTo(20)
            }
            //时间
            dateLab.snp.makeConstraints { make in
-               make.left.equalTo(titleLab.snp.right).offset(10)
+               make.left.equalTo(titleLab.snp.right).offset(15)
                make.width.greaterThanOrEqualTo(0)
                make.height.equalTo(20)
                make.centerY.equalTo(titleLab)
@@ -90,7 +90,7 @@ class TradeListTableCell: UITableViewCell {
            //总费用
            expensesLab.snp.makeConstraints { make in
                make.centerY.equalTo(contentView)
-               make.right.equalTo(contentView).offset(-10)
+               make.right.equalTo(contentView).offset(-15)
                make.width.greaterThanOrEqualTo(0)
                make.height.equalTo(20)
            }
@@ -98,8 +98,8 @@ class TradeListTableCell: UITableViewCell {
            lineView.snp.makeConstraints { make in
                make.height.equalTo(1)
                make.bottom.equalTo(contentView)
-               make.left.equalTo(contentView).offset(10)
-               make.right.equalTo(contentView).offset(-10)
+               make.left.equalTo(contentView).offset(15)
+               make.right.equalTo(contentView).offset(-15)
            }
        }
    }

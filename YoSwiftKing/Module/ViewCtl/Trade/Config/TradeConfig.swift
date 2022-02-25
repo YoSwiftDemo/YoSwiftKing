@@ -58,7 +58,7 @@ open class TradeConfig: NSObject{
     public var textSubColor: UIColor = .hex("#AAAAAA")
     
     //分割线颜色 cell里
-    public var lineColor: UIColor = .groupTableViewBackground
+    public var lineColor: UIColor = .hex("#AAAAAA", alpha: 0.1)
     
     //间距相关
     //顶部 标题间距

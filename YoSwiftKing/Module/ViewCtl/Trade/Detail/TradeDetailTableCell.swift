@@ -15,7 +15,7 @@ class TradeDetailTableCell: UITableViewCell {
      public  lazy var titleLab: UILabel = {
            let lab = UILabel()
            lab.textColor = TradeConfig.instance.textColor
-           lab.font = TradeConfig.instance.textFont
+           lab.font = .systemFont(ofSize: 16)
            lab.textAlignment = .left
            contentView.addSubview(lab)
            return lab
@@ -24,7 +24,7 @@ class TradeDetailTableCell: UITableViewCell {
     public  lazy var textLab: UILabel = {
           let lab = UILabel()
           lab.textColor = TradeConfig.instance.textColor
-          lab.font = TradeConfig.instance.textFont
+          lab.font = .systemFont(ofSize: 16)
           lab.textAlignment = .right
           contentView.addSubview(lab)
           return lab

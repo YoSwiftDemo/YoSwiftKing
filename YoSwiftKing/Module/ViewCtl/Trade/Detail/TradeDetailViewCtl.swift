@@ -21,11 +21,13 @@ class TradeDetailViewCtl: UIViewController, UITableViewDataSource {
     //声明列表
      lazy var tableView: UITableView = {
         let tableView = UITableView()
-        view.addSubview(tableView)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(TradeDetailTableCell.self, forCellReuseIdentifier: NSStringFromClass(TradeDetailTableCell.self))
-        return tableView
+         view.addSubview(tableView)
+         tableView.backgroundColor = .groupTableViewBackground
+         tableView.dataSource = self
+         tableView.delegate = self
+         tableView.register(TradeDetailTableCell.self, forCellReuseIdentifier: NSStringFromClass(TradeDetailTableCell.self))
+         tableView.separatorStyle = .none
+         return tableView
     }()
      override func viewDidLoad() {
         super.viewDidLoad()

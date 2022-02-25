@@ -76,7 +76,8 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(TradeListTableCell.self, forCellReuseIdentifier: NSStringFromClass(TradeListTableCell.self))
-        return tableView
+         tableView.separatorStyle = .none
+         return tableView
     }()
      override func viewDidLoad() {
         super.viewDidLoad()
