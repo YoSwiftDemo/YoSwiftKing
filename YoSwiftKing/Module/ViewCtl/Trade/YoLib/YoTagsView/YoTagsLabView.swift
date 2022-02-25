@@ -18,7 +18,7 @@ import UIKit
 
 
 
-public class YoTagsLabView: UIView {
+open class YoTagsLabView: UIView {
   //数据源
     public var dataSource: [String] = [] {
         didSet {
@@ -57,7 +57,7 @@ public class YoTagsLabView: UIView {
     
     private var contentSize = CGSize.zero
     
-    public var selectModel: YoTagsPropertyModel? //记录当前选中tag 索引
+    open var selectModel: YoTagsPropertyModel? //记录当前选中tag 索引
     
     public override init(frame:CGRect) {
         super.init(frame: frame)
@@ -68,7 +68,7 @@ public class YoTagsLabView: UIView {
         addSubview(arrowImageView)
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
