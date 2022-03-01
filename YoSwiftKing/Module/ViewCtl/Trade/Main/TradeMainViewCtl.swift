@@ -170,10 +170,14 @@ extension TradeMainViewCtl: YoTabPagerBarViewDelegate {
         var attr = YoTitleAttributes()
         attr.layout = .fixed
         attr.style = .underline
+        
+        //        style.titleSelectedColor = TradeConfig.instance.mainTitleSelectColor
+        //        style.titleColor =  TradeConfig.instance.mainTitleColor
+        //        style.titleFont = TradeConfig.instance.mainTitleFont
         //标题 未选择 字体
-        attr.titleFont = .systemFont(ofSize: 18, weight: .medium)
+        attr.titleFont = TradeConfig.instance.mainTitleFont
         //标题 选择 字体
-        attr.titleSelectedFont = .systemFont(ofSize: 18, weight: .medium)
+        attr.titleSelectedFont =  TradeConfig.instance.mainTitleFont
         attr.underlineBackColor = .white
         attr.underlineWidth = 24
         attr.underlineOffsetY = -6

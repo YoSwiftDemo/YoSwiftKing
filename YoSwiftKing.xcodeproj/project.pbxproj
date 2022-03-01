@@ -16,6 +16,7 @@
 		8405A7FD27C72588001A1C61 /* YoCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A7F727C72588001A1C61 /* YoCalendarController.swift */; };
 		8405A7FE27C72588001A1C61 /* YoCalendarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A7F827C72588001A1C61 /* YoCalendarConfig.swift */; };
 		8405A80027C72658001A1C61 /* YoTagsLabViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A7FF27C72658001A1C61 /* YoTagsLabViewConfig.swift */; };
+		841D892927CDF963004DC891 /* YoImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D892827CDF963004DC891 /* YoImageTextButton.swift */; };
 		842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */; };
 		842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */; };
 		842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */; };
@@ -108,6 +109,7 @@
 		8405A7F727C72588001A1C61 /* YoCalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoCalendarController.swift; sourceTree = "<group>"; };
 		8405A7F827C72588001A1C61 /* YoCalendarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoCalendarConfig.swift; sourceTree = "<group>"; };
 		8405A7FF27C72658001A1C61 /* YoTagsLabViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTagsLabViewConfig.swift; sourceTree = "<group>"; };
+		841D892827CDF963004DC891 /* YoImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoImageTextButton.swift; sourceTree = "<group>"; };
 		842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifTextHeaderRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorAutoFooterRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTextAutoFooterRefreshView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 		8405A7EB27C723EE001A1C61 /* YoLib */ = {
 			isa = PBXGroup;
 			children = (
+				841D892727CDF94C004DC891 /* YoButton */,
 				84974F5D27C3906D0020F842 /* YoPage */,
 				84974F6B27C39BEF0020F842 /* CGFloat */,
 				84974F6827C392700020F842 /* NSString */,
@@ -258,6 +261,14 @@
 				8405A7F827C72588001A1C61 /* YoCalendarConfig.swift */,
 			);
 			path = YoCalendar;
+			sourceTree = "<group>";
+		};
+		841D892727CDF94C004DC891 /* YoButton */ = {
+			isa = PBXGroup;
+			children = (
+				841D892827CDF963004DC891 /* YoImageTextButton.swift */,
+			);
+			path = YoButton;
 			sourceTree = "<group>";
 		};
 		842CD1AD27BB79FE003F8240 /* YoRefresh */ = {
@@ -912,6 +923,7 @@
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
 				84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
+				841D892927CDF963004DC891 /* YoImageTextButton.swift in Sources */,
 				8405A80027C72658001A1C61 /* YoTagsLabViewConfig.swift in Sources */,
 				84D1B66227C68E8700B492DB /* TradeDetailTopView.swift in Sources */,
 				84E16E0A27B3C17300FD63A7 /* YoFoundationViewController.swift in Sources */,

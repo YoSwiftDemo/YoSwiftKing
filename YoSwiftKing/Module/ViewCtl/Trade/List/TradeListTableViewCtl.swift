@@ -17,25 +17,32 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         return bgview
     }()
     //UI选择类型按钮
-    private lazy var selectTypeBtn: UIButton = {
-        let btn = UIButton()
+    private lazy var selectTypeBtn: YoImageTextButton = {
+        let btn = YoImageTextButton()
         selectBtnBackgroundView.addSubview(btn)
         btn.setTitle("选择类型", for: .normal)
         btn.titleLabel?.font = TradeConfig.instance.selectButtonFont
         btn.setTitleColor(TradeConfig.instance.selectBtnSelectedColor, for: .selected)
         btn.setTitleColor(TradeConfig.instance.selectBtnNormalColor, for: .normal)
         btn.addTarget(self, action: #selector(selectBtnAction(_:)), for: .touchUpInside)
+        btn.setImage(UIImage.init(named: "trade_arrows_down_btn"), for: .normal)
+        btn.setImage(UIImage.init(named: "trade_arrows_down_selected_btn"), for: .selected)
+        btn.resetEdgeInsets(type: .leftTitleRightImage, space: 3)
+        
         return btn
     }()
     //UI 选择 时间
-    private lazy var selectDateBtn: UIButton = {
-        let btn = UIButton()
+    private lazy var selectDateBtn: YoImageTextButton = {
+        let btn = YoImageTextButton()
         selectBtnBackgroundView.addSubview(btn)
         btn.setTitle("选择时间", for: .normal)
         btn.titleLabel?.font = TradeConfig.instance.selectButtonFont
         btn.setTitleColor(TradeConfig.instance.selectBtnSelectedColor, for: .selected)
         btn.setTitleColor(TradeConfig.instance.selectBtnNormalColor, for: .normal)
         btn.addTarget(self, action: #selector(selectBtnAction(_:)), for: .touchUpInside)
+        btn.setImage(UIImage.init(named: "trade_arrows_down_btn"), for: .normal)
+        btn.setImage(UIImage.init(named: "trade_arrows_down_selected_btn"), for: .selected)
+        btn.resetEdgeInsets(type: .leftTitleRightImage, space: 3)
         return btn
     }()
     //默认日期

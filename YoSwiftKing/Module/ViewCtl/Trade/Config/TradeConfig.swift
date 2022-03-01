@@ -20,9 +20,9 @@ open class TradeConfig: NSObject{
     //字号相关 -----
     //1级标题
     //比如 代缴费/委托
-    public var mainTitleFont: UIFont = .boldSystemFont(ofSize: 18)
+    public var mainTitleFont: UIFont = .systemFont(ofSize: 18, weight: .medium)
     //选择按钮字号
-    public var selectButtonFont: UIFont =  .systemFont(ofSize: 16)
+    public var selectButtonFont: UIFont =  .systemFont(ofSize: 13, weight: .medium)
     //2级标题    cell里  title 标题  生活费/物业费/地产税/水费
     public var titleFont: UIFont = .systemFont(ofSize: 16)
     //1级文本    Kingnights Bridge
@@ -44,7 +44,7 @@ open class TradeConfig: NSObject{
     //1级标题  顶部分页栏标题  选择
     public var mainTitleSelectColor: UIColor  = .hex("#FFFFFF")
     //选择按钮 -  按钮颜色
-    public var  selectBtnSelectedColor: UIColor = .black
+    public var  selectBtnSelectedColor: UIColor = .hex("#AAAAAA")
     //选择按钮 - 未选择验证
     public var  selectBtnNormalColor: UIColor = .black
     //选择区背景色
