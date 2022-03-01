@@ -24,7 +24,11 @@ extension YoBaseUITabBarController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         //设置背景色 默认白色
-        view.backgroundColor = .white
+        view.backgroundColor = .white //无效
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().backgroundColor = .white
+        UITabBar.appearance().backgroundImage=UIImage()
+
     }
 }
 // MARK:  扩展 - 旋转问题

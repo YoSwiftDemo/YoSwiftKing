@@ -50,9 +50,9 @@ public struct YoTitleAttributes {
     /// 标题选中时颜色 默认 blue
     public var titleSelectedColor: UIColor = UIColor.blue
     /// 标题背景色 默认 white
-    public var titleBackColor: UIColor = UIColor.white
+    public var titleBackColor: UIColor = UIColor.clear
     /// 标题选中时背景色  默认 white
-    public var titleSelectedBackColor: UIColor = UIColor.white
+    public var titleSelectedBackColor: UIColor = UIColor.clear
     
     /// 缩放比例 默认 1.25
     public var scale: CGFloat = 1.25
@@ -65,6 +65,10 @@ public struct YoTitleAttributes {
     public var underlinePadding: CGFloat = 0
     /// 下划线背景色 默认 blue
     public var underlineBackColor: UIColor = UIColor.blue
+    //下划线  款
+    public var underlineWidth : CGFloat = 0
+    //下划线 偏移量
+    public var underlineOffsetY : CGFloat = 0
     
     /// 遮罩是否圆角 默认 true
     public var isExistCoverRadius: Bool = true
@@ -75,7 +79,9 @@ public struct YoTitleAttributes {
     /// 遮罩背景色 默认 black 透明 40%
     public var coverBackColor: UIColor = UIColor.black.withAlphaComponent(0.2)
     
-    public init() { }
+    public init() {
+        
+    }
 }
 
 //MARK: - 协议
@@ -152,17 +158,14 @@ public class YoTabPagerBarView: UIView {
         if #available(iOS 11.0, *) { view.contentInsetAdjustmentBehavior = .never }
         return view
     }()
+
     
     /// 初始化
     /// - Parameters:
     ///   - frame: frame
     ///   - delegate: 代理
     ///   - index: 默认选择的下标
-    public init(
-        frame: CGRect,
-        delegate: YoTabPagerBarViewDelegate,
-        default index: Int = 0
-    ) {
+    public init(frame: CGRect,delegate: YoTabPagerBarViewDelegate, default index: Int = 0 ) {
         super.init(frame: frame)
         self.delegate = delegate
         assert(index >= 0 && index <= titles.count - 1, "越界错误, 请检查下标大小值")
@@ -206,7 +209,12 @@ public class YoTabPagerBarView: UIView {
             let diff = currentItem.width - previousItem.width
             let cdiff = currentItem.centerX - previousItem.centerX
             let padding = attributes.layout == .automatic ? attributes.underlinePadding : 0
-            underlineView.width = previousItem.width - padding + progress * diff
+            if attributes.underlineWidth > 0 {
+                underlineView.width = attributes.underlineWidth
+            }else{
+                underlineView.width = previousItem.width - padding + progress * diff
+            }
+      
             underlineView.centerX = previousItem.centerX + progress * cdiff
         default: break
         }
@@ -235,8 +243,9 @@ public class YoTabPagerBarView: UIView {
         previousItem.titleLabel?.font = attributes.titleFont
         previousItem .setTitleColor(attributes.titleColor, for: .normal)
         previousItem .setTitleColor(attributes.titleColor, for: .highlighted)
-        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for:  .normal)
-        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for:  .highlighted)
+        previousItem.backgroundColor = attributes.titleBackColor
+//        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for:  .normal)
+//        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for:  .highlighted)
         titlePosition(titleItems[index])
         let currentItem = titleItems[index]
         currentIndex = index
@@ -269,12 +278,18 @@ public class YoTabPagerBarView: UIView {
             coverView.centerX = currentItem.centerX
         case .underline:
             let padding = attributes.layout == .automatic ? attributes.underlinePadding : 0
-            underlineView.width = currentItem.width - padding
+            if attributes.underlineWidth > 0 {
+                underlineView.width = attributes.underlineWidth
+            }else{
+                underlineView.width = currentItem.width - padding
+            }
             underlineView.centerX = currentItem.centerX
         }
         currentItem.titleLabel?.font = attributes.titleSelectedFont
         currentItem.setTitleColor(attributes.titleSelectedColor, for: .highlighted)
-        currentItem.setBackgroundImage(UIImage.image(color: attributes.titleSelectedBackColor), for: .highlighted)
+        currentItem.setTitleColor(attributes.titleSelectedColor, for: .normal)
+//        currentItem.backgroundColor = attributes.titleSelectedBackColor
+       // currentItem.setBackgroundImage(UIImage.image(color: attributes.titleSelectedBackColor), for: .highlighted)
     }
     
     public required init?(coder: NSCoder) {
@@ -300,8 +315,9 @@ private extension YoTabPagerBarView {
             item.transform = .identity
             item.setTitleColor(idx == currentIndex ? attributes.titleSelectedColor : attributes.titleColor, for:   .highlighted)
             item.setTitleColor(idx == currentIndex ? attributes.titleSelectedColor : attributes.titleColor, for:  .normal)
-            item.setBackgroundImage(UIImage.image(color: idx == currentIndex ? attributes.titleSelectedBackColor : attributes.titleBackColor), for: .normal)
-            item.setBackgroundImage(UIImage.image(color: idx == currentIndex ? attributes.titleSelectedBackColor : attributes.titleBackColor), for:  .highlighted)
+            item.backgroundColor = attributes.titleBackColor
+//            item.setBackgroundImage(UIImage.image(color: idx == currentIndex ? attributes.titleSelectedBackColor : attributes.titleBackColor), for: .normal)
+//            item.setBackgroundImage(UIImage.image(color: idx == currentIndex ? attributes.titleSelectedBackColor : attributes.titleBackColor), for:  .highlighted)
             scrollView.addSubview(item)
             item.addTarget(self, action: #selector(clickTitleAction(_:)),for: .touchUpInside )
             if attributes.layout == .automatic {
@@ -347,8 +363,14 @@ private extension YoTabPagerBarView {
             coverView.center = item.center
         case .underline:
             let padding = attributes.layout == .automatic ? attributes.underlinePadding : 0
-            let underlineW = item.width - padding
-            underlineView.y = height - attributes.underlineHeight
+            var underlineW: CGFloat = 0
+            //item.width - padding
+            if attributes.underlineWidth > 0 {
+                underlineW = attributes.underlineWidth
+            }else{
+                underlineW = item.width - padding
+            }
+            underlineView.y = height - attributes.underlineHeight + attributes.underlineOffsetY
             underlineView.size = CGSize(width: underlineW, height: attributes.underlineHeight)
             if attributes.isExistUnderlineRadius {
                 underlineView.layer.cornerRadius = attributes.underlineHeight/2
@@ -376,15 +398,18 @@ private extension YoTabPagerBarView {
         previousItem.titleLabel?.font = attributes.titleFont
         previousItem.setTitleColor(attributes.titleColor, for: .normal)
         previousItem.setTitleColor(attributes.titleColor, for:  .highlighted)
-        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for: .normal)
-        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for: .highlighted)
+        
+//        previousItem.backgroundColor = attributes.titleBackColor
+//        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for: .normal)
+//        previousItem.setBackgroundImage(UIImage.image(color: attributes.titleBackColor), for: .highlighted)
          
         
         currentItem.titleLabel?.font = attributes.titleSelectedFont
         currentItem.setTitleColor(attributes.titleSelectedColor, for: .normal)
         currentItem.setTitleColor(attributes.titleSelectedColor, for:  .highlighted)
-        currentItem.setBackgroundImage(UIImage.image(color: attributes.titleSelectedBackColor), for: .normal)
-        currentItem.setBackgroundImage(UIImage.image(color: attributes.titleSelectedBackColor), for: .highlighted)
+//        currentItem.backgroundColor = attributes.titleBackColor
+//        currentItem.setBackgroundImage(UIImage.image(color: attributes.titleSelectedBackColor), for: .normal)
+//        currentItem.setBackgroundImage(UIImage.image(color: attributes.titleSelectedBackColor), for: .highlighted)
    
         
         currentIndex = index

@@ -31,7 +31,7 @@ open class YoBaseUINavigationController: UINavigationController {
         navigationBar.tintColor = .red;
         //设置导航栏背景颜色
         navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = .red
+        self.navigationController?.navigationBar.barTintColor = .white
         //设置标题及其颜色
         navigationBar.titleTextAttributes = [.foregroundColor : UIColor.purple, .font : UIFont.systemFont(ofSize: 18)]
     }
