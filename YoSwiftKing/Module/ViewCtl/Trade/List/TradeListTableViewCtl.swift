@@ -65,12 +65,13 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
         tagsView.tagsViewDelegate = self
         
         let config =   YoTagsLabViewConfig.instance
-        config.tagsViewContentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        config.tagsViewContentInset = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
         config.tagsViewMinHeight = 0
         config.scrollDirection = .vertical
         config.tagsViewMaxHeight = view.frame.size.height
-        config.minimumLineSpacing = 10;
-        config.minimumInteritemSpacing = 10;
+        config.minimumLineSpacing = 8;
+        config.minimumInteritemSpacing = 12;
+        config.tagTextFont = .systemFont(ofSize: 12, weight: .regular)
         return tagsView
     }()
 
@@ -123,13 +124,19 @@ class TradeListTableViewCtl: UIViewController, UITableViewDataSource {
 extension TradeListTableViewCtl: UITableViewDelegate {
     //行高
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 15+20+10+20+15+1
+        return 70 + 1
     }
     //xuan ze
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let viewCtl =  TradeDetailViewCtl()
+        if navigationController != nil {
+        print(111)
+        }else{
+            print(2222)
+        }
+        let viewCtl =  TradeDetailViewCtl()
         viewCtl.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(viewCtl, animated: false)
+        self.currentViewController()?.navigationController?.pushViewController(viewCtl, animated: true)
+//        self.navigationController?.pushViewController(viewCtl, animated: false)
     }
 }
 //MARK: 标签代理回调

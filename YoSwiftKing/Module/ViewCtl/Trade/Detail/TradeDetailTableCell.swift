@@ -14,8 +14,8 @@ class TradeDetailTableCell: UITableViewCell {
        //名称
      public  lazy var titleLab: UILabel = {
            let lab = UILabel()
-           lab.textColor = TradeConfig.instance.textColor
-           lab.font = .systemFont(ofSize: 16)
+         lab.textColor = .hex("#333333")
+         lab.font = .systemFont(ofSize: 14, weight: .medium)
            lab.textAlignment = .left
            contentView.addSubview(lab)
            return lab
@@ -23,8 +23,8 @@ class TradeDetailTableCell: UITableViewCell {
       //说明文本
     public  lazy var textLab: UILabel = {
           let lab = UILabel()
-          lab.textColor = TradeConfig.instance.textColor
-          lab.font = .systemFont(ofSize: 16)
+        lab.textColor = .hex("#333333")
+        lab.font = .systemFont(ofSize: 14, weight: .regular)
           lab.textAlignment = .right
           contentView.addSubview(lab)
           return lab
@@ -60,17 +60,17 @@ class TradeDetailTableCell: UITableViewCell {
            super.layoutSubviews()
            //标题  物业费
            titleLab.snp.makeConstraints { make in
-               make.left.equalTo(contentView).offset(15)
+               make.left.equalTo(contentView).offset(16)
                make.centerY.equalTo(contentView)
                make.width.greaterThanOrEqualTo(0)
-               make.height.equalTo(20)
+               make.height.equalTo(14)
            }
            //说明文本
            textLab.snp.makeConstraints { make in
-               make.right.equalTo(contentView).offset(-15)
+               make.right.equalTo(contentView).offset(-16)
                make.centerY.equalTo(contentView)
                make.width.greaterThanOrEqualTo(0)
-               make.height.equalTo(20)
+               make.height.equalTo(13)
            }
            //next
 //           nextImageView.snp.makeConstraints { make in
@@ -83,8 +83,8 @@ class TradeDetailTableCell: UITableViewCell {
            lineView.snp.makeConstraints { make in
                make.height.equalTo(1)
                make.bottom.equalTo(contentView)
-               make.left.equalTo(contentView).offset(15)
-               make.right.equalTo(contentView).offset(-15)
+               make.left.equalTo(contentView).offset(16)
+               make.right.equalTo(contentView).offset(-16)
            }
        }
    }

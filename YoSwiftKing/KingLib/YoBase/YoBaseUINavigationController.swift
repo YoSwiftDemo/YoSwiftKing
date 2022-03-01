@@ -26,14 +26,19 @@ open class YoBaseUINavigationController: UINavigationController {
 //        view.delegate = self
 //        return view
 //    }()
+//    open override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.navigationBar.isHidden = true
+//    }
     open override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.tintColor = .red;
-        //设置导航栏背景颜色
-        navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = .white
-        //设置标题及其颜色
-        navigationBar.titleTextAttributes = [.foregroundColor : UIColor.purple, .font : UIFont.systemFont(ofSize: 18)]
+        self.navigationBar.isHidden = true
+//        navigationBar.tintColor = .red;
+//        //设置导航栏背景颜色
+//        navigationBar.isTranslucent = false
+//        self.navigationController?.navigationBar.barTintColor = .red
+//        //设置标题及其颜色
+//        navigationBar.titleTextAttributes = [.foregroundColor : UIColor.purple, .font : UIFont.systemFont(ofSize: 18)]
     }
     deinit {}
 }

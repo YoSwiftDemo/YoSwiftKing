@@ -31,8 +31,9 @@ class TradeDetailViewCtl: UIViewController, UITableViewDataSource {
     }()
      override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .groupTableViewBackground
-         navigationController?.navigationBar.isHidden = false
+         self.view.backgroundColor = .groupTableViewBackground
+         self.navigationController?.setNavigationBarHidden(false, animated: true)
+         self.navigationController?.navigationBar.isHidden = false
          title = "交易详情"
         //测试 数据
         var model = TradeDetailModel()
@@ -44,8 +45,8 @@ class TradeDetailViewCtl: UIViewController, UITableViewDataSource {
          model2.content = "Todd Baker， 1976年5月10日"
          
         listData = [model,model2]
-         self.topView.costLab.text = "30000P"
-         self.topView.detailLab.text = "wek sjd aksdkadk "
+         self.topView.costLab.text = "3,000.00 P"
+         self.topView.detailLab.text = "4508 The Gramercy Residence"
          self.topView.backgroundColor = .groupTableViewBackground
          tableView.tableHeaderView = topView
         layoutViewCtlSubviews()

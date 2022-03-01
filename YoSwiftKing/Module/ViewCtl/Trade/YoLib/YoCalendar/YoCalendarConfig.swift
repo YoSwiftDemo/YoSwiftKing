@@ -18,7 +18,7 @@ open class YoCalendarConfig: NSObject{
    //头部 背景 橘黄色FD6718
     let  topContainer: UIColor = UIColor.hex("#FD6718")
     //顶部 年颜色
-    let yearTitleColor: UIColor = .hex("#AAAAAA", alpha: 0.5)
+    let yearTitleColor: UIColor = .hex("#AAAAAA", alpha: 0.2)
         //.hex("#AAAAAA")
     //日期  xx月xx日周x
     let monthDayWeekTitleColor: UIColor = .white

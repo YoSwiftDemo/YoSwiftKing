@@ -44,20 +44,20 @@ open class YoTagsLabViewConfig: NSObject{
     //颜色相关
     //color  标签item 背景色
     //未选中tag 背景是
-    let tagNormalBgColor: UIColor =  .hex("#FFFFFF")
+    public lazy var tagNormalBgColor: UIColor =  .hex("#FFFFFF")
     //选中tag 背景是
-    let tagSelectedBgColor: UIColor =  .hex("#FB7830")
+    public lazy var tagSelectedBgColor: UIColor =  .hex("#FB7830")
     //color  标签item 文字颜色
-    let tagNormalTextColor: UIColor = .black
+    public lazy var tagNormalTextColor: UIColor = .black
     //color  标签item 文字颜色
-    let tagSelectTextColor: UIColor = .white
+    public lazy var tagSelectTextColor: UIColor = .white
 
     
     //圆角相关
-    let tagLayerCornerRadius: CGFloat = 0
-    let tagLayerMasksToBounds: Bool =  true  // false+ 0 则是 高度一半
+    public lazy var tagLayerCornerRadius: CGFloat = 0
+    public lazy var tagLayerMasksToBounds: Bool =  true  // false+ 0 则是 高度一半
     //字号
-    let  tagTextFont: UIFont = .systemFont(ofSize: 16, weight: .regular)
+    public lazy var  tagTextFont: UIFont = .systemFont(ofSize: 16, weight: .regular)
     
     
 }

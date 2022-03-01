@@ -41,7 +41,7 @@ class TradeListTableCell: UITableViewCell {
     public  lazy var expensesLab: UILabel = {
           let lab = UILabel()
           lab.textColor = TradeConfig.instance.titleColor
-          lab.font = TradeConfig.instance.titleFont
+          lab.font = TradeConfig.instance.expensesTextFont
           lab.textAlignment = .left
           contentView.addSubview(lab)
           return lab
@@ -68,29 +68,29 @@ class TradeListTableCell: UITableViewCell {
            super.layoutSubviews()
            //标题  物业费
            titleLab.snp.makeConstraints { make in
-               make.left.equalTo(contentView).offset(10)
-               make.top.equalTo(contentView).offset(10+5)
+               make.left.equalTo(contentView).offset(16)
+               make.top.equalTo(contentView).offset(16)
                make.width.greaterThanOrEqualTo(0)
-               make.height.equalTo(20)
+               make.height.equalTo(13)
            }
-           //说明文本
+           //说明文本 2206 Kingnights Bridge
            textLab.snp.makeConstraints { make in
                make.left.equalTo(titleLab)
-               make.top.equalTo(titleLab.snp.bottom).offset(15)
+               make.bottom.equalTo(contentView.snp.bottom).offset(-16)
                make.width.greaterThanOrEqualTo(0)
-               make.height.equalTo(20)
+               make.height.equalTo(14)
            }
            //时间
            dateLab.snp.makeConstraints { make in
-               make.left.equalTo(titleLab.snp.right).offset(15)
+               make.left.equalTo(titleLab.snp.right).offset(16)
                make.width.greaterThanOrEqualTo(0)
-               make.height.equalTo(20)
+               make.height.equalTo(10)
                make.centerY.equalTo(titleLab)
            }
            //总费用
            expensesLab.snp.makeConstraints { make in
                make.centerY.equalTo(contentView)
-               make.right.equalTo(contentView).offset(-15)
+               make.right.equalTo(contentView).offset(-16)
                make.width.greaterThanOrEqualTo(0)
                make.height.equalTo(20)
            }
@@ -98,8 +98,8 @@ class TradeListTableCell: UITableViewCell {
            lineView.snp.makeConstraints { make in
                make.height.equalTo(1)
                make.bottom.equalTo(contentView)
-               make.left.equalTo(contentView).offset(15)
-               make.right.equalTo(contentView).offset(-15)
+               make.left.equalTo(contentView).offset(16)
+               make.right.equalTo(contentView).offset(-16)
            }
        }
    }

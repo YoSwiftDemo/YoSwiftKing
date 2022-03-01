@@ -12,31 +12,31 @@ class TradeDetailTopView: UIView {
     //渐变色 容器
   public  lazy var container: UIView = {
         let view = UILabel()
-      view.backgroundColor = UIColor.gradientColor(colors:[TradeConfig.instance.navStartColor,TradeConfig.instance.navEndColor],
+      view.backgroundColor = UIColor.gradientColor(colors:[ UIColor.hex("#FB7830"),UIColor.hex("#FF9839")],
                                                         startPoint: CGPoint(x: 0, y: 1),
                                                     width: self.frame.size.width)
         self.addSubview(view)
-      view.layer.cornerRadius = 10
+      view.layer.cornerRadius = 20
       view.layer.masksToBounds = true
         return view
     }()
     //花费 总数
   public  lazy var costLab: UILabel = {
         let costLab = UILabel()
-      costLab.textColor = .white
-      costLab.font = .systemFont(ofSize: 30, weight: .semibold)
+      costLab.textColor = .hex("FFFFFF")
+      costLab.font = .systemFont(ofSize: 24, weight: .semibold)
       costLab.textAlignment = .left
         container.addSubview(costLab)
         return costLab
     }()
     //详情
   public  lazy var detailLab: UILabel = {
-        let detailLab = UILabel()
-      detailLab.textColor = .white
-      detailLab.font = .systemFont(ofSize: 18, weight: .bold)
-      detailLab.textAlignment = .left
-        container.addSubview(detailLab)
-        return detailLab
+        let lab = UILabel()
+      lab.textColor = .hex("#FFD9BA")
+      lab.font = .systemFont(ofSize: 16, weight: .medium)
+      lab.textAlignment = .left
+        container.addSubview(lab)
+        return lab
     }()
     
     override init(frame: CGRect) {
@@ -60,14 +60,14 @@ class TradeDetailTopView: UIView {
             make.left.equalTo(container).offset(30)
             make.top.equalTo(container).offset(20)
             make.right.equalTo(container).offset(-30)
-            make.height.equalTo(25)
+            make.height.equalTo(22)
         }
         //说明
         detailLab.snp.makeConstraints { make in
             make.left.equalTo(container).offset(30)
             make.top.equalTo(costLab.snp.bottom).offset(5)
             make.right.equalTo(container).offset(-30)
-            make.height.equalTo(20)
+            make.height.equalTo(16)
         }
     }
 }

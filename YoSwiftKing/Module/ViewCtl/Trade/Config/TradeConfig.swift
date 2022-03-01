@@ -24,11 +24,13 @@ open class TradeConfig: NSObject{
     //选择按钮字号
     public var selectButtonFont: UIFont =  .systemFont(ofSize: 13, weight: .medium)
     //2级标题    cell里  title 标题  生活费/物业费/地产税/水费
-    public var titleFont: UIFont = .systemFont(ofSize: 16)
+    public var titleFont: UIFont = .systemFont(ofSize: 14, weight: .medium)
     //1级文本    Kingnights Bridge
-    public var textFont: UIFont =  .systemFont(ofSize: 14)
+    public var textFont: UIFont =  .systemFont(ofSize: 14, weight: .regular)
     //2级文本    2021.10.12
-    public var textSubFont: UIFont =  .systemFont(ofSize: 12)
+    public var textSubFont: UIFont =  .systemFont(ofSize: 12, weight: .regular)
+    //cell里文本字体
+    public var expensesTextFont: UIFont =  .systemFont(ofSize: 18, weight: .regular)
    
    
     //颜色相关 -------
@@ -51,14 +53,14 @@ open class TradeConfig: NSObject{
     public var changTypeColor: UIColor = .lightBackgroundColor
 
     //2级标题  cell 标题颜色
-    public var titleColor: UIColor  = .black
+    public var titleColor: UIColor  = .hex("#333333")
     //1级文本  Kingnights Bridge
     public var textColor: UIColor = .black
     //2级文本    2021.10.12
     public var textSubColor: UIColor = .hex("#AAAAAA")
     
     //分割线颜色 cell里
-    public var lineColor: UIColor = .hex("#AAAAAA", alpha: 0.1)
+    public var lineColor: UIColor = .hex("#F4F5F9", alpha: 1)
     
     //间距相关
     //顶部 标题间距

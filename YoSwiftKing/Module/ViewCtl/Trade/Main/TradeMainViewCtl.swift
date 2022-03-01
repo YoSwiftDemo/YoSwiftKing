@@ -137,9 +137,12 @@ class TradeMainViewCtl: UIViewController {
         return pageView
     }()
     //left- cycle
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         self.navigationController?.navigationBar.isHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = .white
         //加载子view
         topBackgroundView.isHidden = false
@@ -195,7 +198,6 @@ extension TradeMainViewCtl: YoPageViewDelegate {
         for i in 0..<items.count {
             print(i)
             let  ctl = TradeListTableViewCtl()
-            ctl.view?.backgroundColor  = .randomColor
             arrs.append(ctl)
         }
         return arrs
