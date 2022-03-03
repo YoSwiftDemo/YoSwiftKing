@@ -33,12 +33,19 @@ open class YoBaseUINavigationController: UINavigationController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.isHidden = true
+        
 //        navigationBar.tintColor = .red;
 //        //设置导航栏背景颜色
 //        navigationBar.isTranslucent = false
 //        self.navigationController?.navigationBar.barTintColor = .red
 //        //设置标题及其颜色
 //        navigationBar.titleTextAttributes = [.foregroundColor : UIColor.purple, .font : UIFont.systemFont(ofSize: 18)]
+        //修改页面背景颜色
+        self.view.backgroundColor = UIColor.white
+        //修改导航栏背景图片（使用代码动态生成的纯色图片）
+        let image = createImageWithColor(.white,
+                            frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
     }
     deinit {}
 }
@@ -137,18 +144,25 @@ extension YoBaseUINavigationController {
 }
 // MARK:
 extension YoBaseUINavigationController {
-//    open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-//        if viewControllers.isEmpty {
-//            viewController.hidesBottomBarWhenPushed = true
-//        }
-//        super.pushViewController(viewController, animated: animated)
-//    }
-//    open override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-//        if  viewControllers.isEmpty {
-//            viewControllers.last?.hidesBottomBarWhenPushed = true
-//        }
-//        super.setViewControllers(viewControllers, animated: animated)
-//    }
+    //生成一个指定颜色的图片
+private  func createImageWithColor(_ color: UIColor, frame: CGRect) -> UIImage? {
+         // 开始绘图
+         UIGraphicsBeginImageContext(frame.size)
+          
+         // 获取绘图上下文
+         let context = UIGraphicsGetCurrentContext()
+         // 设置填充颜色
+         context?.setFillColor(color.cgColor)
+         // 使用填充颜色填充区域
+         context?.fill(frame)
+          
+         // 获取绘制的图像
+         let image = UIGraphicsGetImageFromCurrentImageContext()
+          
+         // 结束绘图
+         UIGraphicsEndImageContext()
+         return image
+     }
 }
 // MARK: 旋转
 extension YoBaseUINavigationController {

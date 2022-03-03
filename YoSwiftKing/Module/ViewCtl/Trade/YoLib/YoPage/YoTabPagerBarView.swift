@@ -452,7 +452,12 @@ private extension YoTabPagerBarView {
         case .underline:
             titleTranslation {
                 let padding = self.attributes.layout == .automatic ? self.attributes.underlinePadding : 0
-                self.underlineView.width = currentItem.width - padding
+                // self.underlineView.width = currentItem.width - padding
+                if self.attributes.underlineWidth > 0 {
+                    self.underlineView.width = self.attributes.underlineWidth
+                }else{
+                    self.underlineView.width = currentItem.width - padding
+                }
                 self.underlineView.centerX = currentItem.centerX
             }
         }

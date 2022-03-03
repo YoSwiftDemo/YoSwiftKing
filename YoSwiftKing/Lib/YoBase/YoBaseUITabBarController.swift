@@ -28,7 +28,7 @@ extension YoBaseUITabBarController {
 //        UITabBar.appearance().isTranslucent = false
 //        UITabBar.appearance().backgroundColor = .white
 //        UITabBar.appearance().backgroundImage=UIImage()
-
+        self.view.backgroundColor = UIColor.white
     }
 }
 // MARK:  扩展 - 旋转问题

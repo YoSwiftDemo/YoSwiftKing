@@ -15,15 +15,12 @@ class YoRefreshDetailViewCtl: YoBaseUIViewController {
     private lazy var  scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.left.top.bottom.right.equalTo(self.view)
+        }
         // 可以滚动的区域
         scrollView.contentSize = CGSize(width: self.view.frame.size.width,
                                         height: self.view.frame.size.height*2)
-//        scrollView.snp.makeConstraints { make in
-//            make.left.top.width.equalTo(self.view)
-//            make.height.equalTo(self.view.frame.size.height-88-20)
-//        }
-        scrollView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width,
-                                  height: self.view.frame.size.height-88-20)
         return scrollView
     }()
 }
@@ -36,9 +33,9 @@ extension YoRefreshDetailViewCtl {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
+        self.view.backgroundColor = .green
         scrollView.backgroundColor = .red
-        view.backgroundColor = .green
         layoutViewCtl()
         refreshTypeAction()
     }
@@ -51,8 +48,8 @@ extension YoRefreshDetailViewCtl {
 }
 extension YoRefreshDetailViewCtl {
     private func action() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
-           // self.scrollView.endRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3 ) {
+            self.scrollView.endRefreshing()
         }
     }
     private func refreshTypeAction(){
