@@ -25,10 +25,10 @@ extension YoBaseUITabBarController {
         super.viewDidLoad()
         //设置背景色 默认白色
         view.backgroundColor = .white
-//        UITabBar.appearance().isTranslucent = false
-//        UITabBar.appearance().backgroundColor = .white
-//        UITabBar.appearance().backgroundImage=UIImage()
-        self.view.backgroundColor = UIColor.white
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().backgroundColor = .white
+        UITabBar.appearance().backgroundImage=UIImage()
+      // self.view.backgroundColor = UIColor.white
     }
 }
 // MARK:  扩展 - 旋转问题

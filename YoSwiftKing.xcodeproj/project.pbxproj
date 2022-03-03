@@ -18,6 +18,8 @@
 		8405A80027C72658001A1C61 /* YoTagsLabViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A7FF27C72658001A1C61 /* YoTagsLabViewConfig.swift */; };
 		841D892927CDF963004DC891 /* YoImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D892827CDF963004DC891 /* YoImageTextButton.swift */; };
 		841D892C27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D892B27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift */; };
+		841D893E27D0D199004DC891 /* YoUIKitMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D893D27D0D199004DC891 /* YoUIKitMainViewCtl.swift */; };
+		841D894027D0D1D9004DC891 /* YoDemoMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D893F27D0D1D9004DC891 /* YoDemoMainViewCtl.swift */; };
 		842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */; };
 		842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */; };
 		842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */; };
@@ -112,6 +114,8 @@
 		8405A7FF27C72658001A1C61 /* YoTagsLabViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTagsLabViewConfig.swift; sourceTree = "<group>"; };
 		841D892827CDF963004DC891 /* YoImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoImageTextButton.swift; sourceTree = "<group>"; };
 		841D892B27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CurrentViewCtl.swift"; sourceTree = "<group>"; };
+		841D893D27D0D199004DC891 /* YoUIKitMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoUIKitMainViewCtl.swift; sourceTree = "<group>"; };
+		841D893F27D0D1D9004DC891 /* YoDemoMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoDemoMainViewCtl.swift; sourceTree = "<group>"; };
 		842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifTextHeaderRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorAutoFooterRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTextAutoFooterRefreshView.swift; sourceTree = "<group>"; };
@@ -558,6 +562,7 @@
 		84E16E0327B3BC8600FD63A7 /* YoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				841D893F27D0D1D9004DC891 /* YoDemoMainViewCtl.swift */,
 			);
 			path = YoDemo;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 		84E16E0427B3BFC500FD63A7 /* YoUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				841D893D27D0D199004DC891 /* YoUIKitMainViewCtl.swift */,
 			);
 			path = YoUIKit;
 			sourceTree = "<group>";
@@ -917,6 +923,7 @@
 				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				8405A7FA27C72588001A1C61 /* CalendarModel.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
+				841D894027D0D1D9004DC891 /* YoDemoMainViewCtl.swift in Sources */,
 				84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
 				841D892927CDF963004DC891 /* YoImageTextButton.swift in Sources */,
@@ -941,6 +948,7 @@
 				8405A7FE27C72588001A1C61 /* YoCalendarConfig.swift in Sources */,
 				84E16E2027B4FD5100FD63A7 /* YoBaseTableViewListCell.swift in Sources */,
 				842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */,
+				841D893E27D0D199004DC891 /* YoUIKitMainViewCtl.swift in Sources */,
 				84974F6A27C3927C0020F842 /* String+Size.swift in Sources */,
 				84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */,
 				842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */,
