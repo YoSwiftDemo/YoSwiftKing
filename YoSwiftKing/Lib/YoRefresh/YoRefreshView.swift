@@ -94,7 +94,7 @@ extension YoRefreshView {
  分别代表着上边界，左边界，底边界，右边界，扩展出去的值。
 
  */
-extension YoRefreshView {
+public extension YoRefreshView {
     //开始刷新
     func beginRefreshing() {
         //判断是否可以刷新 存在刷新不刷新
@@ -107,13 +107,13 @@ extension YoRefreshView {
             UIView.animate(withDuration: 0.3, animations: {
                 switch self.refreshStyle {
                 case .header:
-                    scrollView.contentOffset.y = -self.height - scrollView.contentInsetTop
-                    scrollView.contentInset.top += self.height
+                    scrollView.contentOffset.y = -self.heightValue - scrollView.contentInsetTop
+                    scrollView.contentInset.top += self.heightValue
                 case .footer:
-                    scrollView.contentInset.bottom += self.height
+                    scrollView.contentInset.bottom += self.heightValue
                 case .autoFooter:
-                    scrollView.contentOffset.y = self.height + scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInsetBottom
-                    scrollView.contentInset.bottom += self.height
+                    scrollView.contentOffset.y = self.heightValue + scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInsetBottom
+                    scrollView.contentInset.bottom += self.heightValue
                 }
             }, completion: { _ in
                 self.action()
@@ -133,9 +133,9 @@ extension YoRefreshView {
             UIView.animate(withDuration: 0.3, animations: {
                 switch self.refreshStyle {
                 case .header:
-                    scrollView.contentInset.top -= self.height
+                    scrollView.contentInset.top -= self.heightValue
                 case .footer, .autoFooter:
-                    scrollView.contentInset.bottom -= self.height
+                    scrollView.contentInset.bottom -= self.heightValue
                 }
             }, completion: { _ in
                 self.isRefreshing = false
@@ -160,6 +160,8 @@ extension YoRefreshView {
     }
     //MARK:  private添加监听
     private func setupObserver(_ scrollView: UIScrollView) {
+        print(height)
+        print("------------")
         //监听滚动-偏移
         offsetToken = scrollView.observe(\.contentOffset, options: [.new]) { [weak self] scrollView, _ in
             self?.scrollViewDidScroll(scrollView)
@@ -172,11 +174,11 @@ extension YoRefreshView {
         // 设置 frame
          //头部刷新frame 基本不变
         if refreshStyle == .header {
-            frame = CGRect(x: 0, y: -height, width: scrollView.bounds.width, height: height)
+            frame = CGRect(x: 0, y: -heightValue, width: scrollView.bounds.width, height: heightValue)
         } else {
             //尾部
             sizeToken = scrollView.observe(\.contentSize, options: [.new, .initial]) { [weak self] scrollView, _ in
-                self?.frame = CGRect(x: 0, y: scrollView.contentSize.height, width: scrollView.bounds.width, height: self?.height ?? 0)
+                self?.frame = CGRect(x: 0, y: scrollView.contentSize.height, width: scrollView.bounds.width, height: self?.heightValue ?? 0)
                 //往上拉
                 self?.isHidden = scrollView.contentSize.height <= scrollView.bounds.height
             }
@@ -189,12 +191,12 @@ extension YoRefreshView {
         }
         switch refreshStyle {
         case .header:
-            progress = min(1, max(0, -(scrollView.contentOffset.y + scrollView.contentInsetTop) / height))
+            progress = min(1, max(0, -(scrollView.contentOffset.y + scrollView.contentInsetTop) / heightValue))
         case .footer:
             if scrollView.contentSize.height <= scrollView.bounds.height {
                 break
             }
-            progress = min(1, max(0, (scrollView.contentOffset.y + scrollView.bounds.height - scrollView.contentSize.height - scrollView.contentInsetBottom) / height))
+            progress = min(1, max(0, (scrollView.contentOffset.y + scrollView.bounds.height - scrollView.contentSize.height - scrollView.contentInsetBottom) / heightValue))
         case .autoFooter:
             if scrollView.contentSize.height <= scrollView.bounds.height {
                 break

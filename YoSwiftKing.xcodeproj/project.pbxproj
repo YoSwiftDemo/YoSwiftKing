@@ -228,22 +228,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		8405A7EB27C723EE001A1C61 /* YoLib */ = {
-			isa = PBXGroup;
-			children = (
-				841D892A27CE03E9004DC891 /* UIViewController */,
-				841D892727CDF94C004DC891 /* YoButton */,
-				84974F5D27C3906D0020F842 /* YoPage */,
-				84974F6B27C39BEF0020F842 /* CGFloat */,
-				84974F6827C392700020F842 /* NSString */,
-				84974F6527C391210020F842 /* NSObject+ClassName */,
-				84974F6227C390BF0020F842 /* UIView+Layout */,
-				8405A7F227C72588001A1C61 /* YoCalendar */,
-				8405A7EF27C72446001A1C61 /* YoTagsView */,
-			);
-			path = YoLib;
-			sourceTree = "<group>";
-		};
 		8405A7EF27C72446001A1C61 /* YoTagsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,7 +351,6 @@
 		84974F4E27C374C40020F842 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
-				8405A7EB27C723EE001A1C61 /* YoLib */,
 				84D1B65A27C689BD00B492DB /* Detail */,
 				84974F5627C37B200020F842 /* Config */,
 				84974F5327C377D10020F842 /* List */,
@@ -457,6 +440,15 @@
 		84E16DE727B3B46C00FD63A7 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				841D892A27CE03E9004DC891 /* UIViewController */,
+				841D892727CDF94C004DC891 /* YoButton */,
+				84974F5D27C3906D0020F842 /* YoPage */,
+				84974F6B27C39BEF0020F842 /* CGFloat */,
+				84974F6827C392700020F842 /* NSString */,
+				84974F6527C391210020F842 /* NSObject+ClassName */,
+				84974F6227C390BF0020F842 /* UIView+Layout */,
+				8405A7F227C72588001A1C61 /* YoCalendar */,
+				8405A7EF27C72446001A1C61 /* YoTagsView */,
 				84E16E2727B60D6000FD63A7 /* YoRefresh */,
 				84E16DEC27B3B72A00FD63A7 /* YoBase */,
 				84E16DF127B3B98300FD63A7 /* KingUIColor */,

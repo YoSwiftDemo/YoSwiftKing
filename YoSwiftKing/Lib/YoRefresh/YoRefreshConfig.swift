@@ -9,7 +9,7 @@ import UIKit
 /*
  简单刷新
  https://www.jianshu.com/p/0c89263a6fd1
- 
+ 来源 SwiftPullToRefresh
  */
 //MARK:
 open class YoRefreshConfig: NSObject{
@@ -50,8 +50,6 @@ open class YoRefreshConfig: NSObject{
         pullingText: isChinese ? "上拉加载" : "Pull up to load more",
         releaseText: isChinese ? "释放加载" : "Release to load more"
     )
-
-    
 }
 
 //MARK: 全局- 刷新类型

@@ -33,7 +33,7 @@ extension YoRefreshDetailViewCtl {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = .green
         scrollView.backgroundColor = .red
         layoutViewCtl()
