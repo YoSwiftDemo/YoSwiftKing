@@ -1,19 +1,12 @@
 //
-//  TradeMainViewCtl.swift
+//  YoSwiftViewCtl.swift
 //  YoSwiftKing
 //
-//  Created by admin on 2022/2/21.
+//  Created by admin on 2022/2/9.
 //
-/*
- 顶部 分页view
- 中部  collectionView分类处理
- 底部 tableView
- 
- */
-import UIKit
-import SnapKit
 
-class TradeMainViewCtl: UIViewController {
+import UIKit
+class YoSwiftViewCtl: YoBaseUIViewController {
     //    //UI 背景层
     private lazy var topBackgroundView: UIView = {
         let topBg = UIView.init(frame: CGRect(x: 0, y: 0,
@@ -25,14 +18,13 @@ class TradeMainViewCtl: UIViewController {
                                                       width: self.view.frame.size.width)
         return topBg
     }()
-    var type: Int = 5
-    private var item: UIButton!
-    private var items: [String] = ["代缴费","委托","过户"]
+    var items: [String] = ["全部","语法","基础","算法"]
     // 分页顶部tile区
-    private lazy var titleView: YoTabPagerBarView = {
+     lazy var titleView: YoTabPagerBarView = {
         //不用  SnapKit
-        let titleView =  YoTabPagerBarView.init(frame: CGRect(x: 0,y: CGFloat.statusBarHeight,
-                                                              width: view.frame.size.width,
+        let titleView =  YoTabPagerBarView.init(frame: CGRect(x: 10,
+                                                              y: CGFloat.statusBarHeight,
+                                                              width: view.frame.size.width - 10,
                                                               height: 44 + 4),
                                                 delegate: self,
                                                 default: 0)
@@ -40,7 +32,7 @@ class TradeMainViewCtl: UIViewController {
         return titleView
     }()
     // 分页 滚动区
-    private lazy var pageView: YoPageView = {
+    lazy var pageView: YoPageView = {
         let pageView = YoPageView.init(frame: CGRect(x: 0,y: CGFloat.safeAreaNavBarHeight,
                                                      width: view.frame.size.width,
                                                      height:  view.frame.size.height -  CGFloat.safeAreaNavBarHeight - 4))
@@ -54,9 +46,9 @@ class TradeMainViewCtl: UIViewController {
         super.viewWillAppear(animated)
          self.navigationController?.navigationBar.isHidden = true
     }
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor =  .hex("FE5E2F")
         //加载子view
         topBackgroundView.isHidden = false
         titleView.backgroundColor = .clear
@@ -65,14 +57,13 @@ class TradeMainViewCtl: UIViewController {
     
 }
 //MARK: private 私有方法
-extension TradeMainViewCtl {
-    
+ extension YoSwiftViewCtl {
     @objc func clickItem(_ sender: UIButton) {
         print("点击分段控件...")
     }
 }
 //MARK: - YoTabPagerBarViewDelegate 代理 - 分页title 回调
-extension TradeMainViewCtl: YoTabPagerBarViewDelegate {
+extension YoSwiftViewCtl: YoTabPagerBarViewDelegate {
     // 配置 title 个数
     func numberOfTitles(in titleView: YoTabPagerBarView) -> Array<String> {
         return items
@@ -84,9 +75,9 @@ extension TradeMainViewCtl: YoTabPagerBarViewDelegate {
     // 配置 title 属性  颜色 字体大小
     func attributesOfTitles(for titleView: YoTabPagerBarView) -> YoTitleAttributes {
         var attr = YoTitleAttributes()
-        attr.layout = .fixed
-        attr.style = .underline
-        
+        attr.layout =  .automatic //fixed
+        attr.style = .scale
+        attr.titleSpacing = 15
         //        style.titleSelectedColor = TradeConfig.instance.mainTitleSelectColor
         //        style.titleColor =  TradeConfig.instance.mainTitleColor
         //        style.titleFont = TradeConfig.instance.mainTitleFont
@@ -104,13 +95,13 @@ extension TradeMainViewCtl: YoTabPagerBarViewDelegate {
 }
 
 //MARK: - YoPageViewDelegate 代理
-extension TradeMainViewCtl: YoPageViewDelegate {
+extension YoSwiftViewCtl: YoPageViewDelegate {
     //根据index 配置 页面
     func numberOfPageView(in pageView: YoPageView) -> Array<UIViewController> {
         var arrs: [UIViewController] = []
         for i in 0..<items.count {
             print(i)
-            let  ctl = TradeListTableViewCtl()
+            let  ctl = YoSwiftViewListViewCtl()
             arrs.append(ctl)
         }
         return arrs

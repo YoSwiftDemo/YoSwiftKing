@@ -8,6 +8,6 @@
 import UIKit
 class YoDemoMainViewCtl: YoBaseUIViewController {
     override func viewDidLoad() {
-        view.backgroundColor = .randomColor
+        super.viewDidLoad()
     }
 }

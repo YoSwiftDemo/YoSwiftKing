@@ -1,5 +1,5 @@
 //
-//  YoFoundationViewController.swift
+//  YoFoundationViewCtl.swift
 //  YoSwiftKing
 //
 //  Created by admin on 2022/2/9.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 import LJTagsView
-class YoFoundationViewController: YoBaseUIViewController {
+class YoFoundationViewCtl: YoBaseUIViewController {
    
     var dataSource = ["Listing ID","Tower","Sole Agency Type","Have Keys","New Development","Tags","Big landlord","Street Address","Currency","Price per unit","Price per unit(Gross)","Price per unit(Saleable)","Size(Gross)","Size(Saleable)","Status","Register","Landlord","SSD","Agent","Floor Alias","Unit Alias","Unit Balcony","Tower Type","Building Age","Segment","Car Park","Is Coop","SPV","Pet Friendly","View Type","Property Type","123"]
     var modelDataSource: [TagsPropertyModel] = [TagsPropertyModel]()
@@ -64,7 +64,7 @@ class YoFoundationViewController: YoBaseUIViewController {
         tagsView0.reloadData()
     }
 }
-extension YoFoundationViewController:  LJTagsViewProtocol {
+extension YoFoundationViewCtl:  LJTagsViewProtocol {
     
     /** 设置每个tag的属性，包含UI ，对应的属性*/
     func tagsViewUpdatePropertyModel(_ tagsView: LJTagsView, item: TagsPropertyModel, index: NSInteger) {

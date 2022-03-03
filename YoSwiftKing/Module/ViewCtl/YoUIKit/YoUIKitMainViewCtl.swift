@@ -8,6 +8,7 @@
 import UIKit
 class YoUIKitMainViewCtl: YoBaseUIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .randomColor
     }
 }

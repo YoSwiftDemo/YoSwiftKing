@@ -168,8 +168,13 @@ public class YoTabPagerBarView: UIView {
     public init(frame: CGRect,delegate: YoTabPagerBarViewDelegate, default index: Int = 0 ) {
         super.init(frame: frame)
         self.delegate = delegate
-        assert(index >= 0 && index <= titles.count - 1, "越界错误, 请检查下标大小值")
-        currentIndex = index
+//        assert(index >= 0 && index <= titles.count - 1, "越界错误, 请检查下标大小值")
+        if index < titles.count{
+            currentIndex = index
+        }else{
+            currentIndex = 0
+        }
+
         createSubviews()
     }
 
