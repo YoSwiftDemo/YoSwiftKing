@@ -33,6 +33,9 @@ class YoBaseNavView: UIView {
         let btn = UIButton()
         addSubview(btn)
         btn.addTarget(self, action: #selector(leftButtonAction(leftBtn:)), for: .touchUpInside)
+//        btn.setBackgroundImage(UIImage.init(named: "YoBaseBundle.bundle/nav_back_black_btn@3x"), for: .normal)
+        btn.setBackgroundImage(UIImage.init(named: "YoBaseBundle.bundle/nav_back_white_btn@3x"), for: .normal)
+        btn.setEnlargeEdge(top: 44 + 15 , bottom: 15, left: 20, right: 40)
         return btn
     }()
     //标题
@@ -51,8 +54,10 @@ extension YoBaseNavView {
     override func layoutSubviews() {
         //默认添加左侧返回按钮 +布局
         leftButton.snp.makeConstraints { make in
-            make.left.bottom.equalTo(self)
-            make.width.height.equalTo(self) //默认44
+            make.left.equalTo(self).offset(20)
+            make.bottom.equalTo(self).offset(-(44-15)/2)
+            make.width.equalTo(9) //默认44
+            make.height.equalTo(15) //默认44
         }
         //默认添加标题
         textLabel.snp.makeConstraints { make in

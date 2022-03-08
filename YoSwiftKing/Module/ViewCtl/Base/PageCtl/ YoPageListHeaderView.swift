@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
-class  YoSwiftViewListHeaderView: UIView {
+class   YoPageListHeaderView: UIView {
     public  lazy var lineView: UIView = {
         let view = UIView()
         self.addSubview(view)

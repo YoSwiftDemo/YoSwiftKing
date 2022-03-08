@@ -88,14 +88,12 @@ public struct YoTitleAttributes {
 public protocol YoTabPagerBarViewDelegate: AnyObject  {
     
     /// 数据源 即有几个标题
-    /// - Parameter titleView: 对象
     func numberOfTitles(in titleView: YoTabPagerBarView) -> Array<String>
     
     /// 标题属性 可选 不设置取默认值
-    /// - Parameter titleView: 对象
     func attributesOfTitles(for titleView: YoTabPagerBarView) -> YoTitleAttributes
     
-    /// 点击标题事件
+    // 点击标题事件
     func titleView(_ titleView: YoTabPagerBarView, didSelectedAt index: Int)
 }
 
@@ -159,7 +157,6 @@ public class YoTabPagerBarView: UIView {
         return view
     }()
 
-    
     /// 初始化
     /// - Parameters:
     ///   - frame: frame
@@ -174,7 +171,6 @@ public class YoTabPagerBarView: UIView {
         }else{
             currentIndex = 0
         }
-
         createSubviews()
     }
 

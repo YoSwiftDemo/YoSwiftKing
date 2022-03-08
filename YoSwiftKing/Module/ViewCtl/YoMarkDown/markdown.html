@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>网页预览</title>
+<!--  <link href="vue.css" rel="stylesheet" />-->
+  <link href="markdown-white.css" rel="stylesheet" />
+  <style type="text/css">
+  img {
+    max-width: 100%;
+    /*水平居中*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #content {
+    padding: 20px 16px 12px;
+  }
+
+  pre {
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    padding: 1em;
+  }
+
+  pre code {
+    /*小块区域左右滑动，整体禁止左右滑动*/
+    overflow-x: auto;
+    display: block;
+  }
+
+  #content p {
+    word-wrap: break-word;
+  }
+
+  div[class*=language-] {
+    position: relative;
+    background-color: #282c34;
+    border-radius: 6px;
+  }
+
+  .sidebar-button {
+    display: block;
+    width: 20px;/*1.25rem;*/
+    height: 20px;
+    position: absolute;
+    padding: 5px;
+    top: 10px;
+    bottom: .1rem;
+    right: 10px;
+    cursor: pointer;
+    /*我加的*/
+    z-index: 15;
+    /*border: 1px solid rgba(66, 185, 131, 0.45);*/
+    border-radius: 5px;
+    background-color:rgba(66, 185, 131, 0.15);
+  }
+
+  .sidebar-button .icon {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  #ppTOCContent {
+    margin-left: 10px;
+    /*padding: 8px;*/
+    position: fixed;
+    top: 44px;
+    right: 10px;
+    /*bottom: 44px;*/
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: #fff;
+    font-size: 13px;
+    z-index: 10;
+    /*width: 16.4rem;*/
+    /*这三行是抄github的*/
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, .2);
+  }
+
+  .sidebar .sidebar-sub-headers {
+    padding-left: 1rem;
+    font-size: .95em;
+  }
+
+  a.sidebar-link {
+    font-weight: 400;
+    display: inline-block;
+    color: #2c3e50;
+    border-left: .25rem solid transparent;
+    /*padding: .35rem 1rem .35rem 1.25rem;*/
+    padding: .35rem 1rem .35rem 0rem;
+    line-height: 1.4;
+    width: 100%;
+    box-sizing: border-box
+  }
+
+  a.sidebar-link:hover {
+    color: #3eaf7c
+  }
+
+  a.sidebar-link.active {
+    font-weight: 600;
+    color: #3eaf7c;
+    border-left-color: #3eaf7c;
+  }
+
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .sidebar ul,ol {
+    padding-left: 10px;
+  }
+  
+  /*一级目录 */
+  .pptoclist > .pptocitem > .sidebar-link {
+    font-size: 16px;
+    font-weight: bold;    
+  }
+  
+  /*模仿掘金的样式，表格可水平滑动 https://juejin.cn/post/6844904154427572231*/
+  table {
+    display: inline-block !important;
+    /* width: auto; */
+    max-width: 100%;
+    overflow: auto;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar-button" onclick="displayTOC()" style="position: fixed;">
+    <!-- 内联使用SVG this is sometimes called putting your SVG inline, or inlining SVG -->
+    <!--     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon">
+      <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+    </svg> -->
+    <svg height="16" class="octicon octicon-list-unordered" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+    </svg>
+    <!-- <img src="github_readme_menu.svg" alt="github readme menu"> -->
+  </div>
+  <div id="ppTOCContent" class="sidebar"></div>
+  <div id="content">
+  </div>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/lib/marked.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.1.0/lib/marked.js"></script>
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.0/build/styles/default.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.0/build/highlight.min.js"></script>
+  <!-- <script></script> -->
+  <script>
+  //代码高亮设置
+  hljs.initHighlightingOnLoad();
+
+  var showTOC = false;
+  let string = '**marked.js**正在解析文本...\n\n Rendered by **marked.js**.'
+  var fileURLString = ''
+  var offsetYKey = 'offsetY'
+  var ppTOCHTMLString = ''
+  // document.getElementById('content').innerHTML = marked(string);
+
+
+
+  var toc = [];
+  var renderer = (function() {
+    var renderer = new marked.Renderer();
+    renderer.heading = function(text, level, raw) {
+      var anchor = this.options.headerPrefix + raw.toLowerCase().replace(/[^\w\\u4e00-\\u9fa5]]+/g, '-');
+      toc.push({
+        anchor: anchor,
+        level: level,
+        text: text
+      });
+      return '<h' +
+        level +
+        ' id="' +
+        anchor +
+        '">' +
+        text +
+        '</h' +
+        level +
+        '>\n';
+      // '>\n' +
+      // '<a href="#table-of-contents">TOC👆<a>\n';
+    };
+    return renderer;
+  })();
+
+  marked.setOptions({
+    renderer: renderer,
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: false
+  });
+  //代码高亮设置
+  marked.setOptions({
+    highlight: function(code) {
+      return hljs.highlightAuto(code).value;
+    }
+  });
+
+  function build(coll, k, level, ctx) {
+    if (k >= coll.length || coll[k].level <= level) { return k; }
+    var node = coll[k];
+    ctx.push("<li class=\"pptocitem\"><a class=\"sidebar-link\" href='#" + node.anchor + "'>" + node.text + "</a>");
+    k++;
+    var childCtx = [];
+    k = build(coll, k, node.level, childCtx);
+    if (childCtx.length > 0) {
+      ctx.push("<ul>");
+      childCtx.forEach(function(idm) {
+        ctx.push(idm);
+      });
+      ctx.push("</ul>");
+    }
+    ctx.push("</li>");
+    k = build(coll, k, level, ctx);
+    return k;
+  }
+
+  //套一层是为了在swift执行js方法的时候在mac的Safari打断点调试
+  function ppmarked(string) {
+    return marked(string)
+  }
+  function ppGenerateTOC(string) {
+    return generateTOC(string)
+  }  
+
+  function generateTOC(string) {
+    var ctx = [];
+    ctx.push('<ul class="pptoclist">');//<h3 id="table-of-contents">目录</h3>
+    build(toc, 0, 0, ctx);
+    ctx.push("</ul>");
+    let final = ctx.join("");
+    return final;
+  }
+  document.querySelector('#ppTOCContent').hidden = true;
+  function displayTOC() {
+    console.log('显示目录');
+    document.querySelector('#ppTOCContent').hidden = !document.querySelector('#ppTOCContent').hidden;
+  }
+  // 每个文件设置唯一的位置标识符
+  function setFileHash(hash) {
+    offsetYKey = `pageoffsetY${String(hash)}`
+    console.log(offsetYKey)
+    scrollToLastLocation()
+  }
+  // 滚动到上次滑动的位置
+  function scrollToLastLocation() {
+    var offset = localStorage.getItem(offsetYKey);
+    console.log("滚动到", offsetYKey, "==", offset)
+    setTimeout(function() {
+      document.documentElement.scrollTop = document.body.scrollTop = parseInt(offset);
+    }, 100);
+  }
+  document.getElementById('content').innerHTML = ppmarked(string);
+  </script>
+  <script>
+  //滚动时保存滚动位置
+  window.addEventListener('scroll', function(e) {
+    // document.documentElement.scrollTop || document.body.scrollTop
+
+    last_known_scroll_position = window.scrollY;
+    // console.log('last_known_scroll_position=' + last_known_scroll_position);
+    if (!localStorage[offsetYKey]) {
+      localStorage[offsetYKey] = 0;
+    }
+
+    // localStorage.offsetYKey = parseInt(last_known_scroll_position);
+    localStorage.setItem(offsetYKey, parseInt(last_known_scroll_position));
+    // console.log(`设置偏移量${offsetYKey}=${last_known_scroll_position}`)
+  });
+
+  // ？？？
+  window.addEventListener("beforeunload", function(e) {
+    console.log('unload')
+    var confirmationMessage = "\o/";
+    alert('offset')
+      (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Webkit, Safari, Chrome
+  });
+
+  //onload时，取出并滚动到上次保存位置
+  window.onload = function() {
+    // console.log('window.onload')
+    var offset = localStorage.getItem(offsetYKey);
+    console.log("onload获取", offsetYKey, "==", offset)
+    // alert(offset)
+    //https://stackoverflow.com/a/28488360
+    setTimeout(function() {
+      document.documentElement.scrollTop = document.body.scrollTop = parseInt(offset);
+    }, 100);
+
+  };
+  </script>
+</body>
+
+</html>

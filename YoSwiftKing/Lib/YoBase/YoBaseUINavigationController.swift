@@ -20,12 +20,6 @@ open class YoBaseUINavigationController: UINavigationController {
     required public init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //自定义导航区
-//    lazy var navView: YoBaseNavView = {
-//        let view = YoBaseNavView()
-//        view.delegate = self
-//        return view
-//    }()
 //    open override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
 //        self.navigationBar.isHidden = true
@@ -33,7 +27,6 @@ open class YoBaseUINavigationController: UINavigationController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.isHidden = true
-        
 //        navigationBar.tintColor = .red;
 //        //设置导航栏背景颜色
 //        navigationBar.isTranslucent = false
@@ -41,11 +34,11 @@ open class YoBaseUINavigationController: UINavigationController {
 //        //设置标题及其颜色
 //        navigationBar.titleTextAttributes = [.foregroundColor : UIColor.purple, .font : UIFont.systemFont(ofSize: 18)]
         //修改页面背景颜色
-        self.view.backgroundColor = UIColor.white
-        //修改导航栏背景图片（使用代码动态生成的纯色图片）
-        let image = createImageWithColor(.white,
-                            frame: CGRect(x: 0, y: 0, width: 1, height: 1))
-        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+//        self.view.backgroundColor = UIColor.white
+//        //修改导航栏背景图片（使用代码动态生成的纯色图片）
+//        let image = createImageWithColor(.white,
+//                            frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+//        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
     }
     deinit {}
 }
@@ -185,16 +178,5 @@ extension YoBaseUINavigationController {
     //是否影藏状态栏
     open override var prefersStatusBarHidden: Bool {
         return topViewController?.prefersStatusBarHidden ?? false
-    }
-}
-// MARK: 代理  自定义导航层
-extension YoBaseUINavigationController: YoBaseUINavigationControllerDelegate {
-    //选择左侧按钮
-    func selectedLeftButtonAction(on leftBtn: UIButton) {
-        if presentingViewController != nil, viewControllers.count == 1 {
-            dismiss(animated: true)
-        } else {
-            popViewController(animated: true)
-        }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  YoSwiftViewListViewCtl.swift
+//  YoPageListViewCtl.swift
 //  YoSwiftKing
 //
 //  Created by admin on 2022/3/3.
@@ -7,7 +7,7 @@
 import UIKit
 import SnapKit
 //MARK:
-class YoSwiftViewListViewCtl: YoBaseUIViewController {
+class YoPageListViewCtl: YoBaseUIViewController {
     //列表数据
      var listData = [Any]()
     //声明列表
@@ -16,7 +16,7 @@ class YoSwiftViewListViewCtl: YoBaseUIViewController {
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(YoSwiftViewListCell.self, forCellReuseIdentifier: NSStringFromClass(YoSwiftViewListCell.self))
+        tableView.register(YoPageListCell.self, forCellReuseIdentifier: NSStringFromClass(YoPageListCell.self))
          tableView.separatorStyle = .none
          return tableView
     }()
@@ -39,7 +39,7 @@ class YoSwiftViewListViewCtl: YoBaseUIViewController {
     }
 }
 //MARK: table DataSource
-extension YoSwiftViewListViewCtl: UITableViewDataSource {
+extension YoPageListViewCtl: UITableViewDataSource {
     //返回行
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      return listData.count
@@ -47,7 +47,7 @@ extension YoSwiftViewListViewCtl: UITableViewDataSource {
     //cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let model = listData[indexPath.section] as! YoSwiftViewListModel
-       let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(YoSwiftViewListCell.self))! as! YoSwiftViewListCell
+       let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(YoPageListCell.self))! as! YoPageListCell
        cell.titleLab.text = model.title as String?
        cell.textLab.text = model.text
        cell.indexPath = indexPath as NSIndexPath
@@ -55,17 +55,20 @@ extension YoSwiftViewListViewCtl: UITableViewDataSource {
    }
 }
 //MARK: table Delegate
-extension YoSwiftViewListViewCtl: UITableViewDelegate {
+extension YoPageListViewCtl: UITableViewDelegate {
     //行高
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70 + 1
     }
     //xuan ze
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewCtl =  TradeDetailViewCtl()
+        let viewCtl = YoPageDetailMainViewCtl()
+        //YoPageDetailMainViewCtl()
+        //YoMarkDownWebViewCtl()
         viewCtl.hidesBottomBarWhenPushed = true
-       // self.currentViewController()?.navigationController?.pushViewController(viewCtl, animated: false)
-       // self.navigationController?.pushViewController(viewCtl, animated: false)
+//        viewCtl.markdownName =  "SwiftProtocol"
+       self.currentViewController()?.navigationController?.pushViewController(viewCtl, animated: true)
+      // self.navigationController?.pushViewController(viewCtl, animated: false)
     }
     //区头 高
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
@@ -73,13 +76,13 @@ extension YoSwiftViewListViewCtl: UITableViewDelegate {
     }
     //区头
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-       let headerView = YoSwiftViewListHeaderView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 60))
+       let headerView =  YoPageListHeaderView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 60))
         headerView.titleLab.text = "RunTime"
         return headerView
     }
 }
 //MARK: 标签代理回调
-extension YoSwiftViewListViewCtl:  YoTagsLabViewProtocol {
+extension YoPageListViewCtl:  YoTagsLabViewProtocol {
     /** 设置每个tag的属性，包含UI ，对应的属性*/
     func tagsViewUpdatePropertyModel(_ tagsView: YoTagsLabView, item: YoTagsPropertyModel, index: NSInteger) {
 
@@ -103,15 +106,15 @@ extension YoSwiftViewListViewCtl:  YoTagsLabViewProtocol {
 }
 
 //MARK: 选择按钮事件
-extension YoSwiftViewListViewCtl {
+extension YoPageListViewCtl {
 
 }
 //MARK: 页面布局
-extension YoSwiftViewListViewCtl {
+extension YoPageListViewCtl {
     
 }
 //MARK: 页面布局
-extension YoSwiftViewListViewCtl {
+extension YoPageListViewCtl {
     //MARK: 布局
      private  func layoutViewCtlSubviews() {
         //表

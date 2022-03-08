@@ -18,39 +18,49 @@ open class YoBaseUIViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {}
+    //自定义导航区
+    lazy var navView: YoBaseNavView = {
+        let navView = YoBaseNavView()
+        self.view.addSubview(navView)
+        navView.delegate = self
+        return navView
+    }()
 }
 // MARK: 生命周期
 extension YoBaseUIViewController {
+ 
     override open func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = .white
+        self.navView.backgroundColor = .navColor
+        layoutViewCtlSubView()
         //修改导航栏背景图片（使用代码动态生成的纯色图片）
-        let image = createImageWithColor(.white,
-                            frame: CGRect(x: 0, y: 0, width: 1, height: 1))
-        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+//        let image = createImageWithColor(.white,
+//                            frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+//        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
     }
 }
 // MARK:
 extension YoBaseUIViewController {
     //生成一个指定颜色的图片
-private  func createImageWithColor(_ color: UIColor, frame: CGRect) -> UIImage? {
-         // 开始绘图
-         UIGraphicsBeginImageContext(frame.size)
-          
-         // 获取绘图上下文
-         let context = UIGraphicsGetCurrentContext()
-         // 设置填充颜色
-         context?.setFillColor(color.cgColor)
-         // 使用填充颜色填充区域
-         context?.fill(frame)
-          
-         // 获取绘制的图像
-         let image = UIGraphicsGetImageFromCurrentImageContext()
-          
-         // 结束绘图
-         UIGraphicsEndImageContext()
-         return image
-     }
+//private  func createImageWithColor(_ color: UIColor, frame: CGRect) -> UIImage? {
+//         // 开始绘图
+//         UIGraphicsBeginImageContext(frame.size)
+//
+//         // 获取绘图上下文
+//         let context = UIGraphicsGetCurrentContext()
+//         // 设置填充颜色
+//         context?.setFillColor(color.cgColor)
+//         // 使用填充颜色填充区域
+//         context?.fill(frame)
+//
+//         // 获取绘制的图像
+//         let image = UIGraphicsGetImageFromCurrentImageContext()
+//
+//         // 结束绘图
+//         UIGraphicsEndImageContext()
+//         return image
+//     }
 }
 // MARK: 选择相关
 extension YoBaseUIViewController {
@@ -75,3 +85,21 @@ extension YoBaseUIViewController {
         return false
     }
 }
+// MARK: 布局
+extension YoBaseUIViewController {
+    //放一个view
+    func layoutViewCtlSubView(){
+        self.navView.snp.makeConstraints { make in
+            make.left.right.top.equalTo(self.view)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(44)
+        }
+    }
+}
+// MARK: 代理  自定义导航层
+extension YoBaseUIViewController: YoBaseUINavigationControllerDelegate {
+    //选择左侧按钮
+    func selectedLeftButtonAction(on leftBtn: UIButton) {
+            self.navigationController?.popViewController(animated: true)
+    }
+}
+

@@ -1,5 +1,5 @@
 //
-//   YoSwiftViewListCell.swift
+//   YoPageListCell.swift
 //  YoSwiftKing
 //
 //  Created by admin on 2022/3/3.
@@ -7,8 +7,8 @@
 
 import UIKit
 import SnapKit
-//MARK:  cell
-class YoSwiftViewListCell: UITableViewCell {
+//MARK:  cell  YoPageListCell
+class YoPageListCell: UITableViewCell {
     var indexPath: NSIndexPath?
        //计费名称
      public  lazy var titleLab: UILabel = {
