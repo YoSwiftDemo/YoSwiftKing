@@ -1,12 +1,12 @@
 //
-//  YoBaseTableViewListHeaderView.swift
+//  YoSwiftListHeaderView.swift
 //  YoSwiftKing
 //
-//  Created by admin on 2022/2/10.
+//  Created by admin on 2022/3/17.
 //
 
 import UIKit
-class YoBaseTableViewListHeaderView: UIView {
+class YoSwiftListHeaderView: UIView {
     public  lazy var lineView: UIView = {
         let view = UIView()
         self.addSubview(view)

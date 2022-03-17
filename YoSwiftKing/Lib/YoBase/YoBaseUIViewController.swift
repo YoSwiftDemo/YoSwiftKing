@@ -31,6 +31,7 @@ extension YoBaseUIViewController {
  
     override open func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.navigationBar.barTintColor = .white
         self.navView.backgroundColor = .navColor
         layoutViewCtlSubView()

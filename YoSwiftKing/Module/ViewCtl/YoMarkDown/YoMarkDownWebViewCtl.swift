@@ -18,10 +18,10 @@ class YoMarkDownWebViewCtl: YoBaseUIViewController , WKUIDelegate, WKNavigationD
     ///文件相对路径
     var filePathStr: String = ""
     //视图将要加载
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = false
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = false
+//    }
     func loadUrl() {
        if   urlString != ""  {
             if let url = URL(string: urlString){

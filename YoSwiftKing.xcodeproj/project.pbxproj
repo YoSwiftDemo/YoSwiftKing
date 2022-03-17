@@ -20,21 +20,16 @@
 		841D892C27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D892B27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift */; };
 		841D893E27D0D199004DC891 /* YoUIKitMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D893D27D0D199004DC891 /* YoUIKitMainViewCtl.swift */; };
 		841D894027D0D1D9004DC891 /* YoDemoMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D893F27D0D1D9004DC891 /* YoDemoMainViewCtl.swift */; };
-		841D894527D0FE7A004DC891 /* YoPageListViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D894427D0FE7A004DC891 /* YoPageListViewCtl.swift */; };
-		841D894727D105C3004DC891 /* YoPageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D894627D105C3004DC891 /* YoPageListModel.swift */; };
-		841D894927D10637004DC891 /*  YoPageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D894827D10637004DC891 /*  YoPageListCell.swift */; };
-		841D894B27D10806004DC891 /*  YoPageListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D894A27D10806004DC891 /*  YoPageListHeaderView.swift */; };
 		841D895227D11245004DC891 /* mdjs.js in Resources */ = {isa = PBXBuildFile; fileRef = 841D894D27D11245004DC891 /* mdjs.js */; };
 		841D895327D11245004DC891 /* vue.css in Resources */ = {isa = PBXBuildFile; fileRef = 841D894E27D11245004DC891 /* vue.css */; };
 		841D895427D11245004DC891 /* markdown-white.css in Resources */ = {isa = PBXBuildFile; fileRef = 841D894F27D11245004DC891 /* markdown-white.css */; };
 		841D895527D11245004DC891 /* YoMarkDownWebViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D895027D11245004DC891 /* YoMarkDownWebViewCtl.swift */; };
 		841D895627D11245004DC891 /* markdown.html in Resources */ = {isa = PBXBuildFile; fileRef = 841D895127D11245004DC891 /* markdown.html */; };
 		841D895827D112CB004DC891 /* SwiftProtocol.md in Resources */ = {isa = PBXBuildFile; fileRef = 841D895727D112CA004DC891 /* SwiftProtocol.md */; };
-		841D895A27D1AB1F004DC891 /* YoPageDetailMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D895927D1AB1F004DC891 /* YoPageDetailMainViewCtl.swift */; };
 		841D895E27D1BAF4004DC891 /* YoBaseBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 841D895D27D1BAF4004DC891 /* YoBaseBundle.bundle */; };
 		841D896027D1C900004DC891 /* YoButton+Enlarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D895F27D1C900004DC891 /* YoButton+Enlarge.swift */; };
-		841D896227D1E4F4004DC891 /* YoPageMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D896127D1E4F4004DC891 /* YoPageMainViewCtl.swift */; };
 		841D896527D1EE86004DC891 /* YoSwift.json in Resources */ = {isa = PBXBuildFile; fileRef = 841D896427D1EE86004DC891 /* YoSwift.json */; };
+		841D896927D6F88E004DC891 /* YoSwiftListViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D896827D6F88E004DC891 /* YoSwiftListViewCtl.swift */; };
 		842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */; };
 		842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */; };
 		842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */; };
@@ -52,6 +47,15 @@
 		846A368C27B3A4C7004AEC34 /* YoSwiftKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A368B27B3A4C7004AEC34 /* YoSwiftKingTests.swift */; };
 		846A369627B3A4C7004AEC34 /* YoSwiftKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369527B3A4C7004AEC34 /* YoSwiftKingUITests.swift */; };
 		846A369827B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */; };
+		848794F527E333830098D64B /* YoSwift-Main.json in Resources */ = {isa = PBXBuildFile; fileRef = 848794F427E333830098D64B /* YoSwift-Main.json */; };
+		848794F727E337950098D64B /* YoSwiftListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794F627E337950098D64B /* YoSwiftListCell.swift */; };
+		848794F927E337A80098D64B /* YoSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794F827E337A80098D64B /* YoSwiftModel.swift */; };
+		848794FE27E339C70098D64B /* YoSwiftListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794FD27E339C70098D64B /* YoSwiftListHeaderView.swift */; };
+		8487950027E351FA0098D64B /* YoPageDetailMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794FF27E351FA0098D64B /* YoPageDetailMainViewCtl.swift */; };
+		8487950227E352450098D64B /* YoSwiftListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950127E352450098D64B /* YoSwiftListModel.swift */; };
+		8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */; };
+		8487950727E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */; };
+		8487950927E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */; };
 		84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5127C377510020F842 /* TradeMainViewCtl.swift */; };
 		84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */; };
 		84974F5827C37B320020F842 /* TradeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5727C37B320020F842 /* TradeConfig.swift */; };
@@ -131,21 +135,16 @@
 		841D892B27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CurrentViewCtl.swift"; sourceTree = "<group>"; };
 		841D893D27D0D199004DC891 /* YoUIKitMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoUIKitMainViewCtl.swift; sourceTree = "<group>"; };
 		841D893F27D0D1D9004DC891 /* YoDemoMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoDemoMainViewCtl.swift; sourceTree = "<group>"; };
-		841D894427D0FE7A004DC891 /* YoPageListViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoPageListViewCtl.swift; sourceTree = "<group>"; };
-		841D894627D105C3004DC891 /* YoPageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoPageListModel.swift; sourceTree = "<group>"; };
-		841D894827D10637004DC891 /*  YoPageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " YoPageListCell.swift"; sourceTree = "<group>"; };
-		841D894A27D10806004DC891 /*  YoPageListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " YoPageListHeaderView.swift"; sourceTree = "<group>"; };
 		841D894D27D11245004DC891 /* mdjs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mdjs.js; sourceTree = "<group>"; };
 		841D894E27D11245004DC891 /* vue.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = vue.css; sourceTree = "<group>"; };
 		841D894F27D11245004DC891 /* markdown-white.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-white.css"; sourceTree = "<group>"; };
 		841D895027D11245004DC891 /* YoMarkDownWebViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoMarkDownWebViewCtl.swift; sourceTree = "<group>"; };
 		841D895127D11245004DC891 /* markdown.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = markdown.html; sourceTree = "<group>"; };
 		841D895727D112CA004DC891 /* SwiftProtocol.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SwiftProtocol.md; sourceTree = "<group>"; };
-		841D895927D1AB1F004DC891 /* YoPageDetailMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoPageDetailMainViewCtl.swift; sourceTree = "<group>"; };
 		841D895D27D1BAF4004DC891 /* YoBaseBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YoBaseBundle.bundle; sourceTree = "<group>"; };
 		841D895F27D1C900004DC891 /* YoButton+Enlarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YoButton+Enlarge.swift"; sourceTree = "<group>"; };
-		841D896127D1E4F4004DC891 /* YoPageMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoPageMainViewCtl.swift; sourceTree = "<group>"; };
 		841D896427D1EE86004DC891 /* YoSwift.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YoSwift.json; sourceTree = "<group>"; };
+		841D896827D6F88E004DC891 /* YoSwiftListViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoSwiftListViewCtl.swift; sourceTree = "<group>"; };
 		842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifTextHeaderRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorAutoFooterRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A927BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoTextAutoFooterRefreshView.swift; sourceTree = "<group>"; };
@@ -167,6 +166,15 @@
 		846A369127B3A4C7004AEC34 /* YoSwiftKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoSwiftKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A369527B3A4C7004AEC34 /* YoSwiftKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITests.swift; sourceTree = "<group>"; };
 		846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftKingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		848794F427E333830098D64B /* YoSwift-Main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "YoSwift-Main.json"; sourceTree = "<group>"; };
+		848794F627E337950098D64B /* YoSwiftListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListCell.swift; sourceTree = "<group>"; };
+		848794F827E337A80098D64B /* YoSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftModel.swift; sourceTree = "<group>"; };
+		848794FD27E339C70098D64B /* YoSwiftListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListHeaderView.swift; sourceTree = "<group>"; };
+		848794FF27E351FA0098D64B /* YoPageDetailMainViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoPageDetailMainViewCtl.swift; sourceTree = "<group>"; };
+		8487950127E352450098D64B /* YoSwiftListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoSwiftListModel.swift; sourceTree = "<group>"; };
+		8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListDetailViewCtl.swift; sourceTree = "<group>"; };
+		8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftMarkDownWebViewCtl.swift; sourceTree = "<group>"; };
+		8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftDetailDemoViewCtl.swift; sourceTree = "<group>"; };
 		84974F5127C377510020F842 /* TradeMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainViewCtl.swift; sourceTree = "<group>"; };
 		84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListTableViewCtl.swift; sourceTree = "<group>"; };
 		84974F5727C37B320020F842 /* TradeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeConfig.swift; sourceTree = "<group>"; };
@@ -313,19 +321,6 @@
 			path = YoMarkDown;
 			sourceTree = "<group>";
 		};
-		841D896327D1E90F004DC891 /* PageCtl */ = {
-			isa = PBXGroup;
-			children = (
-				841D896127D1E4F4004DC891 /* YoPageMainViewCtl.swift */,
-				841D894427D0FE7A004DC891 /* YoPageListViewCtl.swift */,
-				841D894627D105C3004DC891 /* YoPageListModel.swift */,
-				841D894827D10637004DC891 /*  YoPageListCell.swift */,
-				841D894A27D10806004DC891 /*  YoPageListHeaderView.swift */,
-				841D895927D1AB1F004DC891 /* YoPageDetailMainViewCtl.swift */,
-			);
-			path = PageCtl;
-			sourceTree = "<group>";
-		};
 		842CD1AD27BB79FE003F8240 /* YoRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,16 +328,8 @@
 				842CD1BD27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift */,
 				844A1ABE27BE204B00A1FC75 /* YoSuperCatHeaderRefreshView .swift */,
 			);
-			path = YoRefresh;
-			sourceTree = "<group>";
-		};
-		842CD1B027BB7A54003F8240 /* YoLibDemo */ = {
-			isa = PBXGroup;
-			children = (
-				844A1AC027BE260D00A1FC75 /* Resource */,
-				842CD1AD27BB79FE003F8240 /* YoRefresh */,
-			);
-			path = YoLibDemo;
+			name = YoRefresh;
+			path = ../Module/ViewCtl/YoLibDemo/YoRefresh;
 			sourceTree = "<group>";
 		};
 		844A1AC027BE260D00A1FC75 /* Resource */ = {
@@ -406,6 +393,46 @@
 				846A369727B3A4C7004AEC34 /* YoSwiftKingUITestsLaunchTests.swift */,
 			);
 			path = YoSwiftKingUITests;
+			sourceTree = "<group>";
+		};
+		848794FA27E337D10098D64B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				84E16E0727B3C0D100FD63A7 /* YoSwiftViewCtl.swift */,
+				848794F827E337A80098D64B /* YoSwiftModel.swift */,
+				848794F427E333830098D64B /* YoSwift-Main.json */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		848794FB27E337DE0098D64B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8487950127E352450098D64B /* YoSwiftListModel.swift */,
+				841D896827D6F88E004DC891 /* YoSwiftListViewCtl.swift */,
+				848794F627E337950098D64B /* YoSwiftListCell.swift */,
+				848794FD27E339C70098D64B /* YoSwiftListHeaderView.swift */,
+				841D896427D1EE86004DC891 /* YoSwift.json */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		848794FC27E337EE0098D64B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				841D895727D112CA004DC891 /* SwiftProtocol.md */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8487950327E353690098D64B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */,
+				8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */,
+				8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		84974F4E27C374C40020F842 /* Trade */ = {
@@ -500,6 +527,8 @@
 		84E16DE727B3B46C00FD63A7 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				844A1AC027BE260D00A1FC75 /* Resource */,
+				842CD1AD27BB79FE003F8240 /* YoRefresh */,
 				841D892A27CE03E9004DC891 /* UIViewController */,
 				841D892727CDF94C004DC891 /* YoButton */,
 				84974F5D27C3906D0020F842 /* YoPage */,
@@ -643,9 +672,11 @@
 		84E16E0627B3BFE900FD63A7 /* YoSwift */ = {
 			isa = PBXGroup;
 			children = (
-				84E16E0727B3C0D100FD63A7 /* YoSwiftViewCtl.swift */,
-				841D896427D1EE86004DC891 /* YoSwift.json */,
-				841D895727D112CA004DC891 /* SwiftProtocol.md */,
+				8487950327E353690098D64B /* Detail */,
+				848794FF27E351FA0098D64B /* YoPageDetailMainViewCtl.swift */,
+				848794FC27E337EE0098D64B /* Resource */,
+				848794FB27E337DE0098D64B /* List */,
+				848794FA27E337D10098D64B /* Main */,
 			);
 			path = YoSwift;
 			sourceTree = "<group>";
@@ -671,7 +702,6 @@
 			children = (
 				841D894C27D11245004DC891 /* YoMarkDown */,
 				84974F4E27C374C40020F842 /* Trade */,
-				842CD1B027BB7A54003F8240 /* YoLibDemo */,
 				84E16E1B27B4F86600FD63A7 /* Base */,
 				84E16E0627B3BFE900FD63A7 /* YoSwift */,
 				84E16E0527B3BFD700FD63A7 /* YoFoundation */,
@@ -684,7 +714,6 @@
 		84E16E1B27B4F86600FD63A7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				841D896327D1E90F004DC891 /* PageCtl */,
 				84E16E1C27B4F87600FD63A7 /* TableList */,
 			);
 			path = Base;
@@ -831,6 +860,7 @@
 				841D895627D11245004DC891 /* markdown.html in Resources */,
 				846A368127B3A4C7004AEC34 /* LaunchScreen.storyboard in Resources */,
 				841D895427D11245004DC891 /* markdown-white.css in Resources */,
+				848794F527E333830098D64B /* YoSwift-Main.json in Resources */,
 				841D895827D112CB004DC891 /* SwiftProtocol.md in Resources */,
 				841D895327D11245004DC891 /* vue.css in Resources */,
 				844A1AC327BE26A800A1FC75 /* demo-small.gif in Resources */,
@@ -966,6 +996,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841D896027D1C900004DC891 /* YoButton+Enlarge.swift in Sources */,
+				848794F927E337A80098D64B /* YoSwiftModel.swift in Sources */,
 				8405A7FC27C72588001A1C61 /* YoOpthionButton.swift in Sources */,
 				842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */,
 				84E16E2F27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift in Sources */,
@@ -973,13 +1004,18 @@
 				84E16E0127B3B98300FD63A7 /* YoUIImage+Color.swift in Sources */,
 				84E16E0F27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift in Sources */,
 				84E16E2627B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift in Sources */,
+				8487950927E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift in Sources */,
+				841D896927D6F88E004DC891 /* YoSwiftListViewCtl.swift in Sources */,
+				8487950227E352450098D64B /* YoSwiftListModel.swift in Sources */,
 				842CD1AC27BB444F003F8240 /* UIScrollView+YoRefresh.swift in Sources */,
 				84D1B65E27C68A1200B492DB /* TradeDetailModel.swift in Sources */,
 				84E16E1327B4BA0B00FD63A7 /* YoTabBarCtl.swift in Sources */,
 				841D895527D11245004DC891 /* YoMarkDownWebViewCtl.swift in Sources */,
 				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
+				8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */,
 				841D892C27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift in Sources */,
 				84974F5A27C387770020F842 /* TradeListModel.swift in Sources */,
+				848794FE27E339C70098D64B /* YoSwiftListHeaderView.swift in Sources */,
 				84E16E1827B4F77500FD63A7 /* YoLibViewController.swift in Sources */,
 				84974F6427C390D80020F842 /* UIView+Layout.swift in Sources */,
 				844A1ABF27BE204B00A1FC75 /* YoSuperCatHeaderRefreshView .swift in Sources */,
@@ -989,13 +1025,10 @@
 				84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */,
 				84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */,
 				84D1B65C27C689DE00B492DB /* TradeDetailViewCtl.swift in Sources */,
-				841D894B27D10806004DC891 /*  YoPageListHeaderView.swift in Sources */,
 				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
-				841D896227D1E4F4004DC891 /* YoPageMainViewCtl.swift in Sources */,
 				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				8405A7FA27C72588001A1C61 /* CalendarModel.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
-				841D894927D10637004DC891 /*  YoPageListCell.swift in Sources */,
 				841D894027D0D1D9004DC891 /* YoDemoMainViewCtl.swift in Sources */,
 				84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
@@ -1025,14 +1058,14 @@
 				84974F6A27C3927C0020F842 /* String+Size.swift in Sources */,
 				84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */,
 				842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */,
+				8487950727E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift in Sources */,
 				8405A7F127C7247D001A1C61 /* YoTagsLabView.swift in Sources */,
 				842CD1BE27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift in Sources */,
 				84974F5C27C387910020F842 /* TradeListTableCell.swift in Sources */,
 				84974F6027C3906D0020F842 /* YoPageView.swift in Sources */,
 				8405A7FD27C72588001A1C61 /* YoCalendarController.swift in Sources */,
-				841D895A27D1AB1F004DC891 /* YoPageDetailMainViewCtl.swift in Sources */,
-				841D894727D105C3004DC891 /* YoPageListModel.swift in Sources */,
-				841D894527D0FE7A004DC891 /* YoPageListViewCtl.swift in Sources */,
+				8487950027E351FA0098D64B /* YoPageDetailMainViewCtl.swift in Sources */,
+				848794F727E337950098D64B /* YoSwiftListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
