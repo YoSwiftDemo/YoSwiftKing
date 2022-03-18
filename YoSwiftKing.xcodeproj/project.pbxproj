@@ -51,7 +51,6 @@
 		848794F727E337950098D64B /* YoSwiftListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794F627E337950098D64B /* YoSwiftListCell.swift */; };
 		848794F927E337A80098D64B /* YoSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794F827E337A80098D64B /* YoSwiftModel.swift */; };
 		848794FE27E339C70098D64B /* YoSwiftListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794FD27E339C70098D64B /* YoSwiftListHeaderView.swift */; };
-		8487950027E351FA0098D64B /* YoPageDetailMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848794FF27E351FA0098D64B /* YoPageDetailMainViewCtl.swift */; };
 		8487950227E352450098D64B /* YoSwiftListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950127E352450098D64B /* YoSwiftListModel.swift */; };
 		8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */; };
 		8487950727E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */; };
@@ -170,7 +169,6 @@
 		848794F627E337950098D64B /* YoSwiftListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListCell.swift; sourceTree = "<group>"; };
 		848794F827E337A80098D64B /* YoSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftModel.swift; sourceTree = "<group>"; };
 		848794FD27E339C70098D64B /* YoSwiftListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListHeaderView.swift; sourceTree = "<group>"; };
-		848794FF27E351FA0098D64B /* YoPageDetailMainViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoPageDetailMainViewCtl.swift; sourceTree = "<group>"; };
 		8487950127E352450098D64B /* YoSwiftListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoSwiftListModel.swift; sourceTree = "<group>"; };
 		8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListDetailViewCtl.swift; sourceTree = "<group>"; };
 		8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftMarkDownWebViewCtl.swift; sourceTree = "<group>"; };
@@ -328,8 +326,7 @@
 				842CD1BD27BB83F4003F8240 /* YoRefreshDetailViewCtl.swift */,
 				844A1ABE27BE204B00A1FC75 /* YoSuperCatHeaderRefreshView .swift */,
 			);
-			name = YoRefresh;
-			path = ../Module/ViewCtl/YoLibDemo/YoRefresh;
+			path = YoRefresh;
 			sourceTree = "<group>";
 		};
 		844A1AC027BE260D00A1FC75 /* Resource */ = {
@@ -528,7 +525,6 @@
 			isa = PBXGroup;
 			children = (
 				844A1AC027BE260D00A1FC75 /* Resource */,
-				842CD1AD27BB79FE003F8240 /* YoRefresh */,
 				841D892A27CE03E9004DC891 /* UIViewController */,
 				841D892727CDF94C004DC891 /* YoButton */,
 				84974F5D27C3906D0020F842 /* YoPage */,
@@ -673,7 +669,6 @@
 			isa = PBXGroup;
 			children = (
 				8487950327E353690098D64B /* Detail */,
-				848794FF27E351FA0098D64B /* YoPageDetailMainViewCtl.swift */,
 				848794FC27E337EE0098D64B /* Resource */,
 				848794FB27E337DE0098D64B /* List */,
 				848794FA27E337D10098D64B /* Main */,
@@ -700,6 +695,7 @@
 		84E16E1A27B4F82200FD63A7 /* ViewCtl */ = {
 			isa = PBXGroup;
 			children = (
+				842CD1AD27BB79FE003F8240 /* YoRefresh */,
 				841D894C27D11245004DC891 /* YoMarkDown */,
 				84974F4E27C374C40020F842 /* Trade */,
 				84E16E1B27B4F86600FD63A7 /* Base */,
@@ -1064,7 +1060,6 @@
 				84974F5C27C387910020F842 /* TradeListTableCell.swift in Sources */,
 				84974F6027C3906D0020F842 /* YoPageView.swift in Sources */,
 				8405A7FD27C72588001A1C61 /* YoCalendarController.swift in Sources */,
-				8487950027E351FA0098D64B /* YoPageDetailMainViewCtl.swift in Sources */,
 				848794F727E337950098D64B /* YoSwiftListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

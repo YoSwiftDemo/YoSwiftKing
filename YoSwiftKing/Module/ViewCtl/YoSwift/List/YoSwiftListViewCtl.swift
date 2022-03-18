@@ -39,6 +39,12 @@ class YoSwiftListViewCtl: YoBaseUIViewController {
          
         listData = [model,model2]
         layoutViewCtlSubviews()
+         refreshTypeAction()
+    }
+    //启动刷新
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.beginRefreshing()
     }
 }
 //MARK: table DataSource
@@ -130,5 +136,22 @@ extension YoSwiftListViewCtl {
 extension YoSwiftListViewCtl: JXSegmentedListContainerViewListDelegate {
     func listView() -> UIView {
         return view
+    }
+}
+
+extension YoSwiftListViewCtl {
+    private func  refreshTypeAction() {
+      //头部 指示器
+    self.tableView.createHeaderIndicator(height: 60) { [weak self] in
+        self?.action()
+        }
+    self.tableView.createFooterIndicator { [weak self] in
+        self?.action()
+    }
+    }
+    private func action() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5 ) {
+            self.tableView.endRefreshing()
+        }
     }
 }

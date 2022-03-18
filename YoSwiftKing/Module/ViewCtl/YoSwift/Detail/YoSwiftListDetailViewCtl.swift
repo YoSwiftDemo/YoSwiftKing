@@ -102,7 +102,6 @@ extension YoSwiftListDetailViewCtl:  JXSegmentedListContainerViewDataSource {
     }
      // 设置对应分页
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
-        
         if index == 0 {
             let viewCtl = YoSwiftDetailDemoViewCtl()
             return viewCtl
