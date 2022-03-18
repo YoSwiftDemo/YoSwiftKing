@@ -13,8 +13,8 @@ class YoSwiftListCell: UITableViewCell {
        //计费名称
      public  lazy var titleLab: UILabel = {
            let lab = UILabel()
-           lab.textColor = TradeConfig.instance.titleColor
-           lab.font = TradeConfig.instance.titleFont
+           lab.textColor = .hex("#333333")
+           lab.font = .systemFont(ofSize: 16, weight: .medium)
            lab.textAlignment = .left
            contentView.addSubview(lab)
            return lab
@@ -22,8 +22,8 @@ class YoSwiftListCell: UITableViewCell {
       //说明文本
     public  lazy var textLab: UILabel = {
           let lab = UILabel()
-          lab.textColor = TradeConfig.instance.textSubColor
-          lab.font = TradeConfig.instance.textFont
+          lab.textColor = .hex("#AAAAAA")
+          lab.font =  .systemFont(ofSize: 14, weight: .regular)
           lab.textAlignment = .left
           contentView.addSubview(lab)
           return lab
@@ -31,7 +31,7 @@ class YoSwiftListCell: UITableViewCell {
       //分割线
      public  lazy var lineView: UIView = {
           let line = UIView()
-           line.backgroundColor = TradeConfig.instance.lineColor
+           line.backgroundColor = .hex("#F4F5F9", alpha: 1)
           contentView.addSubview(line)
           return line
       }()

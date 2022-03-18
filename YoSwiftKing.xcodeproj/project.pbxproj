@@ -28,7 +28,7 @@
 		841D895827D112CB004DC891 /* SwiftProtocol.md in Resources */ = {isa = PBXBuildFile; fileRef = 841D895727D112CA004DC891 /* SwiftProtocol.md */; };
 		841D895E27D1BAF4004DC891 /* YoBaseBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 841D895D27D1BAF4004DC891 /* YoBaseBundle.bundle */; };
 		841D896027D1C900004DC891 /* YoButton+Enlarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D895F27D1C900004DC891 /* YoButton+Enlarge.swift */; };
-		841D896527D1EE86004DC891 /* YoSwift.json in Resources */ = {isa = PBXBuildFile; fileRef = 841D896427D1EE86004DC891 /* YoSwift.json */; };
+		841D896527D1EE86004DC891 /* YoSwift-0.json in Resources */ = {isa = PBXBuildFile; fileRef = 841D896427D1EE86004DC891 /* YoSwift-0.json */; };
 		841D896927D6F88E004DC891 /* YoSwiftListViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D896827D6F88E004DC891 /* YoSwiftListViewCtl.swift */; };
 		842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */; };
 		842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */; };
@@ -142,7 +142,7 @@
 		841D895727D112CA004DC891 /* SwiftProtocol.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SwiftProtocol.md; sourceTree = "<group>"; };
 		841D895D27D1BAF4004DC891 /* YoBaseBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YoBaseBundle.bundle; sourceTree = "<group>"; };
 		841D895F27D1C900004DC891 /* YoButton+Enlarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YoButton+Enlarge.swift"; sourceTree = "<group>"; };
-		841D896427D1EE86004DC891 /* YoSwift.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YoSwift.json; sourceTree = "<group>"; };
+		841D896427D1EE86004DC891 /* YoSwift-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "YoSwift-0.json"; sourceTree = "<group>"; };
 		841D896827D6F88E004DC891 /* YoSwiftListViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoSwiftListViewCtl.swift; sourceTree = "<group>"; };
 		842CD1A527BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifTextHeaderRefreshView.swift; sourceTree = "<group>"; };
 		842CD1A727BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorAutoFooterRefreshView.swift; sourceTree = "<group>"; };
@@ -409,7 +409,7 @@
 				841D896827D6F88E004DC891 /* YoSwiftListViewCtl.swift */,
 				848794F627E337950098D64B /* YoSwiftListCell.swift */,
 				848794FD27E339C70098D64B /* YoSwiftListHeaderView.swift */,
-				841D896427D1EE86004DC891 /* YoSwift.json */,
+				841D896427D1EE86004DC891 /* YoSwift-0.json */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -861,7 +861,7 @@
 				841D895327D11245004DC891 /* vue.css in Resources */,
 				844A1AC327BE26A800A1FC75 /* demo-small.gif in Resources */,
 				846A367E27B3A4C7004AEC34 /* Assets.xcassets in Resources */,
-				841D896527D1EE86004DC891 /* YoSwift.json in Resources */,
+				841D896527D1EE86004DC891 /* YoSwift-0.json in Resources */,
 				846A367C27B3A4C3004AEC34 /* Main.storyboard in Resources */,
 				844A1AC427BE26A800A1FC75 /* demo-big.gif in Resources */,
 			);

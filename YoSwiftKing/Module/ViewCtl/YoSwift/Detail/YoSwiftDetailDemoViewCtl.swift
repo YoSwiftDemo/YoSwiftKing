@@ -12,7 +12,6 @@ class YoSwiftDetailDemoViewCtl:  YoBaseUIViewController {
     override func viewDidLoad() {
        super.viewDidLoad()
         self.navView.isHidden = true
-        self.view.backgroundColor = .blue
     }
 }
 //MARK: JXSegmentedView必须实现

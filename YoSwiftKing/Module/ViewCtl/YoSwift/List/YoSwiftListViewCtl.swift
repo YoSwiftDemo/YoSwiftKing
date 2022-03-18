@@ -11,8 +11,9 @@ import SnapKit
 import JXSegmentedView
 //MARK:
 class YoSwiftListViewCtl: YoBaseUIViewController {
+    //区分列表标识
     //列表数据
-     var listData = [Any]()
+     var listData = [YoSwiftViewListSectionModel]()
     //声明列表
      lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -28,18 +29,18 @@ class YoSwiftListViewCtl: YoBaseUIViewController {
         view.backgroundColor = .white
          navigationController?.navigationBar.isHidden = true
         //测试 数据
-        let model = YoSwiftViewListModel()
-        model.title = "RunTime原理2222"
-        model.text = "2206 Kingnights Bridge2"
-
-         
-         let model2 = YoSwiftViewListModel()
-         model2.title = "RunLoop解析"
-         model2.text = "2206 Kingnights Bridge"
-         
-        listData = [model,model2]
+        
+//        let model = YoSwiftViewListModel()
+//        model.title = "RunTime原理2222"
+//        model.text = "2206 Kingnights Bridge2"
+//        let sctionModel = YoSwiftViewListSectionModel()
+//         sctionModel.title = "区头数据"
+//         sctionModel.rows = [model]
+//
+//
+//        listData = [sctionModel]
         layoutViewCtlSubviews()
-         refreshTypeAction()
+        refreshTypeAction()
     }
     //启动刷新
     override func viewDidAppear(_ animated: Bool) {
@@ -51,11 +52,17 @@ class YoSwiftListViewCtl: YoBaseUIViewController {
 extension YoSwiftListViewCtl: UITableViewDataSource {
     //返回行
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return listData.count
+          let sectionModel = listData[section]
+        if (sectionModel.rows != nil) {
+            return sectionModel.rows!.count
+        }
+        return 0
    }
     //cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let model = listData[indexPath.section] as! YoSwiftViewListModel
+        //先去区数据
+       let sectionModel = listData[indexPath.section]
+        let model = sectionModel.rows![indexPath.row]
        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(YoSwiftListCell.self))! as! YoSwiftListCell
        cell.titleLab.text = model.title as String?
        cell.textLab.text = model.text
@@ -85,8 +92,9 @@ extension YoSwiftListViewCtl: UITableViewDelegate {
     }
     //区头
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionModel = listData[section]
        let headerView =  YoSwiftListHeaderView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 60))
-        headerView.titleLab.text = "RunTime"
+        headerView.titleLab.text = sectionModel.title
         return headerView
     }
 }

@@ -7,18 +7,22 @@
 
 import UIKit
 import HandyJSON
+//
+
+class YoSwiftViewModel: Codable {
+    var sections: [YoSwiftViewListSectionModel]?
+}
 //MARK: sction Model
-class YoSwiftViewListSectionModel: HandyJSON {
+class YoSwiftViewListSectionModel: Codable {
     var title: String = ""// 标题
     var rows: [YoSwiftViewListModel]?
-    required init(){}
-
 }
 //MARK: row Model
-class YoSwiftViewListModel: HandyJSON {
+class YoSwiftViewListModel: Codable {
     var title: String = ""// 标题
     var text: String = "" // 文本描述
-    required init(){
-        
-    } // 必须实现一个空的初始化方法
+    var markdown: String = ""
+    var className: String = ""
 }
+
+

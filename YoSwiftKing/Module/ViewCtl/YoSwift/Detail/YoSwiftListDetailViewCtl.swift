@@ -56,7 +56,7 @@ class YoSwiftListDetailViewCtl: YoBaseUIViewController {
         super.viewDidLoad()
          self.navView.isHidden = false
          self.view.backgroundColor =  .white
-         let titles = ["演示","文档"]
+         let titles = ["Demo","文档"]
          //配置数据源
          let dataSource = JXSegmentedTitleDataSource()
          dataSource.titleNormalColor = .white
