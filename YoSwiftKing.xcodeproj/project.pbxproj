@@ -94,6 +94,43 @@
 		84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2C27B665C000FD63A7 /* YoIndicatorRefreshView.swift */; };
 		84E16E2F27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E2E27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift */; };
 		84E16E3127B6793800FD63A7 /* YoGifHeaderRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E16E3027B6793800FD63A7 /* YoGifHeaderRefreshView.swift */; };
+		84F5451E28524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544E928524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift */; };
+		84F5451F28524E01000986CA /* Response+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544EA28524E01000986CA /* Response+SwiftyJSON.swift */; };
+		84F5452028524E01000986CA /* SYMoyaChainRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544EC28524E01000986CA /* SYMoyaChainRequestProvider.swift */; };
+		84F5452128524E01000986CA /* SYDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544EE28524E01000986CA /* SYDataResponse.swift */; };
+		84F5452228524E01000986CA /* Result+SYMoyaNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544EF28524E01000986CA /* Result+SYMoyaNetwork.swift */; };
+		84F5452328524E01000986CA /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F128524E01000986CA /* Storage.swift */; };
+		84F5452428524E01000986CA /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F228524E01000986CA /* MemoryStorage.swift */; };
+		84F5452528524E01000986CA /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F328524E01000986CA /* DiskStorage.swift */; };
+		84F5452628524E01000986CA /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F428524E01000986CA /* CacheSerializer.swift */; };
+		84F5452728524E01000986CA /* NetworkCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F528524E01000986CA /* NetworkCache.swift */; };
+		84F5452828524E01000986CA /* SYMoyaNetworkOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F628524E01000986CA /* SYMoyaNetworkOptionsInfo.swift */; };
+		84F5452928524E01000986CA /* NetworkCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F728524E01000986CA /* NetworkCacheType.swift */; };
+		84F5452A28524E01000986CA /* SYMoyaProvider+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544F928524E01000986CA /* SYMoyaProvider+Codable.swift */; };
+		84F5452B28524E01000986CA /* Response+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544FA28524E01000986CA /* Response+Codable.swift */; };
+		84F5452C28524E01000986CA /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544FC28524E01000986CA /* NetworkConfig.swift */; };
+		84F5452D28524E01000986CA /* SYMoyaProvider+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F544FE28524E01000986CA /* SYMoyaProvider+Image.swift */; };
+		84F5452E28524E01000986CA /* SYMoyaBatchRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450028524E01000986CA /* SYMoyaBatchRequestProvider.swift */; };
+		84F5452F28524E01000986CA /* SYMoyaProvider+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450228524E01000986CA /* SYMoyaProvider+HandyJSON.swift */; };
+		84F5453028524E01000986CA /* Response+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450328524E01000986CA /* Response+HandyJSON.swift */; };
+		84F5453128524E01000986CA /* SYMoyaProvider+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450528524E01000986CA /* SYMoyaProvider+JSON.swift */; };
+		84F5453228524E01000986CA /* SYMoyaURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450728524E01000986CA /* SYMoyaURLCache.swift */; };
+		84F5453328524E01000986CA /* SYMoyaProvider+URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450828524E01000986CA /* SYMoyaProvider+URLCache.swift */; };
+		84F5453428524E01000986CA /* SYMoyaNetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450A28524E01000986CA /* SYMoyaNetworkLoggerPlugin.swift */; };
+		84F5453528524E01000986CA /* SYMoyaProvider+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450C28524E01000986CA /* SYMoyaProvider+String.swift */; };
+		84F5453628524E01000986CA /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450E28524E01000986CA /* Response+ObjectMapper.swift */; };
+		84F5453728524E01000986CA /* SYMoyaProvider+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5450F28524E01000986CA /* SYMoyaProvider+ObjectMapper.swift */; };
+		84F5453828524E01000986CA /* SYMoyaNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451128524E01000986CA /* SYMoyaNetworkError.swift */; };
+		84F5453928524E01000986CA /* MoyaError+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451228524E01000986CA /* MoyaError+Transform.swift */; };
+		84F5453A28524E01000986CA /* ResponseDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451428524E01000986CA /* ResponseDataSourceType.swift */; };
+		84F5453B28524E01000986CA /* SYMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451528524E01000986CA /* SYMoyaProvider.swift */; };
+		84F5453C28524E01000986CA /* URL+SYMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451628524E01000986CA /* URL+SYMoya.swift */; };
+		84F5453D28524E01000986CA /* SYTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451728524E01000986CA /* SYTargetType.swift */; };
+		84F5453E28524E01000986CA /* SYMoyaProvider+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451828524E01000986CA /* SYMoyaProvider+Cache.swift */; };
+		84F5453F28524E01000986CA /* Response+CacheCostCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451A28524E01000986CA /* Response+CacheCostCalculable.swift */; };
+		84F5454028524E01000986CA /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451B28524E01000986CA /* CallbackQueue.swift */; };
+		84F5454128524E01000986CA /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451C28524E01000986CA /* String+MD5.swift */; };
+		84F5454228524E01000986CA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451D28524E01000986CA /* Date+Extensions.swift */; };
 		9065A99C9A156142478C824B /* Pods_YoSwiftKingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37477BC52B22035ACFA24758 /* Pods_YoSwiftKingTests.framework */; };
 		F8AF43D9C1B211EDC3500AE7 /* Pods_YoSwiftKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */; };
 /* End PBXBuildFile section */
@@ -212,6 +249,43 @@
 		84E16E2C27B665C000FD63A7 /* YoIndicatorRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorRefreshView.swift; sourceTree = "<group>"; };
 		84E16E2E27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoIndicatorTextRefreshView.swift; sourceTree = "<group>"; };
 		84E16E3027B6793800FD63A7 /* YoGifHeaderRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoGifHeaderRefreshView.swift; sourceTree = "<group>"; };
+		84F544E928524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+SwiftyJSON.swift"; sourceTree = "<group>"; };
+		84F544EA28524E01000986CA /* Response+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+SwiftyJSON.swift"; sourceTree = "<group>"; };
+		84F544EC28524E01000986CA /* SYMoyaChainRequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaChainRequestProvider.swift; sourceTree = "<group>"; };
+		84F544EE28524E01000986CA /* SYDataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYDataResponse.swift; sourceTree = "<group>"; };
+		84F544EF28524E01000986CA /* Result+SYMoyaNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+SYMoyaNetwork.swift"; sourceTree = "<group>"; };
+		84F544F128524E01000986CA /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		84F544F228524E01000986CA /* MemoryStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		84F544F328524E01000986CA /* DiskStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		84F544F428524E01000986CA /* CacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
+		84F544F528524E01000986CA /* NetworkCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCache.swift; sourceTree = "<group>"; };
+		84F544F628524E01000986CA /* SYMoyaNetworkOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaNetworkOptionsInfo.swift; sourceTree = "<group>"; };
+		84F544F728524E01000986CA /* NetworkCacheType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCacheType.swift; sourceTree = "<group>"; };
+		84F544F928524E01000986CA /* SYMoyaProvider+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+Codable.swift"; sourceTree = "<group>"; };
+		84F544FA28524E01000986CA /* Response+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Codable.swift"; sourceTree = "<group>"; };
+		84F544FC28524E01000986CA /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		84F544FE28524E01000986CA /* SYMoyaProvider+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+Image.swift"; sourceTree = "<group>"; };
+		84F5450028524E01000986CA /* SYMoyaBatchRequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaBatchRequestProvider.swift; sourceTree = "<group>"; };
+		84F5450228524E01000986CA /* SYMoyaProvider+HandyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+HandyJSON.swift"; sourceTree = "<group>"; };
+		84F5450328524E01000986CA /* Response+HandyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+HandyJSON.swift"; sourceTree = "<group>"; };
+		84F5450528524E01000986CA /* SYMoyaProvider+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+JSON.swift"; sourceTree = "<group>"; };
+		84F5450728524E01000986CA /* SYMoyaURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaURLCache.swift; sourceTree = "<group>"; };
+		84F5450828524E01000986CA /* SYMoyaProvider+URLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+URLCache.swift"; sourceTree = "<group>"; };
+		84F5450A28524E01000986CA /* SYMoyaNetworkLoggerPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaNetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		84F5450C28524E01000986CA /* SYMoyaProvider+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+String.swift"; sourceTree = "<group>"; };
+		84F5450E28524E01000986CA /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
+		84F5450F28524E01000986CA /* SYMoyaProvider+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+ObjectMapper.swift"; sourceTree = "<group>"; };
+		84F5451128524E01000986CA /* SYMoyaNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaNetworkError.swift; sourceTree = "<group>"; };
+		84F5451228524E01000986CA /* MoyaError+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaError+Transform.swift"; sourceTree = "<group>"; };
+		84F5451428524E01000986CA /* ResponseDataSourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataSourceType.swift; sourceTree = "<group>"; };
+		84F5451528524E01000986CA /* SYMoyaProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYMoyaProvider.swift; sourceTree = "<group>"; };
+		84F5451628524E01000986CA /* URL+SYMoya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+SYMoya.swift"; sourceTree = "<group>"; };
+		84F5451728524E01000986CA /* SYTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYTargetType.swift; sourceTree = "<group>"; };
+		84F5451828524E01000986CA /* SYMoyaProvider+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SYMoyaProvider+Cache.swift"; sourceTree = "<group>"; };
+		84F5451A28524E01000986CA /* Response+CacheCostCalculable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+CacheCostCalculable.swift"; sourceTree = "<group>"; };
+		84F5451B28524E01000986CA /* CallbackQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackQueue.swift; sourceTree = "<group>"; };
+		84F5451C28524E01000986CA /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		84F5451D28524E01000986CA /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		A336371BDB189EDAB29E75FE /* Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFD891EB5005802FF0B6CE3F /* Pods-YoSwiftKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKingTests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKingTests/Pods-YoSwiftKingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoSwiftKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -363,6 +437,7 @@
 		846A367327B3A4C3004AEC34 /* YoSwiftKing */ = {
 			isa = PBXGroup;
 			children = (
+				84E16E1627B4F75600FD63A7 /* Lib */,
 				84E16E0227B3BC7F00FD63A7 /* Module */,
 				84E16DE727B3B46C00FD63A7 /* Lib */,
 				846A367427B3A4C3004AEC34 /* AppDelegate.swift */,
@@ -634,8 +709,15 @@
 		84E16E0227B3BC7F00FD63A7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				842CD1AD27BB79FE003F8240 /* YoRefresh */,
+				841D894C27D11245004DC891 /* YoMarkDown */,
+				84974F4E27C374C40020F842 /* Trade */,
+				84E16E1B27B4F86600FD63A7 /* Base */,
+				84E16E0627B3BFE900FD63A7 /* YoSwift */,
+				84E16E0527B3BFD700FD63A7 /* YoFoundation */,
+				84E16E0427B3BFC500FD63A7 /* YoUIKit */,
+				84E16E0327B3BC8600FD63A7 /* YoDemo */,
 				84E16E1A27B4F82200FD63A7 /* ViewCtl */,
-				84E16E1627B4F75600FD63A7 /* Lib */,
 				84E16E0C27B3C42600FD63A7 /* TabBar */,
 			);
 			path = Module;
@@ -687,22 +769,16 @@
 		84E16E1627B4F75600FD63A7 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				84F544E728524E01000986CA /* NetWorkMoya */,
 				84E16E1727B4F77500FD63A7 /* YoLibViewController.swift */,
 			);
-			path = Lib;
+			name = Lib;
+			path = Module/Lib;
 			sourceTree = "<group>";
 		};
 		84E16E1A27B4F82200FD63A7 /* ViewCtl */ = {
 			isa = PBXGroup;
 			children = (
-				842CD1AD27BB79FE003F8240 /* YoRefresh */,
-				841D894C27D11245004DC891 /* YoMarkDown */,
-				84974F4E27C374C40020F842 /* Trade */,
-				84E16E1B27B4F86600FD63A7 /* Base */,
-				84E16E0627B3BFE900FD63A7 /* YoSwift */,
-				84E16E0527B3BFD700FD63A7 /* YoFoundation */,
-				84E16E0427B3BFC500FD63A7 /* YoUIKit */,
-				84E16E0327B3BC8600FD63A7 /* YoDemo */,
 			);
 			path = ViewCtl;
 			sourceTree = "<group>";
@@ -740,6 +816,186 @@
 				842CD1AB27BB444F003F8240 /* UIScrollView+YoRefresh.swift */,
 			);
 			path = YoRefresh;
+			sourceTree = "<group>";
+		};
+		84F544E728524E01000986CA /* NetWorkMoya */ = {
+			isa = PBXGroup;
+			children = (
+				84F544E828524E01000986CA /* SwiftyJSON */,
+				84F544EB28524E01000986CA /* SYMoyaChainRequestProvider */,
+				84F544ED28524E01000986CA /* Response */,
+				84F544F028524E01000986CA /* Cache */,
+				84F544F828524E01000986CA /* Codable */,
+				84F544FB28524E01000986CA /* Config */,
+				84F544FD28524E01000986CA /* Image */,
+				84F544FF28524E01000986CA /* SYMoyaBatchRequestProvider */,
+				84F5450128524E01000986CA /* HandyJSON */,
+				84F5450428524E01000986CA /* JSON */,
+				84F5450628524E01000986CA /* SYMoyaURLCache */,
+				84F5450928524E01000986CA /* Log */,
+				84F5450B28524E01000986CA /* String */,
+				84F5450D28524E01000986CA /* ObjectMapper */,
+				84F5451028524E01000986CA /* Error */,
+				84F5451328524E01000986CA /* SYMoya */,
+				84F5451928524E01000986CA /* Utility */,
+			);
+			path = NetWorkMoya;
+			sourceTree = "<group>";
+		};
+		84F544E828524E01000986CA /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				84F544E928524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift */,
+				84F544EA28524E01000986CA /* Response+SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		84F544EB28524E01000986CA /* SYMoyaChainRequestProvider */ = {
+			isa = PBXGroup;
+			children = (
+				84F544EC28524E01000986CA /* SYMoyaChainRequestProvider.swift */,
+			);
+			path = SYMoyaChainRequestProvider;
+			sourceTree = "<group>";
+		};
+		84F544ED28524E01000986CA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				84F544EE28524E01000986CA /* SYDataResponse.swift */,
+				84F544EF28524E01000986CA /* Result+SYMoyaNetwork.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		84F544F028524E01000986CA /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				84F544F128524E01000986CA /* Storage.swift */,
+				84F544F228524E01000986CA /* MemoryStorage.swift */,
+				84F544F328524E01000986CA /* DiskStorage.swift */,
+				84F544F428524E01000986CA /* CacheSerializer.swift */,
+				84F544F528524E01000986CA /* NetworkCache.swift */,
+				84F544F628524E01000986CA /* SYMoyaNetworkOptionsInfo.swift */,
+				84F544F728524E01000986CA /* NetworkCacheType.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		84F544F828524E01000986CA /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				84F544F928524E01000986CA /* SYMoyaProvider+Codable.swift */,
+				84F544FA28524E01000986CA /* Response+Codable.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		84F544FB28524E01000986CA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84F544FC28524E01000986CA /* NetworkConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		84F544FD28524E01000986CA /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				84F544FE28524E01000986CA /* SYMoyaProvider+Image.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		84F544FF28524E01000986CA /* SYMoyaBatchRequestProvider */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450028524E01000986CA /* SYMoyaBatchRequestProvider.swift */,
+			);
+			path = SYMoyaBatchRequestProvider;
+			sourceTree = "<group>";
+		};
+		84F5450128524E01000986CA /* HandyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450228524E01000986CA /* SYMoyaProvider+HandyJSON.swift */,
+				84F5450328524E01000986CA /* Response+HandyJSON.swift */,
+			);
+			path = HandyJSON;
+			sourceTree = "<group>";
+		};
+		84F5450428524E01000986CA /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450528524E01000986CA /* SYMoyaProvider+JSON.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		84F5450628524E01000986CA /* SYMoyaURLCache */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450728524E01000986CA /* SYMoyaURLCache.swift */,
+				84F5450828524E01000986CA /* SYMoyaProvider+URLCache.swift */,
+			);
+			path = SYMoyaURLCache;
+			sourceTree = "<group>";
+		};
+		84F5450928524E01000986CA /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450A28524E01000986CA /* SYMoyaNetworkLoggerPlugin.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		84F5450B28524E01000986CA /* String */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450C28524E01000986CA /* SYMoyaProvider+String.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		84F5450D28524E01000986CA /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				84F5450E28524E01000986CA /* Response+ObjectMapper.swift */,
+				84F5450F28524E01000986CA /* SYMoyaProvider+ObjectMapper.swift */,
+			);
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		84F5451028524E01000986CA /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				84F5451128524E01000986CA /* SYMoyaNetworkError.swift */,
+				84F5451228524E01000986CA /* MoyaError+Transform.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		84F5451328524E01000986CA /* SYMoya */ = {
+			isa = PBXGroup;
+			children = (
+				84F5451428524E01000986CA /* ResponseDataSourceType.swift */,
+				84F5451528524E01000986CA /* SYMoyaProvider.swift */,
+				84F5451628524E01000986CA /* URL+SYMoya.swift */,
+				84F5451728524E01000986CA /* SYTargetType.swift */,
+				84F5451828524E01000986CA /* SYMoyaProvider+Cache.swift */,
+			);
+			path = SYMoya;
+			sourceTree = "<group>";
+		};
+		84F5451928524E01000986CA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				84F5451A28524E01000986CA /* Response+CacheCostCalculable.swift */,
+				84F5451B28524E01000986CA /* CallbackQueue.swift */,
+				84F5451C28524E01000986CA /* String+MD5.swift */,
+				84F5451D28524E01000986CA /* Date+Extensions.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -993,66 +1249,103 @@
 			files = (
 				841D896027D1C900004DC891 /* YoButton+Enlarge.swift in Sources */,
 				848794F927E337A80098D64B /* YoSwiftModel.swift in Sources */,
+				84F5452828524E01000986CA /* SYMoyaNetworkOptionsInfo.swift in Sources */,
 				8405A7FC27C72588001A1C61 /* YoOpthionButton.swift in Sources */,
 				842CD1A827BB3DE3003F8240 /* YoIndicatorAutoFooterRefreshView.swift in Sources */,
+				84F5453928524E01000986CA /* MoyaError+Transform.swift in Sources */,
 				84E16E2F27B66A1F00FD63A7 /* YoIndicatorTextRefreshView.swift in Sources */,
 				8405A7F927C72588001A1C61 /* YoCalendarView.swift in Sources */,
+				84F5452F28524E01000986CA /* SYMoyaProvider+HandyJSON.swift in Sources */,
+				84F5451F28524E01000986CA /* Response+SwiftyJSON.swift in Sources */,
+				84F5452D28524E01000986CA /* SYMoyaProvider+Image.swift in Sources */,
 				84E16E0127B3B98300FD63A7 /* YoUIImage+Color.swift in Sources */,
 				84E16E0F27B3CC4D00FD63A7 /* YoBaseUINavigationController.swift in Sources */,
 				84E16E2627B5FD5B00FD63A7 /* YoBaseTableViewListModel.swift in Sources */,
 				8487950927E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift in Sources */,
 				841D896927D6F88E004DC891 /* YoSwiftListViewCtl.swift in Sources */,
 				8487950227E352450098D64B /* YoSwiftListModel.swift in Sources */,
+				84F5453728524E01000986CA /* SYMoyaProvider+ObjectMapper.swift in Sources */,
 				842CD1AC27BB444F003F8240 /* UIScrollView+YoRefresh.swift in Sources */,
+				84F5452128524E01000986CA /* SYDataResponse.swift in Sources */,
 				84D1B65E27C68A1200B492DB /* TradeDetailModel.swift in Sources */,
 				84E16E1327B4BA0B00FD63A7 /* YoTabBarCtl.swift in Sources */,
 				841D895527D11245004DC891 /* YoMarkDownWebViewCtl.swift in Sources */,
+				84F5453A28524E01000986CA /* ResponseDataSourceType.swift in Sources */,
 				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
 				8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */,
 				841D892C27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift in Sources */,
+				84F5451E28524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift in Sources */,
+				84F5453F28524E01000986CA /* Response+CacheCostCalculable.swift in Sources */,
 				84974F5A27C387770020F842 /* TradeListModel.swift in Sources */,
 				848794FE27E339C70098D64B /* YoSwiftListHeaderView.swift in Sources */,
 				84E16E1827B4F77500FD63A7 /* YoLibViewController.swift in Sources */,
+				84F5452628524E01000986CA /* CacheSerializer.swift in Sources */,
+				84F5453D28524E01000986CA /* SYTargetType.swift in Sources */,
+				84F5453528524E01000986CA /* SYMoyaProvider+String.swift in Sources */,
+				84F5453828524E01000986CA /* SYMoyaNetworkError.swift in Sources */,
 				84974F6427C390D80020F842 /* UIView+Layout.swift in Sources */,
 				844A1ABF27BE204B00A1FC75 /* YoSuperCatHeaderRefreshView .swift in Sources */,
 				84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */,
 				84974F6727C391430020F842 /* NSObject+ClassName.swift in Sources */,
+				84F5452428524E01000986CA /* MemoryStorage.swift in Sources */,
 				84E16E0827B3C0D100FD63A7 /* YoSwiftViewCtl.swift in Sources */,
 				84E16DF027B3B80E00FD63A7 /* YoBaseUITabBarController.swift in Sources */,
 				84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */,
 				84D1B65C27C689DE00B492DB /* TradeDetailViewCtl.swift in Sources */,
 				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
+				84F5452228524E01000986CA /* Result+SYMoyaNetwork.swift in Sources */,
 				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				8405A7FA27C72588001A1C61 /* CalendarModel.swift in Sources */,
 				846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */,
 				841D894027D0D1D9004DC891 /* YoDemoMainViewCtl.swift in Sources */,
 				84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */,
 				84E16E2227B5110700FD63A7 /* YoBaseTableViewListHeaderView.swift in Sources */,
+				84F5452728524E01000986CA /* NetworkCache.swift in Sources */,
+				84F5454228524E01000986CA /* Date+Extensions.swift in Sources */,
+				84F5452328524E01000986CA /* Storage.swift in Sources */,
 				841D892927CDF963004DC891 /* YoImageTextButton.swift in Sources */,
+				84F5452528524E01000986CA /* DiskStorage.swift in Sources */,
 				8405A80027C72658001A1C61 /* YoTagsLabViewConfig.swift in Sources */,
+				84F5452E28524E01000986CA /* SYMoyaBatchRequestProvider.swift in Sources */,
+				84F5453128524E01000986CA /* SYMoyaProvider+JSON.swift in Sources */,
 				84D1B66227C68E8700B492DB /* TradeDetailTopView.swift in Sources */,
 				84E16E0A27B3C17300FD63A7 /* YoFoundationViewCtl.swift in Sources */,
+				84F5453E28524E01000986CA /* SYMoyaProvider+Cache.swift in Sources */,
+				84F5454128524E01000986CA /* String+MD5.swift in Sources */,
 				84E16E1527B4BB4700FD63A7 /* YoBaseUIViewController.swift in Sources */,
+				84F5453228524E01000986CA /* SYMoyaURLCache.swift in Sources */,
 				8405A7FB27C72588001A1C61 /* YoCalendar.swift in Sources */,
+				84F5453028524E01000986CA /* Response+HandyJSON.swift in Sources */,
+				84F5453B28524E01000986CA /* SYMoyaProvider.swift in Sources */,
 				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
 				84E16E3127B6793800FD63A7 /* YoGifHeaderRefreshView.swift in Sources */,
+				84F5452928524E01000986CA /* NetworkCacheType.swift in Sources */,
+				84F5452C28524E01000986CA /* NetworkConfig.swift in Sources */,
+				84F5453428524E01000986CA /* SYMoyaNetworkLoggerPlugin.swift in Sources */,
+				84F5453328524E01000986CA /* SYMoyaProvider+URLCache.swift in Sources */,
 				84E16DEB27B3B46D00FD63A7 /* YoLaunchScreen.swift in Sources */,
 				84974F6127C3906D0020F842 /* YoTabPagerBarView.swift in Sources */,
+				84F5454028524E01000986CA /* CallbackQueue.swift in Sources */,
+				84F5453C28524E01000986CA /* URL+SYMoya.swift in Sources */,
+				84F5453628524E01000986CA /* Response+ObjectMapper.swift in Sources */,
 				84E16E1E27B4F99200FD63A7 /* YoBaseTableListViewController.swift in Sources */,
 				84E16DFD27B3B98300FD63A7 /* YoUIColor+Gradient.swift in Sources */,
 				84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */,
 				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
+				84F5452028524E01000986CA /* SYMoyaChainRequestProvider.swift in Sources */,
 				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
 				84974F5827C37B320020F842 /* TradeConfig.swift in Sources */,
 				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
 				84D1B66027C68A1F00B492DB /* TradeDetailTableCell.swift in Sources */,
 				84E16E2B27B6111900FD63A7 /* YoRefreshConfig.swift in Sources */,
 				8405A7FE27C72588001A1C61 /* YoCalendarConfig.swift in Sources */,
+				84F5452B28524E01000986CA /* Response+Codable.swift in Sources */,
 				84E16E2027B4FD5100FD63A7 /* YoBaseTableViewListCell.swift in Sources */,
 				842CD1A627BB3A5A003F8240 /* YoGifTextHeaderRefreshView.swift in Sources */,
 				841D893E27D0D199004DC891 /* YoUIKitMainViewCtl.swift in Sources */,
 				84974F6A27C3927C0020F842 /* String+Size.swift in Sources */,
 				84E16DFE27B3B98300FD63A7 /* YoUIColor+HexColor.swift in Sources */,
+				84F5452A28524E01000986CA /* SYMoyaProvider+Codable.swift in Sources */,
 				842CD1AA27BB3F53003F8240 /* YoTextAutoFooterRefreshView.swift in Sources */,
 				8487950727E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift in Sources */,
 				8405A7F127C7247D001A1C61 /* YoTagsLabView.swift in Sources */,
