@@ -11,7 +11,7 @@ import SwiftyJSON
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        accountLogin("admin", password: "password")
+        accountLogin("hanguiguang", password: "123456")
         return true
     }
 

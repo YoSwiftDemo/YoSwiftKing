@@ -23,7 +23,7 @@ enum LoginTargetType: SYTargetType {
 //        if defaults.has(.token), let oneToken =  defaults.get(for: .token) {
 //            token = oneToken
 //        }
-        return   ["Authorization":"cGM6MTIzNDU2"]
+        return   ["Authorization":"Basic cGM6MTIzNDU2"]
        // return  ["device":device,"token":token]
     }
     
