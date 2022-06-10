@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.1)
   - CleanJSON (1.0.9)
+  - DefaultsKit (0.2.0)
   - Differentiator (5.0.0)
   - DNSPageView (2.1.0)
   - HandyJSON (5.0.2)
@@ -59,6 +60,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - CleanJSON
+  - DefaultsKit (~> 0.2.0)
   - DNSPageView
   - HandyJSON
   - JXSegmentedView
@@ -88,6 +90,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - CleanJSON
+    - DefaultsKit
     - Differentiator
     - DNSPageView
     - HandyJSON
@@ -119,6 +122,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   CleanJSON: 910a36465ce4829e264a902ccf6d1455fdd9f980
+  DefaultsKit: 6c767941b2c3fe34c4d70e300e6c3b80c94964dd
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   DNSPageView: 4d77a61f49a5668ec330fb7bd620d81354371ea7
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
@@ -147,6 +151,6 @@ SPEC CHECKSUMS:
   YoCommon: 7027e6dff473ac9b7a56501a651b081a6b62c4d2
   YoNavBarView: 2325498a7752ff5e44af244f1ae087d0a2def578
 
-PODFILE CHECKSUM: 20e74b5e325f20a6254ea92e7f8dc76c56bcb769
+PODFILE CHECKSUM: a21e88591943eb136d099b179923b14c604e1533
 
 COCOAPODS: 1.11.3

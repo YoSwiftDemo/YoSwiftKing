@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwi
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/CleanJSON/CleanJSON.framework
 ${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework
+${BUILT_PRODUCTS_DIR}/DefaultsKit/DefaultsKit.framework
 ${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
 ${BUILT_PRODUCTS_DIR}/JXSegmentedView/JXSegmentedView.framework

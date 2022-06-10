@@ -131,6 +131,8 @@
 		84F5454028524E01000986CA /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451B28524E01000986CA /* CallbackQueue.swift */; };
 		84F5454128524E01000986CA /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451C28524E01000986CA /* String+MD5.swift */; };
 		84F5454228524E01000986CA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5451D28524E01000986CA /* Date+Extensions.swift */; };
+		84F5454528525A95000986CA /* LoginTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5454428525A95000986CA /* LoginTargetType.swift */; };
+		84F545472852FCEC000986CA /* UserTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F545462852FCEC000986CA /* UserTargetType.swift */; };
 		9065A99C9A156142478C824B /* Pods_YoSwiftKingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37477BC52B22035ACFA24758 /* Pods_YoSwiftKingTests.framework */; };
 		F8AF43D9C1B211EDC3500AE7 /* Pods_YoSwiftKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */; };
 /* End PBXBuildFile section */
@@ -286,6 +288,8 @@
 		84F5451B28524E01000986CA /* CallbackQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackQueue.swift; sourceTree = "<group>"; };
 		84F5451C28524E01000986CA /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		84F5451D28524E01000986CA /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		84F5454428525A95000986CA /* LoginTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTargetType.swift; sourceTree = "<group>"; };
+		84F545462852FCEC000986CA /* UserTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTargetType.swift; sourceTree = "<group>"; };
 		A336371BDB189EDAB29E75FE /* Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKing-YoSwiftKingUITests/Pods-YoSwiftKing-YoSwiftKingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFD891EB5005802FF0B6CE3F /* Pods-YoSwiftKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoSwiftKingTests.release.xcconfig"; path = "Target Support Files/Pods-YoSwiftKingTests/Pods-YoSwiftKingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D063842915709E551E4B880F /* Pods_YoSwiftKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoSwiftKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +441,7 @@
 		846A367327B3A4C3004AEC34 /* YoSwiftKing */ = {
 			isa = PBXGroup;
 			children = (
+				84F5454328525A79000986CA /* Api */,
 				84E16E1627B4F75600FD63A7 /* Lib */,
 				84E16E0227B3BC7F00FD63A7 /* Module */,
 				84E16DE727B3B46C00FD63A7 /* Lib */,
@@ -998,6 +1003,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		84F5454328525A79000986CA /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				84F5454428525A95000986CA /* LoginTargetType.swift */,
+				84F545462852FCEC000986CA /* UserTargetType.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1277,6 +1291,7 @@
 				84F5451E28524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift in Sources */,
 				84F5453F28524E01000986CA /* Response+CacheCostCalculable.swift in Sources */,
 				84974F5A27C387770020F842 /* TradeListModel.swift in Sources */,
+				84F5454528525A95000986CA /* LoginTargetType.swift in Sources */,
 				848794FE27E339C70098D64B /* YoSwiftListHeaderView.swift in Sources */,
 				84E16E1827B4F77500FD63A7 /* YoLibViewController.swift in Sources */,
 				84F5452628524E01000986CA /* CacheSerializer.swift in Sources */,
@@ -1304,6 +1319,7 @@
 				84F5454228524E01000986CA /* Date+Extensions.swift in Sources */,
 				84F5452328524E01000986CA /* Storage.swift in Sources */,
 				841D892927CDF963004DC891 /* YoImageTextButton.swift in Sources */,
+				84F545472852FCEC000986CA /* UserTargetType.swift in Sources */,
 				84F5452528524E01000986CA /* DiskStorage.swift in Sources */,
 				8405A80027C72658001A1C61 /* YoTagsLabViewConfig.swift in Sources */,
 				84F5452E28524E01000986CA /* SYMoyaBatchRequestProvider.swift in Sources */,
@@ -1533,7 +1549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BKME25WU4F;
+				DEVELOPMENT_TEAM = Y2V4DQAG79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoSwiftKing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1546,7 +1562,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Yo.YoSwiftKing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.power;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

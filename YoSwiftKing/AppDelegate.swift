@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        accountLogin("admin", password: "password")
         return true
     }
 
@@ -56,3 +57,27 @@ Swift 基础语法+基础理论
  //https://www.jianshu.com/p/905ba2a85455
  
  */
+
+extension AppDelegate {
+
+    func accountLogin(_ username: String, password: String) {
+        let provider = SYMoyaProvider<LoginTargetType>()
+        provider.responseSwiftyJSON(.server, target: .accountLogin(username: username, password: password)) { [weak self] (response: SYMoyaNetworkDataResponse<SwiftyJSON.JSON>) in
+          
+            switch response.result {
+            case let .success(json):
+               print(json)
+                guard let code = json["code"].int, code == 200 , let data = json["data"].dictionary else {
+                  
+                    return
+                }
+
+                break
+            case let .failure(error):
+                print("7777")
+                print(error)
+                break
+            }
+        }
+    }
+}

@@ -21,30 +21,16 @@ public struct NetworkConfig {
     
     
     /// 生产环境(本地)
-    static let proUrl =  "http://192.168.1.91:8603"
+    static let proUrl =  "http://123.57.254.149:10086"
  
     // 开发 外网连本地
-    static let devUrl = "http://dev-api.hymetlive.com:8603"
+    static let devUrl = "http://123.57.254.149:10086"
     
     /// 测试环境
-     static let testUrl = "http://test-cdn.hymetlive.com"
+     static let testUrl = "http://123.57.254.149:10086"
     
     // 发布环境
-    static let releaseUrl =  "https://app-api.hyshowlive.com"
-    
-    
-    //视频
-    static let  VIDEO_URL="https://hkong.bscstorage.com/video-boomlive/"
-     //图片前缀
-    static let picUrl = "https://hkong.bscstorage.com/picture-boomlive/"
-     //国家图片 前缀
-    static let countryUrl = "https://hkong.bscstorage.com/map-boomlive/"
-     //头像
-    static let  AVATAR_URL = "https://hkong.bscstorage.com/head-boomlive/"
-    //礼物
-    static let giftUrl = "https://hkong.bscstorage.com/gift-boomlive/"
-    static let email = "hyshowlive@gmail.com"
-    
+    static let releaseUrl =  "http://123.57.254.149:10086"
     
 }
 
