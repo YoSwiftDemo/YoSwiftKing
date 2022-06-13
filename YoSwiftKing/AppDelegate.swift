@@ -14,12 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy  var tabBarCtl = YoTabBarCtl()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
         rootViewCtlAction()
         accountLogin("hanguiguang", password: "123456")
         return true
     }
-
-
 }
 
 /*
@@ -51,16 +52,7 @@ extension AppDelegate {
         
 //        window?.rootViewController  = self.tabBarCtl
 //
-//        return
-        let defaults = Defaults()
-        if defaults.has(.token) {
-            if    let token =  defaults.get(for: .token), token.count > 0  {
-                debugPrint(token)
-                window?.rootViewController  = self.tabBarCtl
-                return
-            }
-        }
-        self.tabBarCtl = YoTabBarCtl()
+//3333
         window?.rootViewController  = UINavigationController.init(rootViewController: LoginViewCtl())
     }
 }

@@ -15,6 +15,7 @@ class LoginViewCtl: YoBaseUIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

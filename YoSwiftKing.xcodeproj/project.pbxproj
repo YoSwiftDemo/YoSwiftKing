@@ -40,7 +40,6 @@
 		844A1AC327BE26A800A1FC75 /* demo-small.gif in Resources */ = {isa = PBXBuildFile; fileRef = 844A1AC127BE26A800A1FC75 /* demo-small.gif */; };
 		844A1AC427BE26A800A1FC75 /* demo-big.gif in Resources */ = {isa = PBXBuildFile; fileRef = 844A1AC227BE26A800A1FC75 /* demo-big.gif */; };
 		846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367427B3A4C3004AEC34 /* AppDelegate.swift */; };
-		846A367C27B3A4C3004AEC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367A27B3A4C3004AEC34 /* Main.storyboard */; };
 		846A367E27B3A4C7004AEC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A367D27B3A4C7004AEC34 /* Assets.xcassets */; };
 		846A368127B3A4C7004AEC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */; };
 		846A368C27B3A4C7004AEC34 /* YoSwiftKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A368B27B3A4C7004AEC34 /* YoSwiftKingTests.swift */; };
@@ -196,7 +195,6 @@
 		844A1AC227BE26A800A1FC75 /* demo-big.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "demo-big.gif"; sourceTree = "<group>"; };
 		846A367127B3A4C3004AEC34 /* YoSwiftKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoSwiftKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A367427B3A4C3004AEC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846A367B27B3A4C3004AEC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846A367D27B3A4C7004AEC34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846A368027B3A4C7004AEC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846A368227B3A4C7004AEC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -449,7 +447,6 @@
 				84F5454328525A79000986CA /* Api */,
 				84E16E0227B3BC7F00FD63A7 /* Module */,
 				846A367427B3A4C3004AEC34 /* AppDelegate.swift */,
-				846A367A27B3A4C3004AEC34 /* Main.storyboard */,
 				846A367D27B3A4C7004AEC34 /* Assets.xcassets */,
 				846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */,
 				846A368227B3A4C7004AEC34 /* Info.plist */,
@@ -1146,7 +1143,6 @@
 				844A1AC327BE26A800A1FC75 /* demo-small.gif in Resources */,
 				846A367E27B3A4C7004AEC34 /* Assets.xcassets in Resources */,
 				841D896527D1EE86004DC891 /* YoSwift-0.json in Resources */,
-				846A367C27B3A4C3004AEC34 /* Main.storyboard in Resources */,
 				844A1AC427BE26A800A1FC75 /* demo-big.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1441,14 +1437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		846A367A27B3A4C3004AEC34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				846A367B27B3A4C3004AEC34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1589,7 +1577,6 @@
 				INFOPLIST_FILE = YoSwiftKing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1618,7 +1605,6 @@
 				INFOPLIST_FILE = YoSwiftKing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
