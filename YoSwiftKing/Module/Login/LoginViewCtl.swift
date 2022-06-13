@@ -11,6 +11,7 @@ import SnapKit
 class LoginViewCtl: YoBaseUIViewController {
     //logo
     lazy  var logoImgView = UIImageView().then {
+        $0.image = R.image.loginLogo()
         view.addSubview($0)
     }
     override func viewDidLoad() {

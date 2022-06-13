@@ -20,7 +20,7 @@ extension UIColor {
 extension UIColor {
     //https://www.xueui.cn/design-theory/dark-dark-adaptation.html
     //主色彩  橘黄色
-    public static var mainColor: UIColor {
+    public static var colorFE5E2F: UIColor {
         return .hex("#FE5E2F")
     }
     //导航条 背景色 橘黄色
