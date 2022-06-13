@@ -40,7 +40,6 @@
 		844A1AC327BE26A800A1FC75 /* demo-small.gif in Resources */ = {isa = PBXBuildFile; fileRef = 844A1AC127BE26A800A1FC75 /* demo-small.gif */; };
 		844A1AC427BE26A800A1FC75 /* demo-big.gif in Resources */ = {isa = PBXBuildFile; fileRef = 844A1AC227BE26A800A1FC75 /* demo-big.gif */; };
 		846A367527B3A4C3004AEC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367427B3A4C3004AEC34 /* AppDelegate.swift */; };
-		846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A367627B3A4C3004AEC34 /* SceneDelegate.swift */; };
 		846A367C27B3A4C3004AEC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367A27B3A4C3004AEC34 /* Main.storyboard */; };
 		846A367E27B3A4C7004AEC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A367D27B3A4C7004AEC34 /* Assets.xcassets */; };
 		846A368127B3A4C7004AEC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */; };
@@ -55,6 +54,9 @@
 		8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */; };
 		8487950727E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */; };
 		8487950927E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */; };
+		848E25A72854503C002EA3DE /* LoginViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25A62854503C002EA3DE /* LoginViewCtl.swift */; };
+		848E25AC28546699002EA3DE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25AB28546699002EA3DE /* R.generated.swift */; };
+		848E25AE285467BF002EA3DE /* DefaultsKey+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25AD285467BF002EA3DE /* DefaultsKey+Ex.swift */; };
 		84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5127C377510020F842 /* TradeMainViewCtl.swift */; };
 		84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */; };
 		84974F5827C37B320020F842 /* TradeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5727C37B320020F842 /* TradeConfig.swift */; };
@@ -194,7 +196,6 @@
 		844A1AC227BE26A800A1FC75 /* demo-big.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "demo-big.gif"; sourceTree = "<group>"; };
 		846A367127B3A4C3004AEC34 /* YoSwiftKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoSwiftKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A367427B3A4C3004AEC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846A367627B3A4C3004AEC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		846A367B27B3A4C3004AEC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846A367D27B3A4C7004AEC34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846A368027B3A4C7004AEC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -212,6 +213,9 @@
 		8487950427E353830098D64B /* YoSwiftListDetailViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftListDetailViewCtl.swift; sourceTree = "<group>"; };
 		8487950627E355920098D64B /* YoSwiftMarkDownWebViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftMarkDownWebViewCtl.swift; sourceTree = "<group>"; };
 		8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftDetailDemoViewCtl.swift; sourceTree = "<group>"; };
+		848E25A62854503C002EA3DE /* LoginViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewCtl.swift; sourceTree = "<group>"; };
+		848E25AB28546699002EA3DE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = YoSwiftKing/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		848E25AD285467BF002EA3DE /* DefaultsKey+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKey+Ex.swift"; sourceTree = "<group>"; };
 		84974F5127C377510020F842 /* TradeMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainViewCtl.swift; sourceTree = "<group>"; };
 		84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListTableViewCtl.swift; sourceTree = "<group>"; };
 		84974F5727C37B320020F842 /* TradeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeConfig.swift; sourceTree = "<group>"; };
@@ -441,12 +445,10 @@
 		846A367327B3A4C3004AEC34 /* YoSwiftKing */ = {
 			isa = PBXGroup;
 			children = (
-				84F5454328525A79000986CA /* Api */,
-				84E16E1627B4F75600FD63A7 /* Lib */,
-				84E16E0227B3BC7F00FD63A7 /* Module */,
 				84E16DE727B3B46C00FD63A7 /* Lib */,
+				84F5454328525A79000986CA /* Api */,
+				84E16E0227B3BC7F00FD63A7 /* Module */,
 				846A367427B3A4C3004AEC34 /* AppDelegate.swift */,
-				846A367627B3A4C3004AEC34 /* SceneDelegate.swift */,
 				846A367A27B3A4C3004AEC34 /* Main.storyboard */,
 				846A367D27B3A4C7004AEC34 /* Assets.xcassets */,
 				846A367F27B3A4C7004AEC34 /* LaunchScreen.storyboard */,
@@ -510,6 +512,14 @@
 				8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		848E25A52853AF22002EA3DE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				848E25A62854503C002EA3DE /* LoginViewCtl.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		84974F4E27C374C40020F842 /* Trade */ = {
@@ -604,6 +614,9 @@
 		84E16DE727B3B46C00FD63A7 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				848E25AB28546699002EA3DE /* R.generated.swift */,
+				848E25AD285467BF002EA3DE /* DefaultsKey+Ex.swift */,
+				84F544E728524E01000986CA /* NetWorkMoya */,
 				844A1AC027BE260D00A1FC75 /* Resource */,
 				841D892A27CE03E9004DC891 /* UIViewController */,
 				841D892727CDF94C004DC891 /* YoButton */,
@@ -714,6 +727,8 @@
 		84E16E0227B3BC7F00FD63A7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				84E16E1627B4F75600FD63A7 /* ThirdLib */,
+				848E25A52853AF22002EA3DE /* Login */,
 				842CD1AD27BB79FE003F8240 /* YoRefresh */,
 				841D894C27D11245004DC891 /* YoMarkDown */,
 				84974F4E27C374C40020F842 /* Trade */,
@@ -771,14 +786,12 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		84E16E1627B4F75600FD63A7 /* Lib */ = {
+		84E16E1627B4F75600FD63A7 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
-				84F544E728524E01000986CA /* NetWorkMoya */,
 				84E16E1727B4F77500FD63A7 /* YoLibViewController.swift */,
 			);
-			name = Lib;
-			path = Module/Lib;
+			path = ThirdLib;
 			sourceTree = "<group>";
 		};
 		84E16E1A27B4F82200FD63A7 /* ViewCtl */ = {
@@ -1020,6 +1033,7 @@
 			buildConfigurationList = 846A369B27B3A4C7004AEC34 /* Build configuration list for PBXNativeTarget "YoSwiftKing" */;
 			buildPhases = (
 				492E365E8A8D632842139184 /* [CP] Check Pods Manifest.lock */,
+				848E25A82854604F002EA3DE /* ShellScript */,
 				846A366D27B3A4C3004AEC34 /* Sources */,
 				846A366E27B3A4C3004AEC34 /* Frameworks */,
 				846A366F27B3A4C3004AEC34 /* Resources */,
@@ -1215,6 +1229,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		848E25A82854604F002EA3DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/YoSwiftKing/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/YoSwiftKing/R.generated.swift\"\n";
+		};
 		93492CC7962BAA88A6D35742 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1287,6 +1320,7 @@
 				84F5453A28524E01000986CA /* ResponseDataSourceType.swift in Sources */,
 				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
 				8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */,
+				848E25AE285467BF002EA3DE /* DefaultsKey+Ex.swift in Sources */,
 				841D892C27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift in Sources */,
 				84F5451E28524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift in Sources */,
 				84F5453F28524E01000986CA /* Response+CacheCostCalculable.swift in Sources */,
@@ -1308,6 +1342,7 @@
 				84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */,
 				84D1B65C27C689DE00B492DB /* TradeDetailViewCtl.swift in Sources */,
 				84E16E1127B3CF9A00FD63A7 /* YoBaseNavView.swift in Sources */,
+				848E25AC28546699002EA3DE /* R.generated.swift in Sources */,
 				84F5452228524E01000986CA /* Result+SYMoyaNetwork.swift in Sources */,
 				84E16E2D27B665C000FD63A7 /* YoIndicatorRefreshView.swift in Sources */,
 				8405A7FA27C72588001A1C61 /* CalendarModel.swift in Sources */,
@@ -1349,10 +1384,10 @@
 				84E16E2927B60D9200FD63A7 /* YoRefreshView.swift in Sources */,
 				84E16DFF27B3B98300FD63A7 /* YoUIColor+Rgb.swift in Sources */,
 				84F5452028524E01000986CA /* SYMoyaChainRequestProvider.swift in Sources */,
-				846A367727B3A4C3004AEC34 /* SceneDelegate.swift in Sources */,
 				84974F5827C37B320020F842 /* TradeConfig.swift in Sources */,
 				84E16E0027B3B98300FD63A7 /* YoUIColor+Normal.swift in Sources */,
 				84D1B66027C68A1F00B492DB /* TradeDetailTableCell.swift in Sources */,
+				848E25A72854503C002EA3DE /* LoginViewCtl.swift in Sources */,
 				84E16E2B27B6111900FD63A7 /* YoRefreshConfig.swift in Sources */,
 				8405A7FE27C72588001A1C61 /* YoCalendarConfig.swift in Sources */,
 				84F5452B28524E01000986CA /* Response+Codable.swift in Sources */,

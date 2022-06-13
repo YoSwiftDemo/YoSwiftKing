@@ -55,6 +55,8 @@ target 'YoSwiftKing' do
   pod 'KakaJSON'
   pod 'SwiftyJSON'
   pod 'DefaultsKit'  , '~> 0.2.0' #  本地数据存储
+  pod 'Then'
+  pod 'R.swift', '6.1.0'
   target 'YoSwiftKingTests' do
     inherit! :search_paths
     # Pods for testing
@@ -65,3 +67,6 @@ target 'YoSwiftKing' do
   end
 
 end
+
+
+
