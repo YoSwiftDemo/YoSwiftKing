@@ -67,9 +67,11 @@ extension AppDelegate {
             case let .success(json):
                print(json)
                 guard let code = json["code"].int, code == 200 , let data = json["data"].dictionary else {
-                  
+
                     return
                 }
+                //登录ok
+                let defaults = Defaults()
 
                 break
             case let .failure(error):
