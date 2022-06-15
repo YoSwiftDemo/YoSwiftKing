@@ -55,7 +55,7 @@
 		8487950927E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */; };
 		848E25A72854503C002EA3DE /* LoginViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25A62854503C002EA3DE /* LoginViewCtl.swift */; };
 		848E25AC28546699002EA3DE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25AB28546699002EA3DE /* R.generated.swift */; };
-		848E25AE285467BF002EA3DE /* DefaultsKey+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25AD285467BF002EA3DE /* DefaultsKey+Ex.swift */; };
+		848E25AE285467BF002EA3DE /* DefaultsKey+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E25AD285467BF002EA3DE /* DefaultsKey+Api.swift */; };
 		84974F5227C377510020F842 /* TradeMainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5127C377510020F842 /* TradeMainViewCtl.swift */; };
 		84974F5527C377FF0020F842 /* TradeListTableViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */; };
 		84974F5827C37B320020F842 /* TradeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F5727C37B320020F842 /* TradeConfig.swift */; };
@@ -68,6 +68,8 @@
 		84974F6A27C3927C0020F842 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6927C3927C0020F842 /* String+Size.swift */; };
 		84974F6D27C39C090020F842 /* CGFloat+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84974F6C27C39C090020F842 /* CGFloat+Config.swift */; };
 		84C0C14328570AE50038AD9E /* CategoryTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0C14228570AE50038AD9E /* CategoryTargetType.swift */; };
+		84C0C148285717F30038AD9E /* CategoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0C147285717F30038AD9E /* CategoryApi.swift */; };
+		84C0C155285973600038AD9E /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0C154285973600038AD9E /* UserApi.swift */; };
 		84D1B65C27C689DE00B492DB /* TradeDetailViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1B65B27C689DE00B492DB /* TradeDetailViewCtl.swift */; };
 		84D1B65E27C68A1200B492DB /* TradeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1B65D27C68A1200B492DB /* TradeDetailModel.swift */; };
 		84D1B66027C68A1F00B492DB /* TradeDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1B65F27C68A1F00B492DB /* TradeDetailTableCell.swift */; };
@@ -214,7 +216,7 @@
 		8487950827E35DEB0098D64B /* YoSwiftDetailDemoViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoSwiftDetailDemoViewCtl.swift; sourceTree = "<group>"; };
 		848E25A62854503C002EA3DE /* LoginViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewCtl.swift; sourceTree = "<group>"; };
 		848E25AB28546699002EA3DE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = YoSwiftKing/R.generated.swift; sourceTree = SOURCE_ROOT; };
-		848E25AD285467BF002EA3DE /* DefaultsKey+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKey+Ex.swift"; sourceTree = "<group>"; };
+		848E25AD285467BF002EA3DE /* DefaultsKey+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsKey+Api.swift"; sourceTree = "<group>"; };
 		84974F5127C377510020F842 /* TradeMainViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMainViewCtl.swift; sourceTree = "<group>"; };
 		84974F5427C377FF0020F842 /* TradeListTableViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeListTableViewCtl.swift; sourceTree = "<group>"; };
 		84974F5727C37B320020F842 /* TradeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeConfig.swift; sourceTree = "<group>"; };
@@ -227,6 +229,8 @@
 		84974F6927C3927C0020F842 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		84974F6C27C39C090020F842 /* CGFloat+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Config.swift"; sourceTree = "<group>"; };
 		84C0C14228570AE50038AD9E /* CategoryTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTargetType.swift; sourceTree = "<group>"; };
+		84C0C147285717F30038AD9E /* CategoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryApi.swift; sourceTree = "<group>"; };
+		84C0C154285973600038AD9E /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		84D1B65B27C689DE00B492DB /* TradeDetailViewCtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeDetailViewCtl.swift; sourceTree = "<group>"; };
 		84D1B65D27C68A1200B492DB /* TradeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeDetailModel.swift; sourceTree = "<group>"; };
 		84D1B65F27C68A1F00B492DB /* TradeDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeDetailTableCell.swift; sourceTree = "<group>"; };
@@ -599,6 +603,24 @@
 			path = CGFloat;
 			sourceTree = "<group>";
 		};
+		84C0C146285717E00038AD9E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				84C0C14228570AE50038AD9E /* CategoryTargetType.swift */,
+				84C0C147285717F30038AD9E /* CategoryApi.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		84C0C1532859734E0038AD9E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				84F545462852FCEC000986CA /* UserTargetType.swift */,
+				84C0C154285973600038AD9E /* UserApi.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		84D1B65A27C689BD00B492DB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,7 +636,6 @@
 			isa = PBXGroup;
 			children = (
 				848E25AB28546699002EA3DE /* R.generated.swift */,
-				848E25AD285467BF002EA3DE /* DefaultsKey+Ex.swift */,
 				84F544E728524E01000986CA /* NetWorkMoya */,
 				844A1AC027BE260D00A1FC75 /* Resource */,
 				841D892A27CE03E9004DC891 /* UIViewController */,
@@ -1018,9 +1039,10 @@
 		84F5454328525A79000986CA /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				84C0C1532859734E0038AD9E /* User */,
+				848E25AD285467BF002EA3DE /* DefaultsKey+Api.swift */,
+				84C0C146285717E00038AD9E /* Category */,
 				84F5454428525A95000986CA /* LoginTargetType.swift */,
-				84F545462852FCEC000986CA /* UserTargetType.swift */,
-				84C0C14228570AE50038AD9E /* CategoryTargetType.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -1320,7 +1342,7 @@
 				842CD1BC27BB83AC003F8240 /* YoRefreshListViewCtl.swift in Sources */,
 				8487950527E353830098D64B /* YoSwiftListDetailViewCtl.swift in Sources */,
 				84C0C14328570AE50038AD9E /* CategoryTargetType.swift in Sources */,
-				848E25AE285467BF002EA3DE /* DefaultsKey+Ex.swift in Sources */,
+				848E25AE285467BF002EA3DE /* DefaultsKey+Api.swift in Sources */,
 				841D892C27CE0409004DC891 /* UIViewController+CurrentViewCtl.swift in Sources */,
 				84F5451E28524E01000986CA /* SYMoyaProvider+SwiftyJSON.swift in Sources */,
 				84F5453F28524E01000986CA /* Response+CacheCostCalculable.swift in Sources */,
@@ -1367,6 +1389,8 @@
 				84F5453228524E01000986CA /* SYMoyaURLCache.swift in Sources */,
 				8405A7FB27C72588001A1C61 /* YoCalendar.swift in Sources */,
 				84F5453028524E01000986CA /* Response+HandyJSON.swift in Sources */,
+				84C0C148285717F30038AD9E /* CategoryApi.swift in Sources */,
+				84C0C155285973600038AD9E /* UserApi.swift in Sources */,
 				84F5453B28524E01000986CA /* SYMoyaProvider.swift in Sources */,
 				84E16DEA27B3B46D00FD63A7 /* YoDarkModeColor.swift in Sources */,
 				84E16E3127B6793800FD63A7 /* YoGifHeaderRefreshView.swift in Sources */,
@@ -1581,6 +1605,7 @@
 				INFOPLIST_FILE = YoSwiftKing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1609,6 +1634,7 @@
 				INFOPLIST_FILE = YoSwiftKing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

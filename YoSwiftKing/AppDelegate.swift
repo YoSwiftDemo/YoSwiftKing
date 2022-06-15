@@ -13,12 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     lazy  var tabBarCtl = YoTabBarCtl()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         rootViewCtlAction()
-        accountLogin("hanguiguang", password: "123456")
+//       accountLogin("hanguiguang", password: "123456")
+//        CategoryApi.shared.categoryUpdateHandler(name: "Swift", id: "16") { finished in
+//            print("1323213================", finished)
+//        }
+//grammar
+        CategoryApi.shared.categoryAddHandler(name: "Grammar", parentId: "16") { finished in
+            
+        }
+        UserApi.shared.categoryAddHandler(email: "738816656@qq.com") { finished in
+            
+        }
+//        CategoryApi.shared.categoryUpdateHandler(name: "Swift", id: "16") { result in
+//
+//        }
+//        CategoryApi.shared.categoryAddHandler(name: "LoginButton", parentId: "12") { finished in
+//                 print(finished)
+//        }
         return true
     }
 }
@@ -49,10 +64,15 @@ Swift 基础语法+基础理论
 
 extension AppDelegate {
     func  rootViewCtlAction(){
-        
-//        window?.rootViewController  = self.tabBarCtl
-//
-//3333
+        let defaults = Defaults()
+        if defaults.has(.token) {
+            if    let token =  defaults.get(for: .token), token.count > 0  {
+                debugPrint(token)
+                window?.rootViewController  = self.tabBarCtl
+                return
+            }
+        }
+        self.tabBarCtl = YoTabBarCtl()
         window?.rootViewController  = UINavigationController.init(rootViewController: LoginViewCtl())
     }
 }
@@ -61,18 +81,21 @@ extension AppDelegate {
 
     func accountLogin(_ username: String, password: String) {
         let provider = SYMoyaProvider<LoginTargetType>()
-        provider.responseSwiftyJSON(.server, target: .accountLogin(username: username, password: password)) { [weak self] (response: SYMoyaNetworkDataResponse<SwiftyJSON.JSON>) in
+        provider.responseSwiftyJSON(.server, target: .accountLogin(username: username, password: password)) { (response: SYMoyaNetworkDataResponse<SwiftyJSON.JSON>) in
           
             switch response.result {
             case let .success(json):
                print(json)
-                guard let code = json["code"].int, code == 200 , let data = json["data"].dictionary else {
+                guard let code = json["code"].int, code == 0 , let data = json["data"].dictionary else {
 
                     return
                 }
-                //登录ok
+                //登录ok token_type
                 let defaults = Defaults()
-
+                if  let token = data["access_token"]?.string, let tokenType = data["token_type"]?.string {
+                    defaults.set(token, for: .token)
+                    defaults.set(tokenType, for: .tokenType)
+                }
                 break
             case let .failure(error):
                 print("7777")
@@ -82,3 +105,14 @@ extension AppDelegate {
         }
     }
 }
+
+
+/*
+ 
+ 
+ UI
+ 
+ Foundation
+ 
+ 
+ */

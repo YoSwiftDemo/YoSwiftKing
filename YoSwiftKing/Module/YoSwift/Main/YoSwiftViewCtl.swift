@@ -8,6 +8,7 @@
 import UIKit
 import JXSegmentedView
 import SnapKit
+import DefaultsKit
 class YoSwiftViewCtl: YoBaseUIViewController {
     //分页基础配置
     var segmentedDataSource: JXSegmentedBaseDataSource?
@@ -27,7 +28,6 @@ class YoSwiftViewCtl: YoBaseUIViewController {
         view.addSubview(listContainerView)
         return listContainerView
     }()
-    let titles = ["基础", "语法", "基础", "功能", "封装"]
     //tab数据源对象
     lazy var dataSource: JXSegmentedTitleDataSource = {
         //配置数据源
@@ -38,7 +38,6 @@ class YoSwiftViewCtl: YoBaseUIViewController {
         dataSource.titleSelectedFont =  .systemFont(ofSize: 18, weight: .medium)
         dataSource.isTitleZoomEnabled = true
         dataSource.isTitleColorGradientEnabled = true
-        dataSource.titles = titles
         return dataSource
     }()
     // indicator tab 指示层
@@ -76,14 +75,33 @@ class YoSwiftViewCtl: YoBaseUIViewController {
         //离开页面的时候，需要恢复屏幕边缘手势，不能影响其他页面
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
+    var  titles = [String]()
      override func viewDidLoad() {
         super.viewDidLoad()
          self.navView.isHidden = true
           self.view.backgroundColor =  .hex("FE5E2F")
 
-         self.segmentedDataSource = self.dataSource
-         self.segmentedView.reloadData()
-         segmentedView.reloadDataWithoutListContainer()
+         self.segmentedDataSource =    self.dataSource
+         CategoryApi.shared.categoryTreeHandler { [weak self] finished in
+             //本地取数据 TagsModel
+             let defaults = Defaults()
+             var  titles = [String]()
+             if  defaults.has(.tags), let tags  = defaults.get(for: .tags) {
+                 for  i in 0 ..< tags.count {
+                     if  let model   = tags[i]  as? TagsModel , let name = model.name {
+                         titles.append(name)
+                     }
+                 }
+                 self?.dataSource.titles =   titles
+             }else {
+                 self?.dataSource.titles = titles
+             }
+             self?.segmentedView.reloadData()
+             self?.segmentedView.reloadDataWithoutListContainer()
+         }
+
+         
+    
     }
 }
 //MARK： 容器代理
@@ -134,25 +152,5 @@ extension YoSwiftViewCtl {
                 debugPrint("banner===ERROR")
                 return []
             }
-        
-//        let path = Bundle.main.path(forResource: "YoSwift-Main", ofType: "json")
-//        let url = URL(fileURLWithPath: path!)
-//        // 带throws的方法需要抛异常
-//                do {
-//                      /*
-//                         * try 和 try! 的区别
-//                         * try 发生异常会跳到catch代码中
-//                         * try! 发生异常程序会直接crash
-//                         */
-//                    let data = try Data(contentsOf: url)
-//                    let jsonData:Any = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
-//                    let jsonArr = jsonData as! NSArray
-//
-//                    for dict in jsonArr {
-//                        print(dict)
-//                    }
-//                } catch let error as Error? {
-//                    print("读取本地数据出现错误!",error ?? "xxx")
-//                }
     }
 }
